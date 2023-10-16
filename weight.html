@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Health App</title>
+    <style>
+        body {
+            font-family: Inter, sans-serif;
+            font-size: 15px;
+            margin: 0;
+            padding: 0;
+            background-color: #F4F0EC;
+        }
+
+        .header {
+            color: #075685;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            height: 20px;
+            line-height: 3;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .section {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin-top: -8px;
+            text-align: center;
+        }
+
+        .header h1,
+        .header p {
+            display: inline;
+        }
+
+        .arrow {
+            font-size: 32px;
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .weight-section {
+            font-size: 26px;
+            background-color: #d4eafc;
+            border-radius: 10px;
+            padding: 20px;
+            color: #075685;
+            text-align: center;
+            width: 80%;
+            margin: 30px 0 20px;
+            position: relative;
+        }
+
+        .edit-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #075685;
+            font-size: 15px;
+        }
+
+        .profile-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #000000;
+            font-size: 40px;
+        }
+
+        .calories-section {
+            font-size: 20px;
+            background-color: #d4eafc;
+            border-radius: 4%;
+            padding: 20px;
+            color: #075685;
+            text-align: left;
+            width: 80%;
+            margin: 10px 20px;
+            position: relative;
+        }
+
+        .checkmark {
+            font-size: 20px;
+            background-color: #075685;
+            border-radius: 100%;
+            padding: 1px 8px;
+            color: #d4eafc;
+            display: inline-block;
+            margin-right: 10px;
+            text-align: center;
+        }
+
+        .meal-item {
+            font-size: 17px;
+            margin-left: 10px;
+            display: inline;
+        }
+
+        .total-calories {
+            font-size: 15px;
+            margin-top: 5px;
+            margin-left: 47px;
+            margin-bottom: 10px;
+        }
+
+        .plus-sign {
+            font-size: 23px;
+            background-color: #075685;
+            border-radius: 100%;
+            padding: 1px 8px;
+            color: #d4eafc;
+            display: inline-block;
+            margin-right: 10px;
+            text-align: center;
+        }
+
+        .edit-breakfast-icon {
+            position: absolute;
+            top: 64px;
+            right: 15px;
+            color: #075685;
+            font-size: 15px;
+        }
+
+        .edit-lunch-icon {
+            position: absolute;
+            top: 126px;
+            right: 15px;
+            color: #075685;
+            font-size: 15px;
+        }
+
+        .mood-section {
+            font-size: 15px;
+            background-color: #d4eafc;
+            border-radius: 10px;
+            padding: 20px;
+            color: #075685;
+            text-align: center;
+            width: 80%;
+            margin: 30px 0 20px;
+            position: relative;
+        }
+
+        .mood-icons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: -10px;
+        }
+
+        .mood-icon-happy img {
+            width: 50px;
+        }
+
+        .mood-icon-sad img {
+            width: 56px;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-bottom: -3px;
+            margin-top: -2px;
+        }
+
+        .mood-text {
+            font-size: 18px;
+        }
+
+        .plus-sign-mood {
+            font-size: 40px;
+            background-color: #075685;
+            border-radius: 100%;
+            padding: 0px 12px;
+            color: #d4eafc;
+            display: inline-block;
+            margin-right: 10px;
+            text-align: center;
+            margin-top: -2px;
+            margin-bottom: 8px;
+        }
+
+
+        .menu-section {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #FFF;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .menu-icon {
+            font-size: 30px;
+            color: #000;
+        }
+
+        .exercise-section {
+            font-size: 20px;
+            background-color: #d4eafc;
+            border-radius: 4%;
+            padding: 20px;
+            color: #075685;
+            text-align: left;
+            width: 80%;
+            margin: 10px 0 20px;
+            position: relative;
+            margin-bottom: 70px;
+        }
+
+        .exercise-item {
+            font-size: 17px;
+            margin-left: 10px;
+            display: inline;
+        }
+
+        .total-exercises {
+            font-size: 15px;
+            margin-top: 5px;
+            margin-left: 47px;
+            margin-bottom: 10px;
+        }
+
+        .plus-sign-exercise {
+            font-size: 23px;
+            background-color: #075685;
+            border-radius: 100%;
+            padding: 1px 8px;
+            color: #d4eafc;
+            display: inline-block;
+            margin-right: 10px;
+            text-align: center;
+        }
+
+        .edit-exercise-icon-1 {
+            position: absolute;
+            top: 66px;
+            right: 15px;
+            color: #075685;
+            font-size: 15px;
+        }
+
+        .edit-exercise-icon-2 {
+            position: absolute;
+            top: 117px;
+            right: 15px;
+            color: #075685;
+            font-size: 15px;
+        }
+
+        .exercise-add-more {
+            font-size: 20px;
+            background-color: #075685;
+            border-radius: 100%;
+            padding: 1px 8px;
+            color: #d4eafc;
+            display: inline-block;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <i class="fas fa-user-circle profile-icon"></i>
+        <span class="arrow"> &lt; </span>
+        <h1 id="date"></h1>
+        <h1>Metrics</h1>
+        <span class="arrow"> &gt; </span>
+
+        <script>
+            const dateElement = document.getElementById("date");
+            const currentDate = new Date();
+            const formattedDate = currentDate.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: '2-digit' });
+            dateElement.textContent = formattedDate;
+        </script>
+    </div>
+
+    <div class="container">
+        <div class="section weight-section">
+            Today's Weight: 150 lbs
+            <i class="fas fa-edit edit-icon"></i>
+        </div>
+
+        <div class="section calories-section">
+            <h2 class="section-title">Calories Tracker</h2>
+            <div class="checkmark">&#10003;</div> Breakfast:
+            <span class="meal-item">Banana, Yogurt</span>
+            <i class="fas fa-edit edit-breakfast-icon"></i>
+            <div class="total-calories">
+                540 cal
+            </div>
+            <div class="checkmark">&#10003;</div> Lunch:
+            <span class="meal-item">Salad, Chicken, Rice</span>
+            <i class="fas fa-edit edit-lunch-icon"></i>
+            <div class="total-calories">
+                700 cal
+            </div>
+            <div class="plus-sign">+</div> Add a Meal
+        </div>
+
+        <div class="section mood-section">
+            <h2 class="section-title">Mood Tracker</h2>
+            <div class="mood-icons">
+                <div class="mood-icon-happy">
+                    <img src="happy_icon.png" alt="Happy Icon">
+                    <div class="mood-text">Morning</div>
+                </div>
+                <div class="mood-icon-sad">
+                    <img src="sad_icon.png" alt="Sad Icon">
+                    <div class="mood-text">Afternoon</div>
+                </div>
+                <div class="mood-icon">
+                    <div class="plus-sign-mood">&#43;</div>
+                    <div class="mood-text">Add More</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section exercise-section">
+            <h2 class="section-title">Exercise Tracker</h2>
+            <div class="checkmark">&#10003;</div> Morning Run:
+            <span class="exercise-item">3 miles</span>
+            <i class="fas fa-edit edit-exercise-icon-1"></i>
+            <br>
+            <br>
+            <div class="checkmark">&#10003;</div> Afternoon Yoga:
+            <span class="exercise-item">30 mins</span>
+            <i class="fas fa-edit edit-exercise-icon-2"></i>
+            <br>
+            <br>
+            <div class="plus-sign">+</div> Add More
+            <br>
+        </div>
+        
+        
+    </div>
+
+    <div class="menu-section">
+        <i class="fas fa-chart-bar menu-icon"></i>
+        <i class="fas fa-weight menu-icon"></i>
+        <i class="fas fa-users menu-icon"></i>
+    </div>
+</body>
+</html>
