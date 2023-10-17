@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Health-App Homepage. </title>
+    <link rel="stylesheet" href="Health-app-style.css" type="text/css">
+
+
+<style>
+  #outer{
+    background-color: rgba(244, 240, 236, 1);
+    width: 50em;
+}
+
+h1 {
+    color: rgb(0, 39, 97);
+    font-size: 3em;
+    margin-left: 1.5em;
+    margin-bottom: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 3em; 
+}
+
+#community {
+    background-color: white;
+    width: 35em;
+    margin-left: 3em;
+    font-size: 1.125em;
+    height: 1.25em;
+    margin-bottom: 1em;
+}
+
+#words{
+    margin: 11.5em;
+    position: center;
+    color: rgb(9, 9, 146);
+    width: 15em;
+}
+
+#steps-dv{
+    margin-left: 7em;
+    background: #D8EDFE;
+    width: 530px;
+   
+    top: 201px;
+    left: 20px;
+    border-radius: 15px;
+    border: .5px solid black;
+    gap: 11.04px;
+    margin-bottom: 2em;
+}
+
+#basic-font{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 39, 97);
+    font-size: 1.35em;
+    padding-left: 1em;
+    
+}
+
+#categories{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 39, 97) ;
+    font-size: 1.35em;
+    padding-left: 1em;
+    margin-left: 5em;
+}
+#steps-left{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 39, 97) ;
+    font-size: 1.35em;
+    padding-left: 8.7em;
+}
+
+.progress-bar {
+    margin-top: 2em;
+    margin-left: 11.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: 
+      radial-gradient(closest-side, #D8EDFE 79%, transparent 80% 100%),
+      conic-gradient(rgb(0, 39, 97) 75%, rgb(228, 236, 254) 0);  
+  }
+
+.progress-bar::before {
+    content: "8530 \a Steps";
+    white-space: pre;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25em;
+  }
+
+.container {
+    padding: 48px;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+  }
+  
+.container .group {
+    padding: 2px 20px;
+    margin: 4px;
+    padding-left: 1.2em;
+  }
+
+.container2 {
+    padding-top: 3em;
+    padding-left: 5em;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+  }
+  
+.container2 .group {
+    padding: 2px 20px;
+    margin: 4px;
+    padding-left: 1.2em;
+  }
+  
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  label {
+    position: relative;
+  }
+  
+
+label::before {
+    content: "";
+    background: white;
+    background-position: center;
+    background-size: contain;
+    width: 55px; 
+    height: 55px;
+    position: absolute;
+    left: -35px;
+    top: -20px; 
+
+    transform: scale(0) rotateZ(180deg);
+    transition: all 0.4s cubic-bezier(0.54, 0.01, 0, 1.49);
+}
+
+
+label::after {
+    background: white;
+    border: 2px solid rgb(0, 39, 97);
+    width: 45px;
+    height: 55px; 
+    position: absolute;
+    border-radius: 50%;
+    content: "+";
+    font-size: 40px; 
+    padding-left: .45em;
+    padding-top: .2em;
+    font-weight: bold;
+    color: rgb(0, 39, 97);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+  input[type="checkbox"]:checked + label::before {
+    transform: scale(1) rotateZ(0deg);
+  }
+  
+.category-label {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 2em;
+    left: 50%; 
+    transform: translateX(-50%); 
+    bottom: 0; 
+}
+
+#footer{
+    background-color: white;
+    width: 50em;
+    height: 8em;
+    border: solid black;
+    
+
+}
+
+.menu-section {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #FFF;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu-icon {
+  font-size: 30px;
+  color: #000;
+}
+</style>
+</head>
+<body>
+    <div id = "outer">
+       <h1>
+        Welcome back <strong> Susan Smith!</strong>
+       </h1>
+
+       <div id ="community">
+        <p id = "words">Community: 1 new message! </p>
+        </div>
+
+        <div id = "steps-dv"> 
+            <p id= "basic-font">Daily Steps </p>
+        <div class="progress-bar">
+            <progress value="72" min="0" max="100" style="visibility:hidden;height:0;width:0;">75%</progress>
+          </div>
+          <p id = "steps-left">1470 steps left!</p>
+        </div>
+
+        <div id = "steps-dv"> 
+            <p id= "basic-font">Calories </p>
+            <div class="container">
+                <div class="group">
+                  <input type="checkbox" id="xd" value = "+"/>
+                  <label for="xd"></label>
+                  <p class="category-label">Breakfast</p>
+                </div>
+          
+                <div class="group">
+                  <input type="checkbox" id="figma" value = "+" />
+                  <label for="figma"></label>
+                  <p class="category-label">Lunch</p>
+                </div>
+          
+                <div class="group">
+                  <input type="checkbox" id="sketch" value = "+" />
+                  <label for="sketch"></label>
+                  <p class="category-label">Snack</p>
+                </div>
+
+                <div class="group">
+                    <input type="checkbox" id="sketch" value = "+"/>
+                    <label for="sketch"></label>
+                    <p class="category-label">Dinner</p>
+                  </div>
+              </div>
+        </div>
+
+
+        <div id = "steps-dv"> 
+            <p id= "basic-font">Mood</p>
+            <div class="container2">
+                <div class="group">
+                    <input type="checkbox" id="figma" value = "+" />
+                    <label for="figma"></label>
+                    <p class="category-label">Morning</p>
+                  </div>
+          
+                <div class="group">
+                  <input type="checkbox" id="figma" value = "+" />
+                  <label for="figma"></label>
+                  <p class="category-label">Noon</p>
+                </div>
+
+                <div class="group">
+                    <input type="checkbox" id="sketch" value = "+"/>
+                    <label for="sketch"></label>
+                    <p class="category-label">Dinner</p>
+                  </div>
+              </div>
+        </div>
+        
+        </div>
+        
+</body>
