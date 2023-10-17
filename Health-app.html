@@ -27,21 +27,22 @@ h1 {
 #community {
     background-color: white;
     width: 35em;
-    margin-left: 6em;
+    margin-left: 5em;
     font-size: 1.125em;
     height: 1.25em;
     margin-bottom: 1em;
 }
 
 #words{
-    margin: 11.5em;
+
+    margin-left: 10em;
     position: center;
     color: rgb(9, 9, 146);
     width: 15em;
 }
 
 #steps-dv{
-    margin-left: 7em;
+    margin-left: 5em;
     background: #D8EDFE;
     width: 530px;
    
@@ -209,6 +210,10 @@ label::after {
   font-size: 30px;
   color: #000;
 }
+#plus {
+    font-size: 2em; /* Adjust the size for the "+" symbol */
+    vertical-align: middle; /* Center the "+" vertically with the text */
+  }
 </style>
 
 </head>
@@ -226,7 +231,8 @@ label::after {
         </div>
 
         <div id = "steps-dv"> 
-            <p id= "basic-font">Daily Steps </p>
+          
+            <pre id= "basic-font">Daily Steps                                                                               <span id="plus">+</span></pre>
         <div class="progress-bar">
             <progress value="72" min="0" max="100" style="visibility:hidden;height:0;width:0;">75%</progress>
           </div>
