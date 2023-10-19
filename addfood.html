@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Health App</title>
     <style>
+        
         body {
             font-family: Inter, sans-serif;
             font-size: 15px;
@@ -23,6 +24,12 @@
             position: relative;
             height: 20px;
             line-height: 3;
+        }
+        input[type="checkbox"] {
+            display: none;
+        }
+        input[type="checkbox"]:checked + label::before {
+            transform: scale(1) rotateZ(0deg);
         }
 
         .container {
@@ -55,6 +62,20 @@
             position: absolute;
             left: 30px;
         }
+        .arrow.right {
+            right: 30px; 
+            left: auto;
+        }
+    
+
+        /* Style for the checkmark */
+        .arrow.right::after {
+            content: "\2714"; /* Unicode character for a checkmark */
+            font-family: Inter, sans-serif;
+            font-size: 32px;
+            font-weight: bold;
+            color: #000000;
+        }
 
         .food-table table {
             width: 100%;
@@ -65,40 +86,37 @@
             position: relative;
             overflow: hidden;
             border-collapse: collapse;
-            
-            }
+        }
 
-            .food-table td {
-            /*border: 1px solid #075685; /* Dark blue border */
-            padding: 15px; /*adds vertical heights to rows*/
+        .food-table td {
+            padding: 15px;
             width: 50%;
             text-align: center;
-            background-color: #d4eafc; /* Background color */
+            background-color: #d4eafc;
             color: #075685;
-            height: 40px; /*adds vertical height to rows*/
-            }
+            height: 40px;
+        }
 
-     .food-table td:not(:last-child) {
-        border-right: 1px solid #075685; /*adds vertical line in table*/
-    }
+        .food-table td:not(:last-child) {
+            border-right: 1px solid #075685;
+        }
 
-    .food-table tr:not(:last-child) td {
-        border-bottom: 1px solid #075685; /*sets horiz lines*/
-    }
+        .food-table tr:not(:last-child) td {
+            border-bottom: 1px solid #075685;
+        }
 
-    .food-table td:first-child {
-        font-weight: bold; /*make text bold in left column*/
-    }
+        .food-table td:first-child {
+            font-weight: bold;
+        }
+
         .profile-icon {
             position: absolute;
             top: 10px;
             right: 10px;
             color: #000000;
             font-size: 40px;
-            
         }
 
-        
         .menu-section {
             position: fixed;
             bottom: 0;
@@ -115,44 +133,62 @@
             color: #000;
         }
 
+        .food-table input {
+            font-family: Inter, sans-serif;
+            font-size: 15px;
+            border: none;
+            background: transparent;
+            width: 100%;
+            color: #075685;
+            text-align: center;
+        }
 
-
+        input[type="checkbox"] {
+            display: none;
+        }
     </style>
 </head>
 
 <body>
     <div class="header">
+        <input type="checkbox" id="12345" value="+"/>
+        <label for="12345"></label>
+
         <i class="fas fa-user-circle profile-icon"></i>
         <span class="arrow"> &lt; </span>
+        <input type="checkbox" id="xd" value="+"/>
+        <label for="figma"></label>
+        <label for="sketch"></label>
+        <label for="xd"></label>
+        <span class="arrow right"></span> <!-- Removed the > and added the checkmark style -->
         <h1 id="date"></h1>
         <h1>Add Food</h1>
     </div>
 
     <div class="section food-table">
         <table>
-          <tr>
-            <td>Name</td>
-            <td>Cheese</td>
-          </tr>
-          <tr>
-            <td>Calories</td>
-            <td>25</td>
-          </tr>
-          <tr>
-            <td>Total fat (g)</td>
-            <td>6</td>
-          </tr>
-          <tr>
-            <td>Total Carbohydrate (g)</td>
-            <td>6</td>
-          </tr>
-          <tr>
-            <td>Protein (g)</td>
-            <td>5</td>
-          </tr>
-          
+            <tr>
+                <td>Name</td>
+                <td><input type="text" id="foodName" placeholder="Enter food name"></td>
+            </tr>
+            <tr>
+                <td>Calories</td>
+                <td><input type="text" id="calories" placeholder="Enter calories"></td>
+            </tr>
+            <tr>
+                <td>Total fat (g)</td>
+                <td><input type="text" id="fat" placeholder="Enter total fat"></td>
+            </tr>
+            <tr>
+                <td>Total Carbohydrate (g)</td>
+                <td><input type="text" id="carbs" placeholder="Enter total carbs"></td>
+            </tr>
+            <tr>
+                <td>Protein (g)</td>
+                <td><input type="text" id="protein" placeholder="Enter protein"></td>
+            </tr>
         </table>
-      </div>
+    </div>
 
     <!-- creates menu with 3 icons at bottom of page -->
     <div class="menu-section">
