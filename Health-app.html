@@ -16,11 +16,11 @@
 }
 
 h1 {
-    color: rgb(0, 39, 97);
+    color: #075685;
     font-size: 3em;
     margin-left: 1.5em;
     margin-bottom: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Inter;
     padding-top: 3em; 
 }
 
@@ -29,50 +29,49 @@ h1 {
     width: 35em;
     margin-left: 5em;
     font-size: 1.125em;
+    font-family: Inter;
     height: 1.25em;
     margin-bottom: 1em;
 }
 
 #words{
-
     margin-left: 10em;
     position: center;
     color: rgb(9, 9, 146);
     width: 15em;
 }
 
-#steps-dv{
-    margin-left: 5em;
-    background: #D8EDFE;
-    width: 530px;
-   
-    top: 201px;
-    left: 20px;
-    border-radius: 15px;
-    border: .5px solid black;
-    gap: 11.04px;
-    margin-bottom: 2em;
+#steps-dv {
+  margin: 0 auto; 
+  width: 75%;
+  padding: 10px; 
+  background: #D8EDFE;
+  border-radius: 15px;
+  gap: 11.04px;
+  margin-bottom: 2em;
 }
 
+
 #basic-font{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Inter;
     color: rgb(0, 39, 97);
-    font-size: 1.35em;
+    font-size: 20pt;
     padding-left: 1em;
+    text-align: left;
     
 }
 
 #categories{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Inter;
     color: rgb(0, 39, 97);
     font-size: 1.35em;
     padding-left: 1em;
     margin-left: 5em;
 }
 #steps-left{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Inter;
     color: rgb(0, 39, 97);
-    font-size: 1.35em;
+    font-size: 15pt;
     padding-left: 11em;
 }
 
@@ -94,37 +93,40 @@ h1 {
 .progress-bar::before {
     content: "8530 \a Steps";
     white-space: pre;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.25em;
+    font-family: Inter;
+    font-size: 15pt;
     color: rgb(0, 39, 97);
   }
 
 .container {
-    padding: 48px;
-    display: flex;
-    flex-direction:row;
-    justify-content: space-between;
-  }
-  
+  padding: 20px;
+  display: flex;
+  margin-left: 10pt;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 35%;
+}
+
 .container .group {
-    padding: 2px 20px;
-    margin: 4px;
-    padding-left: 1.2em;
-  }
+  margin: 20pt;
+  width: 45%;
+}
+
 
 .container2 {
-    padding-top: 3em;
-    padding-left: 5em;
-    display: flex;
-    flex-direction:row;
-    justify-content: space-between;
-  }
-  
+  padding: 48px;
+  display: flex;
+  margin-left: 20pt;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 40%; 
+}
+
 .container2 .group {
-    padding: 2px 20px;
-    margin: 4px;
-    padding-left: 1.2em;
-  }
+  margin: 30pt;
+  width: 30%;
+}
+
   
   input[type="checkbox"] {
     display: none;
@@ -176,11 +178,11 @@ label::after {
   }
   
 .category-label {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Inter;
     text-align: center;
     font-size: 25px;
     margin-top: 2em;
-    left: 50%; 
+    left: 1%; 
     transform: translateX(-50%); 
     bottom: 0; 
     color: rgb(0, 39, 97);
@@ -196,7 +198,7 @@ label::after {
 
 
 .menu-section {
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 10;
   width: 48.45em;
@@ -211,17 +213,16 @@ label::after {
   color: #000;
 }
 #plus {
-    font-size: 2em; /* Adjust the size for the "+" symbol */
-    vertical-align: middle; /* Center the "+" vertically with the text */
+    font-size: 2em; 
+    vertical-align: middle; 
   }
-  .profile-icon {
-          
-            margin-top: .25em;
-            margin-left: 11.8em;
-            font-size: 50px; /* Adjust the font size as needed */
-            color: #000; /* Icon color */
-            cursor: pointer; /* Optional: Add a cursor pointer on hover */
-  }
+.profile-icon {
+  position: relative;
+  top: 150px;
+  right: -679px;
+  color: #000000;
+  font-size: 40px;
+}
 </style>
 
 </head>
@@ -230,12 +231,12 @@ label::after {
   
     <div id = "outer">
       <i class="fas fa-user-circle profile-icon"></i>
-       <h1>
-        Welcome back <strong> Susan Smith!</strong>
-       </h1>
+      <h1>
+        Welcome Back, <strong>Susan Smith!</strong>
+      </h1>    
 
        <div id ="community">
-        <p id = "words">Community: 1 new message! </p>
+        <p id = "words">Community: <b>1 new message!</b> </p>
         </div>
 
         <div id = "steps-dv"> 
@@ -243,7 +244,7 @@ label::after {
             <pre id= "basic-font">Daily Steps                                                                               <span id="plus">+</span></pre>
         <div class="progress-bar">
             <progress value="72" min="0" max="100" style="visibility:hidden;height:0;width:0;">75%</progress>
-          </div>
+        </div>
           <p id = "steps-left">1470 steps left!</p>
         </div>
 
