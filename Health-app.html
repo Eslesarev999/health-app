@@ -159,12 +159,14 @@ h1 {
   
   label {
     position: relative;
+    --circle-bg: white;
+    
   }
   
 
 label::before {
-    content: "";
-    background: white;
+  content: "";
+    background: transparent; /* Set the initial background to transparent */
     background-position: center;
     background-size: contain;
     width: 55px; 
@@ -173,7 +175,7 @@ label::before {
     left: -35px;
     top: -20px; 
 
-    transform: scale(0) rotateZ(180deg);
+    transform: scale(1) rotateZ(180deg); /* Set scale to 1 always */
     transition: all 0.4s cubic-bezier(0.54, 0.01, 0, 1.49);
 }
 
@@ -196,6 +198,7 @@ label::after {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    background-color: var(--circle-bg);
 }
   
   input[type="checkbox"]:checked + label::before {
@@ -356,6 +359,9 @@ label::after {
     padding-right: .4em;
     font-weight: bold;
 }
+input[type="checkbox"]:focus {
+    outline: none;
+}
 </style>
 
 </head>
@@ -408,9 +414,9 @@ label::after {
                 </div>
 
                 <div class="group">
-                    <input type="checkbox" id="sketch" value = "+"/>
-                    <label for="sketch"></label>
-                    <p class="category-label">Dinner</p>
+                  <input type="checkbox" id="dinner" value = "+" />
+                  <label for="dinner"></label>
+                  <p class="category-label">Dinner</p>
                   </div>
               </div>
         </div>
@@ -455,4 +461,21 @@ label::after {
 
         
         
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            const label = this.nextElementSibling;
+            if (this.checked) {
+                label.style.setProperty('--circle-bg', 'green');
+                label.style.setProperty('--circle-border', 'green');
+            } else {
+                label.style.setProperty('--circle-bg', 'white');
+                label.style.setProperty('--circle-border', '#075685');
+            }
+        });
+    });
+});
+          </script>
 </body>
