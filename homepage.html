@@ -10,39 +10,40 @@
 
 
 <style>
-  #outer{
+  #H_outer{
     background-color: rgba(244, 240, 236, 1);
     width: 48em;
 }
 
-h1 {
+#H_header{
     color: #075685;
     font-size: 3em;
-    margin-left: 1.1em;
+    margin-left: 1.5em;
     margin-bottom: 0;
     font-family: Inter;
     padding-top: 1em; 
 }
 
-#community {
+#H_community {
     background-color: white;
-    width: 35em;
-    margin-left: 4em;
-    font-size: 1.125em;
+    width: 24.5em;
+    margin-left: 1em;
+    font-size: 1.8em;
     font-family: Inter;
-    height: 1.25em;
+    height: 1.50em;
     margin-bottom: 1em;
 }
 
-#words{
-    margin-left: 10em;
+#H_words{
+  padding-top: .125em;
+    margin-left: 6.5em;
     position: center;
     color: #075685;
     width: 15em;
 }
 
 
-#steps-dv {
+#H_steps-dv {
   margin: 0 auto; 
   width: 75%;
   padding: 10px; 
@@ -51,7 +52,7 @@ h1 {
   gap: 11.04px;
   margin-bottom: 2em;
 }
-#cals-dv {
+#H_cals-dv {
   margin: 0 auto; 
   width: 75%;
   padding: 10px; 
@@ -60,7 +61,7 @@ h1 {
   gap: 11.04px;
   margin-bottom: 2em;
 }
-#stats-dv {
+#H_stats-dv {
   margin: 0 auto; 
   width: 75%;
   padding: 10px; 
@@ -71,30 +72,30 @@ h1 {
 }
 
 
-#basic-font{
+#H_basic-font{
     font-family: Inter;
     color: #075685;
-    font-size: 20pt;
+    font-size: 22pt;
     padding-left: .6em;
     text-align: left;
 }
 
 
-#categories{
+#H_categories{
     font-family: Inter;
     color: #075685;
-    font-size: 1.35em;
+    font-size: 1.5em;
     padding-left: 1em;
     margin-left: 5em;
 }
-#steps-left{
+#H_steps-left{
     font-family: Inter;
     color: #075685;
-    font-size: 15pt;
-    padding-left: 11em;
+    font-size: 22pt;
+    padding-left: 7em;
 }
 
-.progress-bar {
+.H_progress-bar {
     margin-top: 2em;
     margin-left: 14em;
     display: flex;
@@ -109,20 +110,20 @@ h1 {
       conic-gradient(rgb(0, 39, 97) 75%, rgb(228, 236, 254) 0);  
   }
 
-.progress-bar::before {
+.H_progress-bar::before {
     content: "8530 \a Steps";
     white-space: pre;
     font-family: Inter;
-    font-size: 15pt;
+    font-size: 20pt;
     color: #075685;
   }
 
-  .container {
+  .H_container {
   display: flex;
   justify-content: space-between; /* Distribute items evenly */
 }
 
-.group {
+.H_group {
   display: flex;
   flex-direction: column; /* Place checkbox and label vertically */
   align-items: center; /* Center items horizontally */
@@ -132,13 +133,13 @@ h1 {
 }
 
 
-.container .group {
+.H_container .H_group {
   margin: 20pt;
   width: 45%;
 }
 
 
-.container2 {
+.H_container2 {
   padding: 48px;
   display: flex;
   margin-left: 20pt;
@@ -147,7 +148,7 @@ h1 {
   width: 40%; 
 }
 
-.container2 .group {
+.H_container2 .H_group {
   margin: 30pt;
   width: 30%;
 }
@@ -157,14 +158,14 @@ h1 {
     display: none;
   }
   
-  label {
+  #H_label-style {
     position: relative;
     --circle-bg: white;
     
-  }
+}
   
 
-label::before {
+#H_label-style::before {
   content: "";
     background: transparent; /* Set the initial background to transparent */
     background-position: center;
@@ -180,7 +181,7 @@ label::before {
 }
 
 
-label::after {
+#H_label-style::after {
     background: white;
     border: 2px solid  #075685;
     width: 45px;
@@ -205,7 +206,7 @@ label::after {
     transform: scale(1) rotateZ(0deg);
   }
   
-.category-label {
+.H_category-label {
     font-family: Inter;
     text-align: center;
     font-size: 25px;
@@ -223,7 +224,7 @@ label::after {
 }
 
 
-.menu-section {
+.H_menu-section {
   position: relative;
   bottom: 0;
   left: 10;
@@ -234,12 +235,12 @@ label::after {
   justify-content: space-around;
 }
 
-.menu-icon {
+.H_menu-icon {
   font-size: 30px;
   color: #000;
 }
 
-.profile-icon {
+.H_profile-icon {
   position: relative;
   top: 35px;
   right: -679px;
@@ -247,7 +248,7 @@ label::after {
   font-size: 60px;
 }
 
-.bar-graph {
+.H_bar-graph {
     position: relative;
     background-color: whitesmoke;
     border-radius: 5px;
@@ -258,7 +259,7 @@ label::after {
     border: 1px solid  #075685;
     justify-content: flex-start; /* Align bars from the left */
 }
-.goal-label {
+.H_goal-label {
   position: absolute;
   
   right: 10px; /* Adjust the right position as needed */
@@ -266,9 +267,9 @@ label::after {
   font-family: Inter;
   color: #FF5733; /* Adjust the color as needed */
   font-weight: bold;
-  font-size: 13px;
+  font-size: 25px;
 }
-.goal-line {
+.H_goal-line {
     position: absolute;
     width: 90%; /* Make the goal line span the full width */
     background-color: transparent; /* Make it transparent */
@@ -277,7 +278,7 @@ label::after {
     border-top: 2px dotted #FF5733; /* Create a dotted effect */
 }
 
-.bar {
+.H_bar {
     width: 60px; /* Adjust the width of each bar */
     background-color:rgb(0, 37, 97); /* Adjust the color as needed */
     border-radius: 5px;
@@ -288,17 +289,17 @@ label::after {
     align-items: center;
     position: relative;
     margin-right: 10px; /* Adjust the spacing between bars */
-    padding-right: .8em;
+    padding-right: 1.2em;
 }
 
-.bar-value {
-    font-size: 14px;
+.H_bar-value {
+    font-size: 22px;
     font-family: Inter;
     margin-top: 5px;
     padding-left: .5em;
 }
 
-.bar-labels {
+.H_bar-labels {
   color: #075685;
   font-family: Inter;
     display: flex;
@@ -306,53 +307,53 @@ label::after {
     margin-top: 10px; /* Adjust the vertical spacing between bars and labels */
 }
 
-.bar-label {
-    font-size: 16px;
+.H_bar-label {
+    font-size: 24px;
     font-weight: bold;
     font-family: Inter;
-    padding-left: 1em;
+    padding-left: .25em;
     padding-right: 1.7em;
     color: #075685;
     text-align: center;
     width: 60px; /* Match the width of each bar */
 }
-.bar-label2 {
-    font-size: 16px;
+.H_bar-label2 {
+    font-size: 24px;
     font-weight: bold;
-    padding-left: 2em;
-    padding-right: 1em;
+    padding-left: 1.2em;
+    padding-right: 1.3em;
     font-family: Inter;
    
     color: #075685;
     text-align: center;
-    width: 60px; /* Match the width of each bar */
+    width: 60px; 
 }
-.stats-header {
+.H_stats-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
 }
 
-.date {
+.H_date {
     font-family: Inter;
     color: #075685;
-    font-size: 25px;
-    text-align: right; /* Align the date to the right */
+    font-size: 28px;
+    text-align: right; 
 }
-.bold-name {
+.H_bold-name {
     font-weight: bold;
     font-size: 1.025em;
     color: #075685;
 }
-.title-container {
+.H_title-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     
 }
 
-#plus {
+#H_plus {
     font-size: 3em;
     color: #075685;
     vertical-align: middle;
@@ -368,94 +369,94 @@ input[type="checkbox"]:focus {
 <body>
 
   
-    <div id = "outer">
-      <i class="fas fa-user-circle profile-icon"></i>
-      <h1>
-        Welcome Back, <strong><span class="bold-name">Susan Smith</span></strong>!
+    <div id = "H_outer">
+      <i class="fas fa-user-circle H_profile-icon"></i>
+      <h1 id = "H_header">
+        Welcome Back, <strong><span class="H_bold-name">Susan Smith</span></strong>!
     </h1> 
 
-       <div id ="community">
-        <p id = "words">Community: <b>1 new message!</b> </p>
+       <div id ="H_community">
+        <p id = "H_words">Community: <b>1 new message!</b> </p>
         </div>
 
-        <div id = "steps-dv"> 
+        <div id = "H_steps-dv"> 
            
           <!-- Want to put plus sign parrallel as Daily steps title but on the upper right hand side as opposed to where the daily steps one is, on the upper left side of the div -->
            
-          <div class="title-container">
-            <p id="basic-font">Daily Steps</p>
-            <span id="plus">+</span>
+          <div class="H_title-container">
+            <p id="H_basic-font">Daily Steps</p>
+            <span id="H_plus">+</span>
         </div>
-        <div class="progress-bar">
+        <div class="H_progress-bar">
             <progress value="72" min="0" max="100" style="visibility:hidden;height:0;width:0;">75%</progress>
         </div>
-          <p id = "steps-left">1470 steps left!</p>
+          <p id = "H_steps-left">1470 steps left!</p>
         </div>
 
-        <div id = "cals-dv"> 
-            <p id= "basic-font">Calories </p>
-            <div class="container">
-                <div class="group">
+        <div id = "H_cals-dv"> 
+            <p id= "H_basic-font">Calories </p>
+            <div class="H_container">
+                <div class="H_group">
                   <input type="checkbox" id="xd" value = "+"/>
-                  <label for="xd"></label>
-                  <p class="category-label">Breakfast</p>
+                  <label id="H_label-style" for="xd"></label>
+                  <p class="H_category-label">Breakfast</p>
                 </div>
           
-                <div class="group">
+                <div class="H_group">
                   <input type="checkbox" id="figma" value = "+" />
-                  <label for="figma"></label>
-                  <p class="category-label">Lunch</p>
+                  <label id="H_label-style" for="figma"></label>
+                  <p class="H_category-label">Lunch</p>
                 </div>
           
-                <div class="group">
+                <div class="H_group">
                   <input type="checkbox" id="sketch" value = "+" />
-                  <label for="sketch"></label>
-                  <p class="category-label">Snack</p>
+                  <label id="H_label-style" for="sketch"></label>
+                  <p class="H_category-label">Snack</p>
                 </div>
 
-                <div class="group">
+                <div class="H_group">
                   <input type="checkbox" id="dinner" value = "+" />
-                  <label for="dinner"></label>
-                  <p class="category-label">Dinner</p>
+                  <label id="H_label-style" for="dinner"></label>
+                  <p class="H_category-label">Dinner</p>
                   </div>
               </div>
         </div>
 
 
-        <div id = "stats-dv"> 
+        <div id = "H_stats-dv"> 
           <!-- Want to have a bar graph in this div indicating how many steps the user walked within that week: Will plot how many steps the user walked in each particular day in comparison to the daily steps goal they have set.
           lets say it is wednesday, the users daily steps goal is 10,000. Can randomly put a number for the amount they walked on monday and tuesday -->
-          <div class="stats-header">
-            <p id="basic-font">Weekly Stats</p>
-            <div class="date">10/19/23</div> <!-- Add the date here -->
+          <div class="H_stats-header">
+            <p id="H_basic-font">Weekly Stats</p>
+            <div class="H_date">10/19/23</div> <!-- Add the date here -->
         </div>
-            <div class="bar-graph">
-              <div class="goal-line">
-                <span class="goal-label">Goal</span>
+            <div class="H_bar-graph">
+              <div class="H_goal-line">
+                <span class="H_goal-label">Goal</span>
               </div><!-- Horizontal dotted line representing the daily goal -->
-              &nbsp;<div class="bar" style="height: 80%;"><span class="bar-value">8,000</span></div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <div class="bar" style="height: 60%;"><span class="bar-value">6,000</span></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <div class="bar" style="height: 82%;"><span class="bar-value">8,530</span></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <div class="bar" style="height: 1%;"><span class="bar-value"></span></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <div class="bar" style="height: 1%;"><span class="bar-value"></span></div>
+              &nbsp;<div class="H_bar" style="height: 80%;"><span class="H_bar-value">8,000</span></div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <div class="H_bar" style="height: 60%;"><span class="H_bar-value">6,000</span></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <div class="H_bar" style="height: 82%;"><span class="H_bar-value">8,530</span></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <div class="H_bar" style="height: 1%;"><span class="H_bar-value"></span></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <div class="H_bar" style="height: 1%;"><span class="H_bar-value"></span></div>
               <!-- Repeat the above for each day of the week -->
           </div>
-          <div class="bar-labels">
-              <span class="bar-label">Monday</span>
-              <span class="bar-label">Tuesday</span>
-              <span class="bar-label">Wednesday</span>
-              <span class="bar-label2">Thursday</span>
-              <span class="bar-label2">Friday</span>
+          <div class="H_bar-labels">
+              <span class="H_bar-label">Monday</span>
+              <span class="H_bar-label">Tuesday</span>
+              <span class="H_bar-label">Wednesday</span>
+              <span class="H_bar-label2">Thursday</span>
+              <span class="H_bar-label2">Friday</span>
 
               <!-- Repeat the above for each day of the week -->
           </div>
            
         </div>
         
-        <div class="menu-section">
-          <i class="fas fa-chart-bar menu-icon"></i>
-          <i class="fas fa-weight menu-icon"></i>
-          <i class="fas fa-users menu-icon"></i>
+        <div class="H_menu-section">
+          <i class="fas fa-chart-bar H_menu-icon"></i>
+          <i class="fas fa-weight H_menu-icon"></i>
+          <i class="fas fa-users H_menu-icon"></i>
       </div>
         </div>
 
