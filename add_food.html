@@ -8,7 +8,7 @@
     <title>Health App</title>
     <style>
         
-        body {
+        addf_body {
             font-family: Inter, sans-serif;
             font-size: 15px;
             margin: 0;
@@ -16,7 +16,7 @@
             background-color: #F4F0EC;
         }
 
-        .header {
+        .addf_header {
             color: #075685;
             text-align: center;
             padding: 20px;
@@ -31,44 +31,44 @@
             transform: scale(1) rotateZ(0deg);
         }
 
-        .container {
+        .addf_container {
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 20px;
         }
 
-        .section {
+        .addf_section {
             margin-top: 20px;
             text-align: center;
         }
 
-        .section-title {
+        .addf_section-title {
             font-size: 24px;
             margin-top: -8px;
             text-align: center;
         }
 
-        .header h1,
-        .header p {
+        .addf_header h1,
+        .addf_header p {
             display: inline;
         }
 
-        .arrow {
+        .addf_arrow {
             font-size: 32px;
             font-weight: bold;
             color: #000000;
             position: absolute;
             left: 30px;
         }
-        .arrow.right {
+        .addf_arrow.right {
             right: 30px; 
             left: auto;
         }
     
 
         /* Style for the checkmark */
-        .arrow.right::after {
+        .addf_arrow.right::after {
             content: "\2714"; /* Unicode character for a checkmark */
             font-family: Inter, sans-serif;
             font-size: 32px;
@@ -76,7 +76,7 @@
             color: #000000;
         }
 
-        .food-table table {
+        .addf_food-table table {
             width: 100%;
             border-radius: 20px; /*??? maybe change to 10???-->rounds table edges*/
             padding: 20px;
@@ -87,7 +87,7 @@
             border-collapse: collapse;
         }
 
-        .food-table td {
+        .addf_food-table td {
             padding: 15px;
             width: 50%;
             text-align: center;
@@ -96,19 +96,19 @@
             height: 40px;
         }
 
-        .food-table td:not(:last-child) {
+        .addf_food-table td:not(:last-child) {
             border-right: 1px solid #075685;
         }
 
-        .food-table tr:not(:last-child) td {
+        .addf_food-table tr:not(:last-child) td {
             border-bottom: 1px solid #075685;
         }
 
-        .food-table td:first-child {
+        .addf_food-table td:first-child {
             font-weight: bold;
         }
 
-        .profile-icon {
+        .addf_profile-icon {
             position: absolute;
             top: 10px;
             right: 10px;
@@ -116,7 +116,7 @@
             font-size: 40px;
         }
 
-        .menu-section {
+        .addf_menu-addf_section {
             position: fixed;
             bottom: 0;
             left: 0;
@@ -127,12 +127,12 @@
             justify-content: space-around;
         }
 
-        .menu-icon {
+        .addf_menu-icon {
             font-size: 30px;
             color: #000;
         }
 
-        .food-table input {
+        .addf_food-table input {
             font-family: Inter, sans-serif;
             font-size: 15px;
             border: none;
@@ -148,27 +148,27 @@
     </style>
 </head>
 
-<body>
-    <div class="header">
+<addf_body>
+    <div class="addf_header">
         <input type="checkbox" id="12345" value="+"/>
         <label for="12345"></label>
 
-        <i class="fas fa-user-circle profile-icon"></i>
-        <span class="arrow"> &lt; </span>
+        <i class="fas fa-user-circle addf_profile-icon"></i>
+        <span class="addf_arrow"> &lt; </span>
         <input type="checkbox" id="xd" value="+"/>
         <label for="figma"></label>
         <label for="sketch"></label>
         <label for="xd"></label>
-        <span class="arrow right"></span> <!-- Removed the > and added the checkmark style -->
+        <span class="addf_arrow right"></span> <!-- Removed the > and added the checkmark style -->
         <h1 id="date"></h1>
         <h1>Add Food</h1>
     </div>
 
-    <div class="section food-table">
+    <div class="addf_section addf_food-table">
         <table>
             <tr>
                 <td>Name</td>
-                <td><input type="text" id="foodName" placeholder="Enter food name"></td>
+                <td><input type="text" id="addf_foodName" placeholder="Enter food name"></td>
             </tr>
             <tr>
                 <td>Calories</td>
@@ -189,11 +189,11 @@
         </table>
     </div>
 
-    <!-- creates menu with 3 icons at bottom of page -->
-    <div class="menu-section">
-        <i class="fas fa-chart-bar menu-icon"></i>
-        <i class="fas fa-weight menu-icon"></i>
-        <i class="fas fa-users menu-icon"></i>
+    <!-- creates addf_menu with 3 icons at bottom of page -->
+    <div class="addf_menu-addf_section">
+        <i class="fas fa-chart-bar addf_menu-icon"></i>
+        <i class="fas fa-weight addf_menu-icon"></i>
+        <i class="fas fa-users addf_menu-icon"></i>
     </div>
-</body>
+</addf_body>
 </html>
