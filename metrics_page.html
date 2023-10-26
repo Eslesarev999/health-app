@@ -24,36 +24,36 @@
             line-height: 3;
         }
 
-        .container {
+        .mp_container {
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 20px;
         }
 
-        .section {
+        .mp_section {
             margin-top: 20px;
             text-align: center;
         }
 
-        .section-title {
+        .mp_section-title {
             font-size: 24px;
             margin-top: -8px;
             text-align: center;
         }
 
-        .header h1,
-        .header p {
+        .mp_header h1,
+        .mp_header p {
             display: inline;
         }
 
-        .arrow {
+        .mp_arrow {
             font-size: 32px;
             font-weight: bold;
             color: #000000;
         }
 
-        .weight-section {
+        .mp_weight-section {
             font-size: 26px;
             background-color: #d4eafc;
             border-radius: 10px;
@@ -65,7 +65,7 @@
             position: relative;
         }
 
-        .edit-icon {
+        .mp_edit-icon {
             position: absolute;
             top: 10px;
             right: 10px;
@@ -73,7 +73,7 @@
             font-size: 15px;
         }
 
-        .profile-icon {
+        .mp_profile-icon {
             position: absolute;
             top: 10px;
             right: 10px;
@@ -81,7 +81,7 @@
             font-size: 40px;
         }
 
-        .calories-section {
+        .mp_calories-section {
             font-size: 20px;
             background-color: #d4eafc;
             border-radius: 4%;
@@ -93,7 +93,7 @@
             position: relative;
         }
 
-        .checkmark {
+        .mp_checkmark {
             font-size: 20px;
             background-color: #075685;
             border-radius: 100%;
@@ -104,20 +104,20 @@
             text-align: center;
         }
 
-        .meal-item {
+        .mp_meal-item {
             font-size: 17px;
             margin-left: 10px;
             display: inline;
         }
 
-        .total-calories {
+        .mp_total-calories {
             font-size: 15px;
             margin-top: 5px;
             margin-left: 47px;
             margin-bottom: 10px;
         }
 
-        .plus-sign {
+        .mp_plus-sign {
             font-size: 23px;
             background-color: #fff;
             border-radius: 100%;
@@ -128,7 +128,7 @@
             text-align: center;
         }
 
-        .edit-breakfast-icon {
+        .mp_edit-breakfast-icon {
             position: absolute;
             top: 64px;
             right: 15px;
@@ -136,7 +136,7 @@
             font-size: 15px;
         }
 
-        .edit-lunch-icon {
+        .mp_edit-lunch-icon {
             position: absolute;
             top: 126px;
             right: 15px;
@@ -144,7 +144,7 @@
             font-size: 15px;
         }
 
-        .mood-section {
+        .mp_mood-section {
             font-size: 15px;
             background-color: #d4eafc;
             border-radius: 10px;
@@ -156,17 +156,17 @@
             position: relative;
         }
 
-        .mood-icons {
+        .mp_mood-icons {
             display: flex;
             justify-content: center;
             margin-bottom: -10px;
         }
 
-        .mood-icon-happy img {
+        .mp_mood-icon-happy img {
             width: 50px;
         }
 
-        .mood-icon-sad img {
+        .mp_mood-icon-sad img {
             width: 56px;
             margin-left: 30px;
             margin-right: 30px;
@@ -174,11 +174,11 @@
             margin-top: -2px;
         }
 
-        .mood-text {
+        .mp_mood-text {
             font-size: 18px;
         }
 
-        .plus-sign-mood {
+        .mp_plus-sign-mood {
             font-size: 40px;
             background-color: #075685;
             border-radius: 100%;
@@ -192,7 +192,7 @@
         }
 
 
-        .menu-section {
+        .mp_menu-section {
             position: fixed;
             bottom: 0;
             left: 0;
@@ -203,12 +203,12 @@
             justify-content: space-around;
         }
 
-        .menu-icon {
+        .mp_menu-icon {
             font-size: 30px;
             color: #000;
         }
 
-        .exercise-section {
+        .mp_exercise-section {
             font-size: 20px;
             background-color: #d4eafc;
             border-radius: 4%;
@@ -221,20 +221,20 @@
             margin-bottom: 70px;
         }
 
-        .exercise-item {
+        .mp_exercise-item {
             font-size: 17px;
             margin-left: 10px;
             display: inline;
         }
 
-        .total-exercises {
+        .mp_total-exercises {
             font-size: 15px;
             margin-top: 5px;
             margin-left: 47px;
             margin-bottom: 10px;
         }
 
-        .plus-sign-exercise {
+        .mp_plus-sign-exercise {
             font-size: 23px;
             background-color: #075685;
             border-radius: 100%;
@@ -245,7 +245,7 @@
             text-align: center;
         }
 
-        .edit-exercise-icon-1 {
+        .mp_edit-exercise-icon-1 {
             position: absolute;
             top: 66px;
             right: 15px;
@@ -253,7 +253,7 @@
             font-size: 15px;
         }
 
-        .edit-exercise-icon-2 {
+        .mp_edit-exercise-icon-2 {
             position: absolute;
             top: 117px;
             right: 15px;
@@ -261,7 +261,7 @@
             font-size: 15px;
         }
 
-        .exercise-add-more {
+        .mp_exercise-add-more {
             font-size: 20px;
             background-color: #075685;
             border-radius: 100%;
@@ -276,12 +276,12 @@
 </head>
 
 <body>
-    <div class="header">
-        <i class="fas fa-user-circle profile-icon"></i>
-        <span class="arrow"> &lt; </span>
+    <div class="mp_header">
+        <i class="fas fa-user-circle mp_profile-icon"></i>
+        <span class="mp_arrow"> &lt; </span>
         <h1 id="date"></h1>
         <h1>Metrics</h1>
-        <span class="arrow"> &gt; </span>
+        <span class="mp_arrow"> &gt; </span>
 
         <script>
             const dateElement = document.getElementById("date");
@@ -291,70 +291,70 @@
         </script>
     </div>
 
-    <div class="container">
-        <div class="section weight-section">
+    <div class="mp_container">
+        <div class="mp_section mp_weight-section">
             Today's Weight: 150 lbs
-            <i class="fas fa-edit edit-icon"></i>
+            <i class="fas fa-edit mp_edit-icon"></i>
         </div>
 
-        <div class="section calories-section">
-            <h2 class="section-title">Calories Tracker</h2>
-            <div class="checkmark">&#10003;</div> Breakfast:
-            <span class="meal-item">Banana, Yogurt</span>
-            <i class="fas fa-edit edit-breakfast-icon"></i>
-            <div class="total-calories">
+        <div class="mp_section mp_calories-section">
+            <h2 class="mp_section-title">Calories Tracker</h2>
+            <div class="mp_checkmark">&#10003;</div> Breakfast:
+            <span class="mp_meal-item">Banana, Yogurt</span>
+            <i class="fas fa-edit mp_edit-breakfast-icon"></i>
+            <div class="mp_total-calories">
                 540 cal
             </div>
-            <div class="checkmark">&#10003;</div> Lunch:
-            <span class="meal-item">Salad, Chicken, Rice</span>
-            <i class="fas fa-edit edit-lunch-icon"></i>
-            <div class="total-calories">
+            <div class="mp_checkmark">&#10003;</div> Lunch:
+            <span class="mp_meal-item">Salad, Chicken, Rice</span>
+            <i class="fas fa-edit mp_edit-lunch-icon"></i>
+            <div class="mp_total-calories">
                 700 cal
             </div>
-            <div class="plus-sign">+</div> Add a Meal
+            <div class="mp_plus-sign">+</div> Add a Meal
         </div>
 
-        <div class="section mood-section">
-            <h2 class="section-title">Mood Tracker</h2>
-            <div class="mood-icons">
-                <div class="mood-icon-happy">
+        <div class="mp_section mp_mood-section">
+            <h2 class="mp_section-title">Mood Tracker</h2>
+            <div class="mp_mood-icons">
+                <div class="mp_mood-icon-happy">
                     <img src="icons/happy_icon.png" alt="Happy Icon">
-                    <div class="mood-text">Morning</div>
+                    <div class="mp_mood-text">Morning</div>
                 </div>
-                <div class="mood-icon-sad">
+                <div class="mp_mood-icon-sad">
                     <img src="icons/sad_icon.png" alt="Sad Icon">
-                    <div class="mood-text">Afternoon</div>
+                    <div class="mp_mood-text">Afternoon</div>
                 </div>
-                <div class="mood-icon">
-                    <div class="plus-sign-mood">&#43;</div>
-                    <div class="mood-text">Add More</div>
+                <div class="mp_mood-icon">
+                    <div class="mp_plus-sign-mood">&#43;</div>
+                    <div class="mp_mood-text">Add More</div>
                 </div>
             </div>
         </div>
 
-        <div class="section exercise-section">
-            <h2 class="section-title">Exercise Tracker</h2>
-            <div class="checkmark">&#10003;</div> Morning Run:
-            <span class="exercise-item">3 miles</span>
-            <i class="fas fa-edit edit-exercise-icon-1"></i>
+        <div class="mp_section mp_exercise-section">
+            <h2 class="mp_section-title">Exercise Tracker</h2>
+            <div class="mp_checkmark">&#10003;</div> Morning Run:
+            <span class="mp_exercise-item">3 miles</span>
+            <i class="fas fa-edit mp_edit-exercise-icon-1"></i>
             <br>
             <br>
-            <div class="checkmark">&#10003;</div> Afternoon Yoga:
-            <span class="exercise-item">30 mins</span>
-            <i class="fas fa-edit edit-exercise-icon-2"></i>
+            <div class="mp_checkmark">&#10003;</div> Afternoon Yoga:
+            <span class="mp_exercise-item">30 mins</span>
+            <i class="fas fa-edit mp_edit-exercise-icon-2"></i>
             <br>
             <br>
-            <div class="plus-sign">+</div> Add More
+            <div class="mp_plus-sign">+</div> Add More
             <br>
         </div>
         
         
     </div>
 
-    <div class="menu-section">
-        <i class="fas fa-chart-bar menu-icon"></i>
-        <i class="fas fa-weight menu-icon"></i>
-        <i class="fas fa-users menu-icon"></i>
+    <div class="mp_menu-section">
+        <i class="fas fa-chart-bar mp_menu-icon"></i>
+        <i class="fas fa-weight mp_menu-icon"></i>
+        <i class="fas fa-users mp_menu-icon"></i>
     </div>
 </body>
 </html>
