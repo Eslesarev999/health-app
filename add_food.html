@@ -1,159 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="global.css" />
+    <link rel="stylesheet" type="text/css" href="add_food.css" />
     <link rel="stylesheet" href="Inter/Inter-VariableFont_slnt,wght.ttf">
     <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.min.css">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Health App</title>
-    <style>
-        
-        addf_body {
-            font-family: Inter, sans-serif;
-            font-size: 15px;
-            margin: 0;
-            padding: 0;
-            background-color: #F4F0EC;
-        }
-
-        .addf_header {
-            color: #075685;
-            text-align: center;
-            padding: 20px;
-            position: relative;
-            height: 20px;
-            line-height: 3;
-        }
-        input[type="checkbox"] {
-            display: none;
-        }
-        input[type="checkbox"]:checked + label::before {
-            transform: scale(1) rotateZ(0deg);
-        }
-
-        .addf_container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .addf_section {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .addf_section-title {
-            font-size: 24px;
-            margin-top: -8px;
-            text-align: center;
-        }
-
-        .addf_header h1,
-        .addf_header p {
-            display: inline;
-        }
-
-        .addf_arrow {
-            font-size: 32px;
-            font-weight: bold;
-            color: #000000;
-            position: absolute;
-            left: 30px;
-        }
-        .addf_arrow.right {
-            right: 30px; 
-            left: auto;
-        }
-    
-
-        /* Style for the checkmark */
-        .addf_arrow.right::after {
-            content: "\2714"; /* Unicode character for a checkmark */
-            font-family: Inter, sans-serif;
-            font-size: 32px;
-            font-weight: bold;
-            color: #000000;
-        }
-
-        .addf_food-table table {
-            width: 100%;
-            border-radius: 20px; /*??? maybe change to 10???-->rounds table edges*/
-            padding: 20px;
-            width: 90%;
-            margin: 40px auto 20px;
-            position: relative;
-            overflow: hidden;
-            border-collapse: collapse;
-        }
-
-        .addf_food-table td {
-            padding: 15px;
-            width: 50%;
-            text-align: center;
-            background-color: #d4eafc;
-            color: #075685;
-            height: 40px;
-        }
-
-        .addf_food-table td:not(:last-child) {
-            border-right: 1px solid #075685;
-        }
-
-        .addf_food-table tr:not(:last-child) td {
-            border-bottom: 1px solid #075685;
-        }
-
-        .addf_food-table td:first-child {
-            font-weight: bold;
-        }
-
-        .addf_profile-icon {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            color: #000000;
-            font-size: 40px;
-        }
-
-        .addf_menu-addf_section {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #FFF;
-            padding: 10px;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .addf_menu-icon {
-            font-size: 30px;
-            color: #000;
-        }
-
-        .addf_food-table input {
-            font-family: Inter, sans-serif;
-            font-size: 15px;
-            border: none;
-            background: transparent;
-            width: 100%;
-            color: #075685;
-            text-align: center;
-        }
-
-        input[type="checkbox"] {
-            display: none;
-        }
-    </style>
 </head>
 
-<addf_body>
-    <div class="addf_header">
+<body>
+    <div class="header">
         <input type="checkbox" id="12345" value="+"/>
         <label for="12345"></label>
 
-        <i class="fas fa-user-circle addf_profile-icon"></i>
         <span class="addf_arrow"> &lt; </span>
         <input type="checkbox" id="xd" value="+"/>
         <label for="figma"></label>
@@ -190,10 +52,11 @@
     </div>
 
     <!-- creates addf_menu with 3 icons at bottom of page -->
-    <div class="addf_menu-addf_section">
-        <i class="fas fa-chart-bar addf_menu-icon"></i>
-        <i class="fas fa-weight addf_menu-icon"></i>
-        <i class="fas fa-users addf_menu-icon"></i>
+    <div class="icon_menu">
+        <i class="fas fa-chart-bar"></i>
+        <i class="fas fa-weight"></i>
+        <i class="fas fa-users"></i>
     </div>
-</addf_body>
+</body>
+
 </html>
