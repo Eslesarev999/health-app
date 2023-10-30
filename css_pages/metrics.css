@@ -1,0 +1,230 @@
+.mp_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.mp_section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.mp_section-title {
+    font-size: 24px;
+    margin-top: -8px;
+    text-align: center;
+}
+
+.mp_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 49px;
+    margin-bottom: -36px;
+}
+
+.header-text-container h1 {
+    display: inline;
+    margin: 0;
+    color: #d4eafc;
+}
+
+.mp_arrow {
+    font-size: 32px;
+    font-weight: bold;
+    color: #d4eafc;
+    margin: 20px;
+}
+
+.mp_weight-section {
+    font-size: 26px;
+    background-color: #d4eafc;
+    border-radius: 10px;
+    padding: 20px;
+    color: #075685;
+    text-align: center;
+    width: 80%;
+    margin: 30px 0 20px;
+    position: relative;
+}
+
+.mp_edit-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #075685;
+    font-size: 15px;
+}
+
+.mp_profile-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #000000;
+    font-size: 40px;
+}
+
+.mp_calories-section {
+    font-size: 20px;
+    background-color: #d4eafc;
+    border-radius: 4%;
+    padding: 20px;
+    color: #075685;
+    text-align: left;
+    width: 80%;
+    margin: 10px 20px;
+    position: relative;
+}
+
+
+.mp_checkmark {
+    font-size: 20px;
+    background-color: #075685;
+    border-radius: 100%;
+    padding: 1px 8px;
+    color: #d4eafc;
+    display: inline-block;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.mp_meal-item {
+    font-size: 17px;
+    margin-left: 10px;
+    display: inline;
+}
+
+.mp_total-calories {
+    font-size: 15px;
+    margin-top: 5px;
+    margin-left: 47px;
+    margin-bottom: 10px;
+}
+
+.mp_plus-sign {
+    font-size: 23px;
+    background-color: #fff;
+    border-radius: 100%;
+    padding: 1px 8px;
+    color: #000;
+    display: inline-block;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.mp_edit-icon-1 {
+    color: #075685;
+    font-size: 25px;
+    margin-left: 400px;
+    position: relative;
+}
+
+.mp_mood-section {
+    font-size: 15px;
+    background-color: #d4eafc;
+    border-radius: 10px;
+    padding: 20px;
+    color: #075685;
+    text-align: center;
+    width: 80%;
+    margin: 30px 0 20px;
+    position: relative;
+}
+
+.mp_mood-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -10px;
+}
+
+.mp_mood-icon-happy img {
+    width: 50px;
+}
+
+.mp_mood-icon-sad img {
+    width: 56px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: -3px;
+    margin-top: -2px;
+}
+
+.mp_mood-text {
+    font-size: 18px;
+}
+
+.mp_plus-sign-mood {
+    font-size: 40px;
+    background-color: #075685;
+    border-radius: 100%;
+    padding: 0px 12px;
+    color: #d4eafc;
+    display: inline-block;
+    margin-right: 10px;
+    text-align: center;
+    margin-top: -2px;
+    margin-bottom: 8px;
+}
+
+.mp_exercise-section {
+    font-size: 20px;
+    background-color: #d4eafc;
+    border-radius: 4%;
+    padding: 20px;
+    color: #075685;
+    text-align: left;
+    width: 80%;
+    margin: 10px 0 20px;
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.mp_exercise-item {
+    font-size: 17px;
+    margin-left: 10px;
+    display: inline;
+}
+
+.mp_total-exercises {
+    font-size: 15px;
+    margin-top: 5px;
+    margin-left: 47px;
+    margin-bottom: 10px;
+}
+
+.mp_plus-sign-exercise {
+    font-size: 23px;
+    background-color: #075685;
+    border-radius: 100%;
+    padding: 1px 8px;
+    color: #d4eafc;
+    display: inline-block;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.mp_edit-exercise-icon {
+    color: #075685;
+    font-size: 25px;
+    margin-left: 400px;
+    position: relative;
+}
+
+.mp_edit-exercise-icon-2 {
+    position: absolute;
+    top: 117px;
+    right: 15px;
+    color: #075685;
+    font-size: 15px;
+}
+
+.mp_exercise-add-more {
+    font-size: 20px;
+    background-color: #075685;
+    border-radius: 100%;
+    padding: 1px 8px;
+    color: #d4eafc;
+    display: inline-block;
+    text-align: center;
+}
