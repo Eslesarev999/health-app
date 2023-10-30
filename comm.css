@@ -1,0 +1,100 @@
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked + label::before {
+    transform: scale(1) rotateZ(0deg);
+}
+
+.c_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.c_section {
+    margin-top: 60px; /* edited to add space between add food heading and box */
+    text-align: center;
+}
+
+.c_section-title {
+    font-size: 24px;
+    margin-top: -8px;
+    text-align: center;
+}
+
+.c_header h1,
+.c_header p {
+    display: inline;
+    color: #FFFFFF; /* Set the header text color to white */
+}
+
+.c_arrow {
+    font-size: 32px;
+    font-weight: bold;
+    color: #FFFFFF;
+    position: absolute;
+    left: 30px;
+}
+
+.c_arrow.right {
+    right: 30px;
+    left: auto;
+}
+
+/* Style for the checkmark */
+.c_arrow.right::after {
+    content: "\2714"; /* Unicode character for a checkmark */
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.c_message1 table {
+    display: none; /* Hide the table */
+}
+
+.c_message1 {
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px;
+    width: 80%;
+    margin: 70px auto;
+    position: relative;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    border: 1px solid #075685;
+    text-align: left; /* Set text alignment for the entire box to left */
+}
+
+.c_message1 .fas.fa-user-circle {
+    color: #000000;
+    font-size: 60px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    margin-right: 20px;
+}
+
+.c_message1 p {
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    color: #075685;
+    text-align: left;
+    margin-left: 80px
+}
+
+
+/* Remove the previous styling for table cells and inputs */
+.c_message1 td,
+.c_message1 input {
+    display: none;
+}
+
+
+input[type="checkbox"] {
+    display: none;
+}
