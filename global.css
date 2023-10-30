@@ -10,13 +10,13 @@ body {
     font-size: 15px;
     margin: 0;
     padding: 0;
-    background-color: #F4F0EC;
+    background-color: #07334B;
     /* overflow: hidden; */
     overflow: scroll;
 }
 
 .header {
-    color: #075685;
+    color: #FFFFFF;
     text-align: center;
     padding: 20px;
     position: relative;
