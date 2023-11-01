@@ -21,54 +21,63 @@ document.addEventListener("DOMContentLoaded", function () {
         const editButton = document.createElement("i");
         editButton.className = "fas fa-edit mp_edit-exercise-icon";
 
-        // Append the checkmark, exercise name, and edit button to the exercise container
+        // Create an input field for editing exercise duration
+        const exerciseInput = document.createElement("span");
+        exerciseInput.textContent = "0 mins";
+        exerciseInput.className = "mp_exercise-input";
+
+        // Append the checkmark, exercise name, edit button, and exercise input to the exercise container
         exerciseContainer.appendChild(checkmark);
         exerciseContainer.appendChild(exerciseName);
         exerciseContainer.appendChild(editButton);
+        exerciseContainer.appendChild(exerciseInput);
 
-        // Create the total exercise duration container
-        const totalExerciseDuration = document.createElement("div");
-        totalExerciseDuration.className = "mp_total-exercises";
+        // Append a line break to separate exercises
+        exerciseContainer.appendChild(document.createElement("br"));
+        exerciseContainer.appendChild(document.createElement("br"));
 
-        // Create an input field for editing exercise duration
-        const exerciseInput = document.createElement("input");
-        exerciseInput.type = "text";
-        exerciseInput.value = "0 mins";
-        exerciseInput.className = "exercise-input";
-
-        // Append the exercise input field to the total exercise duration container
-        totalExerciseDuration.appendChild(exerciseInput);
-
-        // Append the exercise container and total exercise duration to the exercise section
+        // Append the exercise container to the exercise section
         const exerciseSection = document.querySelector(".mp_exercise-section");
         exerciseSection.insertBefore(exerciseContainer, addExerciseButton);
-        exerciseSection.insertBefore(totalExerciseDuration, addExerciseButton);
 
-        // Function to handle editing the exercise name for this exercise
+        // Function to handle editing the exercise name and duration for this exercise
         editButton.addEventListener("click", function () {
-            const inputField = document.createElement("input");
-            inputField.type = "text";
-            inputField.value = exerciseName.textContent;
+            // Edit the exercise title
+            const titleInputField = document.createElement("input");
+            titleInputField.type = "text";
+            titleInputField.value = exerciseName.textContent;
 
-            inputField.addEventListener("blur", function () {
-                exerciseName.textContent = inputField.value;
+            titleInputField.addEventListener("blur", function () {
+                exerciseName.textContent = titleInputField.value;
+            });
+
+            titleInputField.addEventListener("keyup", function (event) {
+                if (event.key === "Enter") {
+                    exerciseName.textContent = titleInputField.value;
+                }
+            });
+
+            // Edit the exercise duration
+            const durationInputField = document.createElement("input");
+            durationInputField.type = "text";
+            durationInputField.value = exerciseInput.textContent;
+
+            durationInputField.addEventListener("blur", function () {
+                exerciseInput.textContent = durationInputField.value;
+            });
+
+            durationInputField.addEventListener("keyup", function (event) {
+                if (event.key === "Enter") {
+                    exerciseInput.textContent = durationInputField.value;
+                }
             });
 
             exerciseName.textContent = "";
-            exerciseName.appendChild(inputField);
+            exerciseName.appendChild(titleInputField);
+            exerciseInput.textContent = "";
+            exerciseInput.appendChild(durationInputField);
 
-            inputField.focus();
-        });
-
-        // Function to handle editing exercise duration
-        exerciseInput.addEventListener("blur", function () {
-            exerciseInput.value = exerciseInput.value.replace(/[^0-9]/g, ""); // Remove non-numeric characters
-            const inputNumber = parseInt(exerciseInput.value);
-            if (!isNaN(inputNumber)) {
-                totalExerciseDuration.textContent = inputNumber + " mins";
-            } else {
-                totalExerciseDuration.textContent = "0 mins";
-            }
+            titleInputField.focus();
         });
     });
 });
