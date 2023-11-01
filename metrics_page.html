@@ -6,19 +6,21 @@
     <link rel="stylesheet" type="text/css" href="css_pages/metrics.css" />
     <link rel="stylesheet" href="Inter/Inter-VariableFont_slnt,wght.ttf">
     <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.min.css">
-    <script src="metrics_interactivity/calories_counter.js"></script>
+    <script src="metrics_interactivity/add_meal_redirect.js"></script>
     <script src="metrics_interactivity/exercise_counter.js"></script>
     <script src="metrics_interactivity/weight.js"></script>
+    <script src="metrics_interactivity/mood.js"></script>
     <script src="global_interactivity.js"></script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Health App</title>
+    
 </head>
 
 <body>
+    <img class="profile-icon" src="icons/profile_pic.png" height="36px" width="36px">
     <div class="mp_header">
-        <img class="profile-icon" src="icons/profile_pic.png" height="36px" width="36px">
         <span class="mp_arrow"> &lt; </span>
         <div class="header-text-container">
             <h1 id="date"></h1>
@@ -36,36 +38,57 @@
 
     <div class="mp_container">
         <div class="mp_section mp_weight-section">
-            Today's Weight: <span id="weight-value"> lbs</span>
+            Today's Weight: <span id="weight-value">150 lbs</span>
             <i class="fas fa-edit mp_edit-icon"></i>
         </div>
         
-
         <div class="mp_section mp_calories-section">
             <h2 class="mp_section-title">Calories Tracker</h2>
+            <div class="mp_checkmark">&#10003;</div> Breakfast:
+            <span class="mp_meal-item">Banana, Yogurt</span>
+            <i class="fas fa-edit mp_edit-breakfast-icon" id="edit-icon-1"></i>
+            <div class="mp_total-calories">
+                540 cal
+            </div>
+            <div class="mp_checkmark">&#10003;</div> Lunch:
+            <span class="mp_meal-item">Salad, Chicken, Rice</span>
+            <i class="fas fa-edit mp_edit-lunch-icon" id="edit-icon-2"></i>
+            <div class="mp_total-calories">
+                700 cal
+            </div>
             <div class="mp_plus-sign" id="add-meal-button">+</div> Add a Meal
         </div>
 
         <div class="mp_section mp_mood-section">
             <h2 class="mp_section-title">Mood Tracker</h2>
-            <div class="mp_mood-icons">
+            <div class="mp_mood-icons" id="moodIcons">
                 <div class="mp_mood-icon-happy">
-                    <img src="icons/happy_icon.png" alt="Happy Icon">
+                    <img src="icons/Happy (1).png" alt="Happy Icon" class="mood-option" onclick="selectMood('happy')">
                     <div class="mp_mood-text">Morning</div>
                 </div>
                 <div class="mp_mood-icon-sad">
-                    <img src="icons/sad_icon.png" alt="Sad Icon">
+                    <img src="icons/Sad (1).png" alt="Sad Icon" class="mood-option" onclick="selectMood('sad')">
                     <div class="mp_mood-text">Afternoon</div>
                 </div>
-                <div class="mp_mood-icon">
-                    <div class="mp_plus-sign-mood">&#43;</div>
-                    <div class="mp_mood-text">Add More</div>
+                <div class="mp_plus-sign-mood" id="add-mood-button">
+                    <div class="mp_plus-sign-icon">+</div>
+                    <!-- <div class="mp_mood-text">Add More</div> -->
                 </div>
             </div>
         </div>
 
         <div class="mp_section mp_exercise-section">
             <h2 class="mp_section-title">Exercise Tracker</h2>
+            <div class="mp_checkmark">&#10003;</div> Morning Run:
+            <span class="mp_exercise-item">1 hr</span>
+            <i class="fas fa-edit mp_edit-exercise-icon-1"></i>
+            <br>
+            <br>
+            <div class="mp_checkmark">&#10003;</div> Cycling Class:
+            <span class="mp_exercise-item">45 mins</span>
+            <i class="fas fa-edit mp_edit-exercise-icon-2"></i>
+            <br>
+            <br>
             <div class="mp_plus-sign" id="add-exercise-button">+</div> Add More
         </div>
         
