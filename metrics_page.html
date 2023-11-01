@@ -9,6 +9,8 @@
     <script src="metrics_interactivity/calories_counter.js"></script>
     <script src="metrics_interactivity/exercise_counter.js"></script>
     <script src="metrics_interactivity/weight.js"></script>
+    <script src="global_interactivity.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Health App</title>
@@ -16,7 +18,7 @@
 
 <body>
     <div class="mp_header">
-        <i class="fas fa-user-circle profile-icon"></i>
+        <img class="profile-icon" src="icons/profile_pic.png" height="36px" width="36px">
         <span class="mp_arrow"> &lt; </span>
         <div class="header-text-container">
             <h1 id="date"></h1>
@@ -71,9 +73,9 @@
     </div>
 
     <div class="icon_menu">
-        <i class="fas fa-chart-bar"></i>
-        <i class="fas fa-weight"></i>
-        <i class="fas fa-users"></i>
+        <i id="chartIcon" class="fas fa-chart-bar"></i>
+        <i id="weightIcon" class="fas fa-weight"></i>
+        <i id="usersIcon" class="fas fa-users"></i>
     </div>
 </body>
 </html>

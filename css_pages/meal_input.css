@@ -1,48 +1,50 @@
 .meal_header {
-    color: #075685;
-    text-align: center;
+    color: #FFFFFF;
     padding: 20px;
-    position: relative;
     height: 20px;
     line-height: 3;
+    margin-bottom: 35px;
+    display: flex;
 }
 
 .meal_header h1 {
     display: inline;
-}
-
-.meal_header {
-    margin-bottom: 35px;
+    margin: 0 auto;
 }
 
 #meal_arrow {
-    font-size: 32px;
-    font-weight: bold;
-    color: #000000;
-    margin-left: auto;
+    font-size: 30px;
+    color: #FFFFFF;
+    margin-left: 0;
 }
 
 .meal_container {
     display: flex; 
-    justify-content: space-between; 
-    align-items: center;
+    justify-content: flex-end; 
 }
 
 .meal_search-section {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     margin-top: 25px;
+    width: 100%;
 }
 
 #meal_searchbar {
-    background-color: #D8EDFE;
+    background-color: #FFFFFF;
     height: 35px;
     width: 295px;
     border-radius: 10px;
     border: transparent;
     margin-left: 8px;
     margin-right: 8px;
+}
+
+#clear_search {
+    border-radius: 10px;
+    background-color: transparent;
+    border-color: transparent;
 }
 
 ::placeholder { /* placeholder from search bar */
@@ -78,7 +80,7 @@
 }
 
 .meal_food_history {
-    background-color: #D8EDFE;
+    background-color: #FFFFFF;
     border-radius: 10px;
     width: 373px;
     height: 650px;
@@ -86,17 +88,31 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    padding: 5px;
 }
 
 .meal_food_item {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    margin: 10px;
+    /* justify-content: space-between;
     padding: 10px;
-    color: #075685;
+    color: #075685; */
+}
+
+.food-name {
+    flex-grow: 1;
+    max-width: 150px;
+    word-wrap: break-word;
+}
+.meal_calories {
+    margin-left: 5px;
 }
 
 .meal_plus-sign {
     font-size: 23px;
+    margin-left: 10px;
     background-color: #fff;
     border-radius: 100%;
     padding: 1px 8px;
