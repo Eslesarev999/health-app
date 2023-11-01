@@ -27,19 +27,19 @@
 .header-text-container h1 {
     display: inline;
     margin: 0;
-    color: #d4eafc;
+    color: #ffffff;
 }
 
 .mp_arrow {
     font-size: 32px;
     font-weight: bold;
-    color: #d4eafc;
+    color: #ffffff;
     margin: 20px;
 }
 
 .mp_weight-section {
     font-size: 26px;
-    background-color: #d4eafc;
+    background-color: #ffffff;
     border-radius: 10px;
     padding: 20px;
     color: #075685;
@@ -54,7 +54,7 @@
     top: 10px;
     right: 10px;
     color: #075685;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .mp_profile-icon {
@@ -67,7 +67,7 @@
 
 .mp_calories-section {
     font-size: 20px;
-    background-color: #d4eafc;
+    background-color: #ffffff;
     border-radius: 4%;
     padding: 20px;
     color: #075685;
@@ -80,10 +80,10 @@
 
 .mp_checkmark {
     font-size: 20px;
-    background-color: #075685;
+    background-color: #3687b8;
     border-radius: 100%;
     padding: 1px 8px;
-    color: #d4eafc;
+    color: #ffffff;
     display: inline-block;
     margin-right: 10px;
     text-align: center;
@@ -104,31 +104,38 @@
 
 .mp_plus-sign {
     font-size: 23px;
-    background-color: #fff;
+    background-color: #3687b8;
     border-radius: 100%;
     padding: 1px 8px;
-    color: #000;
+    color: #ffffff;
     display: inline-block;
     margin-right: 10px;
     text-align: center;
 }
 
-.mp_edit-icon-1 {
+.mp_edit-breakfast-icon {
     color: #075685;
-    font-size: 25px;
-    margin-left: 400px;
-    position: relative;
+    font-size: 20px;
+    right: 10px;
+    position: absolute;
+}
+
+.mp_edit-lunch-icon {
+    color: #075685;
+    font-size: 20px;
+    right: 10px;
+    position: absolute;
 }
 
 .mp_mood-section {
     font-size: 15px;
-    background-color: #d4eafc;
+    background-color: #ffffff;
     border-radius: 10px;
     padding: 20px;
     color: #075685;
     text-align: center;
     width: 80%;
-    margin: 30px 0 20px;
+    margin: 30px 0 30px;
     position: relative;
 }
 
@@ -139,37 +146,60 @@
 }
 
 .mp_mood-icon-happy img {
-    width: 50px;
+    width: 56px;
+    margin-right: 20px;
+    position: relative;
 }
 
 .mp_mood-icon-sad img {
     width: 56px;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-bottom: -3px;
-    margin-top: -2px;
+    margin-right: 20px;
+    position: relative;
 }
 
 .mp_mood-text {
-    font-size: 18px;
+    font-size: 16px; /* Adjust the size as needed */
+    text-align: center; /* Center the text */
+    color: #3687b8;
+    margin-right: 20px;
 }
 
 .mp_plus-sign-mood {
-    font-size: 40px;
-    background-color: #075685;
-    border-radius: 100%;
-    padding: 0px 12px;
-    color: #d4eafc;
-    display: inline-block;
-    margin-right: 10px;
-    text-align: center;
-    margin-top: -2px;
-    margin-bottom: 8px;
+    color: #ffffff;
+    width: 56px;
+    margin-right: 20px;
+    margin-top: 15px;
+    position: relative;
+    font-size: 33px;
 }
+
+.mp_new-mood-icon {
+    width: 56px;
+    margin-right: 40px;
+}
+
+.mp_modal {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.mp_plus-sign-icon {
+    background-color: #3687b8;
+    border-radius: 50%;
+    padding: 5px;
+    width: 30px; 
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: -6px;
+}
+
 
 .mp_exercise-section {
     font-size: 20px;
-    background-color: #d4eafc;
+    background-color: #ffffff;
     border-radius: 4%;
     padding: 20px;
     color: #075685;
@@ -181,7 +211,13 @@
 }
 
 .mp_exercise-item {
-    font-size: 17px;
+    font-size: 20px;
+    margin-left: 5px;
+    display: inline;
+}
+
+.mp_exercise-input {
+    font-size: 20px;
     margin-left: 10px;
     display: inline;
 }
@@ -195,10 +231,10 @@
 
 .mp_plus-sign-exercise {
     font-size: 23px;
-    background-color: #075685;
+    background-color: #07334b;
     border-radius: 100%;
-    padding: 1px 8px;
-    color: #d4eafc;
+    padding: 0px 8px;
+    color: #ffffff;
     display: inline-block;
     margin-right: 10px;
     text-align: center;
@@ -206,25 +242,32 @@
 
 .mp_edit-exercise-icon {
     color: #075685;
-    font-size: 25px;
-    margin-left: 400px;
-    position: relative;
+    right: 10px;
+    position: absolute;
+    font-size: 20px;
+}
+
+.mp_edit-exercise-icon-1 {
+    color: #075685;
+    right: 10px;
+    position: absolute;
+    font-size: 20px;
 }
 
 .mp_edit-exercise-icon-2 {
     position: absolute;
     top: 117px;
-    right: 15px;
+    right: 10px;
     color: #075685;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .mp_exercise-add-more {
     font-size: 20px;
-    background-color: #075685;
+    background-color: #07334b;
     border-radius: 100%;
     padding: 1px 8px;
-    color: #d4eafc;
+    color: #ffffff;
     display: inline-block;
     text-align: center;
 }
