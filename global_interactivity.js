@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     usersIcon.addEventListener('click', () => {
-        // Redirect to the specific HTML page for users
         window.location.href = 'community.html'; //doesn't currently exist
     });
 });

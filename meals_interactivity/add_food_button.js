@@ -5,7 +5,6 @@ function handleAddFoodButtonClick() {
 }
 
 function handleBackButtonClick() {
-    // Replace 'another_page.html' with the URL of the page you want to navigate to
     window.location.href = 'metrics_page.html';
 }
 
@@ -29,7 +28,7 @@ function resetListItems() {
     const foodList = document.getElementById('foodList');
     const foodItems = foodList.getElementsByTagName('li');
     for (let i = 0; i < foodItems.length; i++) {
-        foodItems[i].style.display = ''; // Reset to default display value (usually 'list-item')
+        foodItems[i].style.display = ''; // Reset to default display value
     }
 }
 
@@ -42,7 +41,7 @@ function filterListItems(searchText) {
         const foodName = foodItem.textContent.toLowerCase();
 
         if (foodName.includes(searchText)) {
-            foodItem.style.display = ''; // Reset to default display value (usually 'list-item')
+            foodItem.style.display = '';
         } else {
             foodItem.style.display = 'none';
         }
