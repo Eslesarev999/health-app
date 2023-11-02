@@ -5,29 +5,57 @@ input[type="checkbox"] {
 input[type="checkbox"]:checked + label::before {
     transform: scale(1) rotateZ(0deg);
 }
+.c_section {
+    margin-top: 20px; 
+    text-align: center;
+}
+.c_section {
+    margin-top: 20px; /* Adjust this value to control the spacing */
+    text-align: center;
+}
+.c_section:first-child {
+    margin-top: 60px; /* Adjust this value to control the spacing */
+}
+
+.c_message1 {
+    margin-bottom: 20px; /* Adjust this value to control the spacing */
+}
+
+
+.c_message1 {
+    margin-bottom: 20px; /* Adjust this value to control the spacing */
+}
 
 .c_container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
+
 }
 
 .c_section {
-    margin-top: 60px; /* edited to add space between add food heading and box */
+    margin-top: 80px; /* edited to add space between add food heading and box */
     text-align: center;
+
+    
 }
 
 .c_section-title {
     font-size: 24px;
     margin-top: -8px;
+    
     text-align: center;
+    
 }
 
 .c_header h1,
 .c_header p {
     display: inline;
-    color: #FFFFFF; /* Set the header text color to white */
+    color: #FFFFFF;
+    padding: 30px;
+    margin-bottom: 30px;
+
 }
 
 .c_arrow {
@@ -53,15 +81,29 @@ input[type="checkbox"]:checked + label::before {
 }
 
 .c_message1 table {
+    margin-top: 30px;
     display: none; /* Hide the table */
 }
 
+/* .c_message1 {
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px;
+    width: 80%;
+    margin: 30px auto;
+    position: relative;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    border: 1px solid #075685;
+    text-align: left; 
+} */
+/*HERERERE MAKES IT SPREAD OUT*/
 .c_message1 {
     width: 100%;
     border-radius: 20px;
     padding: 20px;
     width: 80%;
-    margin: 70px auto;
+    margin: 20px auto;
     position: relative;
     overflow: hidden;
     background-color: #FFFFFF;
