@@ -50,7 +50,7 @@ function selectMood(mood) {
     img.alt = `${mood} Icon`;
 
     const moodText = document.createElement("div");
-    moodText.className = "mp_mood-text";
+    moodText.className = "mp_mood-text-new";
     moodText.textContent = "Evening";
 
     newMoodDiv.appendChild(img);

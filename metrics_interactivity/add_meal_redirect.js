@@ -5,14 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const editMealButton2 = document.getElementById("edit-icon-2");
 
     addMealButton.addEventListener("click", function () {
-        window.location.href = "add_food.html";
+        window.location.href = "meal_input.html";
     });
 
     editMealButton1.addEventListener("click", function () {
-        window.location.href = "add_food.html";
+        window.location.href = "meal_input.html";
     });
 
     editMealButton2.addEventListener("click", function () {
-        window.location.href = "add_food.html";
+        window.location.href = "meal_input.html";
     });
 });

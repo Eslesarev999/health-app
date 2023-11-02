@@ -10,6 +10,7 @@
     <script src="metrics_interactivity/exercise_counter.js"></script>
     <script src="metrics_interactivity/weight.js"></script>
     <script src="metrics_interactivity/mood.js"></script>
+    <script src="metrics_interactivity/arrow_redirect.js"></script>
     <script src="global_interactivity.js"></script>
 
     <meta charset="UTF-8">
@@ -21,12 +22,12 @@
 <body>
     <img class="profile-icon" src="icons/profile_pic.png" height="36px" width="36px">
     <div class="mp_header">
-        <span class="mp_arrow"> &lt; </span>
+        <span class="mp_arrow" id="left-arrow"> &lt; </span>
         <div class="header-text-container">
             <h1 id="date"></h1>
             <h1> Metrics </h1>
         </div>
-        <span class="mp_arrow"> &gt; </span>
+        <span class="mp_arrow" id="right-arrow"> &gt; </span>
 
         <script>
             const dateElement = document.getElementById("date");

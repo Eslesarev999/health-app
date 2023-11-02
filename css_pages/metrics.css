@@ -158,10 +158,17 @@
 }
 
 .mp_mood-text {
-    font-size: 16px; /* Adjust the size as needed */
-    text-align: center; /* Center the text */
+    font-size: 16px; 
+    text-align: center; 
     color: #3687b8;
     margin-right: 20px;
+}
+
+.mp_mood-text-new {
+    font-size: 16px; 
+    text-align: center; 
+    color: #3687b8;
+    margin-right: 33px;
 }
 
 .mp_plus-sign-mood {
@@ -173,13 +180,13 @@
     font-size: 33px;
 }
 
-.mp_new-mood-icon {
+.mp_new-mood-icon img {
     width: 56px;
     margin-right: 40px;
 }
 
-.mp_modal {
-    width: 20px;
+.mp_modal img {
+    width: 56px;
     margin-right: 10px;
 }
 
