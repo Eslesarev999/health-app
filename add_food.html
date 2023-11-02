@@ -11,49 +11,179 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Health App</title>
+    <style>
+        .addf_container {
+            color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .addf_section {
+            color: #FFFFFF;
+            text-align: center;
+        }
+
+        .addf_section-title {
+            color: #FFFFFF;
+            font-size: 24px;
+            margin: 0;
+            text-align: center;
+        }
+
+        .addf_header h1,
+        .addf_header p {
+            color: #FFFFFF;
+            padding: 0;
+            height: 20px;
+            line-height: 3;
+            display: flex;
+            margin: 0;
+        }
+
+        .addf_arrow {
+            font-size: 30px;
+            /* font-weight: bold; */
+            color: #FFFFFF;
+            position: absolute;
+            margin-left: 0; /* Align the arrow with the heading */
+        }
+
+        .addf_arrow.right {
+            right: 30px;
+            left: auto;
+        }
+
+        .addf_food-table-container {
+            width: 70%; /* Adjust the width as needed */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 40px auto 20px;
+        }
+
+        .addf_food-table table {
+            width: 100%;
+            border-radius: 20px;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            border-collapse: collapse;
+            table-layout: fixed; /* Added to make the table more responsive */
+        }
+
+        .addf_food-table td {
+            padding: 15px;
+            width: 50%;
+            text-align: center;
+            background-color: #FFFFFF;
+            color: #075685;
+            height: 40px;
+        }
+
+        .addf_food-table td:not(:last-child) {
+            border-right: 1px solid #075685;
+        }
+
+        .addf_food-table tr:not(:last-child) td {
+            border-bottom: 1px solid #075685;
+        }
+
+        .addf_food-table td:first-child {
+            font-weight: bold;
+        }
+
+        .addf_food-table input {
+            font-family: Inter, sans-serif;
+            font-size: 15px;
+            border: none;
+            background: transparent;
+            width: 100%;
+            color: #075685;
+            text-align: center;
+        }
+
+        .addf_done_div {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .addf_done_button {
+            height: 24px;
+            width: 96px; /* Adjust the width as needed */
+            background-color: #FFFFFF;
+            border-radius: 50px;
+            border-color: #000000;
+            color: #075685;
+            font-family: Inter, sans-serif;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="header">
-        <input type="checkbox" id="12345" value="+"/>
-        <label for="12345"></label>
-
-        <span class="addf_arrow"> &lt; </span>
-        <input type="checkbox" id="xd" value="+"/>
-        <label for="figma"></label>
-        <label for="sketch"></label>
-        <label for="xd"></label>
-        <span class="addf_arrow right"></span> <!-- Removed the > and added the checkmark style -->
-        <h1 id="date"></h1>
-        <h1>Add Food</h1>
+    <div class="addf_profile-icon">
+        <img class="profile-icon" src="icons/profile_pic.png" height="36px" width="36px">
     </div>
 
-    <div class="addf_section addf_food-table">
-        <table>
-            <tr>
-                <td>Name</td>
-                <td><input type="text" id="addf_foodName" placeholder="Enter food name"></td>
-            </tr>
-            <tr>
-                <td>Calories</td>
-                <td><input type="text" id="calories" placeholder="Enter calories"></td>
-            </tr>
-            <tr>
-                <td>Total fat (g)</td>
-                <td><input type="text" id="fat" placeholder="Enter total fat"></td>
-            </tr>
-            <tr>
-                <td>Total Carbohydrate (g)</td>
-                <td><input type="text" id="carbs" placeholder="Enter total carbs"></td>
-            </tr>
-            <tr>
-                <td>Protein (g)</td>
-                <td><input type="text" id="protein" placeholder="Enter protein"></td>
-            </tr>
-        </table>
+    <div class="addf_container">
+        <div class="addf_section">
+            <div class="header">
+                <input type="checkbox" id="12345" value="+"/>
+                <label for="12345"></label>
+
+                <span class="addf_arrow"> &lt; </span>
+                <input type="checkbox" id="xd" value="+"/>
+                <label for="figma"></label>
+                <label for="sketch"></label>
+                <label for="xd"></label>
+                <span class="addf_arrow right"></span>
+                <h1 id="date"></h1>
+                <h1>Add Food</h1>
+            </div>
+
+            <div class="addf_food-table-container">
+                <div class="addf_food-table">
+                    <table>
+                        <tr>
+                            <td>Name</td>
+                            <td><input type="text" id="addf_foodName" placeholder="Enter food"></td>
+                        </tr>
+                        <tr>
+                            <td>Calories</td>
+                            <td><input type="text" id="calories" placeholder="Enter calories"></td>
+                        </tr>
+                        <tr>
+                            <td>Total fat (g)</td>
+                            <td><input type="text" id="fat" placeholder="Enter fat"></td>
+                        </tr>
+                        <tr>
+                            <td>Total Carbohydrate (g)</td>
+                            <td><input type="text" id="carbs" placeholder="Enter carbs"></td>
+                        </tr>
+                        <tr>
+                            <td>Protein (g)</td>
+                            <td><input type="text" id="protein" placeholder="Enter protein"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="addf_done_div">
+                    <button class="addf_done_button">Done</button>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- creates addf_menu with 3 icons at bottom of page -->
     <div class="icon_menu">
         <i id="chartIcon" class="fas fa-chart-bar"></i>
         <i id="weightIcon" class="fas fa-weight"></i>
