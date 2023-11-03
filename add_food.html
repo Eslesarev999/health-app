@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" href="css_pages/add_food.css" />
     <link rel="stylesheet" href="Inter/Inter-VariableFont_slnt,wght.ttf">
     <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.min.css">
+    <script src="add_food_interactivity/addf_arrow_redirect.js"></script>
+    <script src="add_food_interactivity/addf_done_button.js"></script>
     <script src="global_interactivity.js"></script>
 
     <meta charset="UTF-8">
@@ -141,7 +143,9 @@
                 <input type="checkbox" id="12345" value="+"/>
                 <label for="12345"></label>
 
-                <span class="addf_arrow"> &lt; </span>
+                <!-- <span class="addf_arrow"> &lt; </span> -->
+                <span class="addf_arrow" id="left-arrow"> &lt; </span>
+
                 <input type="checkbox" id="xd" value="+"/>
                 <label for="figma"></label>
                 <label for="sketch"></label>
@@ -178,17 +182,68 @@
                 </div>
 
                 <div class="addf_done_div">
-                    <button class="addf_done_button">Done</button>
+                    <button class="addf_done_button" id="done_button">Done</button>
+                    <!-- <span class="addf_arrow" id="left-arrow"> &lt; </span> -->
+
                 </div>
             </div>
         </div>
     </div>
+
 
     <div class="icon_menu">
         <i id="chartIcon" class="fas fa-chart-bar"></i>
         <i id="weightIcon" class="fas fa-weight"></i>
         <i id="usersIcon" class="fas fa-users"></i>
     </div>
+
+
+
+    <!-- Other HTML elements and content above this point -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const doneButton = document.getElementById("done_button");
+    
+        doneButton.addEventListener("click", function () {
+            // Get user input
+            const foodName = document.getElementById("addf_foodName").value;
+            const calories = document.getElementById("calories").value;
+            const fat = document.getElementById("fat").value;
+            const carbs = document.getElementById("carbs").value;
+            const protein = document.getElementById("protein").value;
+    
+            // Create an object to represent the food entry
+            const foodEntry = {
+                name: foodName,
+                calories: calories,
+                fat: fat,
+                carbs: carbs,
+                protein: protein
+            };
+    
+            // Check if there's existing data in local storage
+            const existingData = localStorage.getItem("foodHistory");
+            let foodHistory = [];
+    
+            if (existingData) {
+                foodHistory = JSON.parse(existingData);
+            }
+    
+            // Add the new entry to the food history
+            foodHistory.push(foodEntry);
+    
+            // Store the updated food history in local storage
+            localStorage.setItem("foodHistory", JSON.stringify(foodHistory));
+    
+            // Redirect to meal_input.html
+            window.location.href = "meal_input.html";
+        });
+    });
+    </script>
+    
+    <!-- Rest of your HTML content below this point -->
+    
 </body>
 
 </html>
