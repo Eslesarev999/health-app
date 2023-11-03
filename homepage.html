@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.min.css">
 <script src="global_interactivity.js"></script>
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,31 +15,38 @@
 </head>
 <body>
 
-  
-    <div id = "H_outer">
     <img class="profile-icon" src="icons/profile_pic.png" height="36px" width="36px">
-
+    <div class="container">
       <h1 id = "header">
         Welcome Back, <strong><span class="H_bold-name">Susan Smith</span></strong>!
     </h1> 
-
+  </div>
        <div id ="H_community">
         <p id = "H_words">Community: <b>1 new message!</b> </p>
         </div>
 
-        <div id = "H_steps-dv"> 
-           
-          <!-- Want to put plus sign parrallel as Daily steps title but on the upper right hand side as opposed to where the daily steps one is, on the upper left side of the div -->
-           
+        
+
+      <div id = "H_steps-dv"> 
           <div class="H_title-container">
             <p id="H_basic-font">Daily Steps</p>
-            <span id="H_plus">+</span>
+
+            <div id="H_add-steps">
+              <span id="H_plus">+</span>
+              <!-- Dropdown for selecting steps -->
+              <div id="H_manual-entry" style="display: none;">
+                <input type="number" id="H_manual-target" placeholder="Enter target steps" min="1"><br>
+                <input type="number" id="H_manual-steps" placeholder="Enter steps taken" min="1">
+                <button id="H_confirm-steps">Add</button>
+            </div>
+          </div>
         </div>
-        <div class="H_progress-bar">
-            <progress value="72" min="0" max="100" style="visibility:hidden;height:0;width:0;">75%</progress>
-        </div>
-          <p id = "H_steps-left">1470 steps left!</p>
-        </div>
+       
+
+        <div class="H_progress-bar" data-steps="0" ></div>
+
+          <p id = "H_steps-left"></p>
+      </div>
 
         <div id = "H_cals-dv"> 
             <p id= "H_basic-font">Calories </p>
@@ -75,25 +83,29 @@
           lets say it is wednesday, the users daily steps goal is 10,000. Can randomly put a number for the amount they walked on monday and tuesday -->
           <div class="H_stats-header">
             <p id="H_basic-font">Weekly Stats</p>
-            <div class="H_date">10/19/23</div> <!-- Add the date here -->
+            <div id="H_date"></div> <!-- Add the date here -->
         </div>
             <div class="H_bar-graph">
               <div class="H_goal-line">
                 <span class="H_goal-label">Goal</span>
               </div><!-- Horizontal dotted line representing the daily goal -->
-              &nbsp;<div class="H_bar" style="height: 80%;"><span class="H_bar-value">8,000</span></div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <div class="H_bar" style="height: 60%;"><span class="H_bar-value">6,000</span></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <div class="H_bar" style="height: 82%;"><span class="H_bar-value">8,530</span></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <div class="H_bar" style="height: 1%;"><span class="H_bar-value"></span></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <div class="H_bar" style="height: 1%;"><span class="H_bar-value"></span></div>
+              <div class="H_bar" id="monday-bar" style="height: 1%;"><span class="H_bar-value"></span></div>
+              <div class="H_bar" id="tuesday-bar" style="height: 1%;"><span class="H_bar-value"></span></div>
+              <div class="H_bar" id="wednesday-bar" style="height: 1%;"><span class="H_bar-value"></span></div>
+              <div class="H_bar" id="thursday-bar" style="height: 1%;"><span class="H_bar-value"></span></div>
+              <div class="H_bar" id="friday-bar" style="height: 1%;"><span class="H_bar-value"></span></div>
+              <div class="H_bar" id="saturday-bar" style="height: 1%;"><span class="H_bar-value"></span></div>
+              <div class="H_bar" id="sunday-bar" style="height: 1%;"><span class="H_bar-value"></span></div>
               <!-- Repeat the above for each day of the week -->
           </div>
           <div class="H_bar-labels">
-              <span class="H_bar-label">Monday</span>
-              <span class="H_bar-label">Tuesday</span>
-              <span class="H_bar-label">Wednesday</span>
-              <span class="H_bar-label2">Thursday</span>
-              <span class="H_bar-label2">Friday</span>
+              <span class="H_bar-label">Mon</span>
+              <span class="H_bar-label">Tues</span>
+              <span class="H_bar-label">Wed</span>
+              <span class="H_bar-label2">Thurs</span>
+              <span class="H_bar-label2">Fri</span>
+              <span class="H_bar-label2">Sat</span>
+              <span class="H_bar-label2">Sun</span>
 
               <!-- Repeat the above for each day of the week -->
           </div>
@@ -105,8 +117,9 @@
           <i id="weightIcon" class="fas fa-weight"></i>
           <i id="usersIcon" class="fas fa-users"></i>
       </div>
-        </div>
+     
 
+      <script src="homepage_interactivity/add_steps.js"></script>
         
         
         <script>
@@ -126,4 +139,10 @@
     });
 });
           </script>
+          <script>
+            const dateElement = document.getElementById("H_date");
+            const currentDate = new Date();
+            const formattedDate = currentDate.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: '2-digit' });
+            dateElement.textContent = formattedDate;
+        </script>
 </body>
