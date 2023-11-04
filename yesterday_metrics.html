@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css_pages/global.css" />
+    <link rel="stylesheet" type="text/css" href="css_pages/metrics.css" />
+    <link rel="stylesheet" href="Inter/Inter-VariableFont_slnt,wght.ttf">
+    <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.min.css">
+    <script src="metrics_interactivity/add_meal_redirect.js"></script>
+    <script src="metrics_interactivity/exercise_counter.js"></script>
+    <script src="metrics_interactivity/weight.js"></script>
+    <script src="metrics_interactivity/mood.js"></script>
+    <script src="metrics_interactivity/yesterday_arrow_redirect.js"></script>
+    <script src="global_interactivity.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Health App</title>
+    
+</head>
+
+<body>
+    <img class="profile-icon" src="icons/profile_pic.png" height="36px" width="36px">
+    <div class="mp_header">
+        <h1 class="metrics-heading">
+            <div class="header-text-container">
+                &nbsp;&nbsp;&nbsp;Nov 1st, 2023 Metrics
+            </div>
+            <span class="mp_arrow" id="right-arrow"> &gt; </span>
+        </h1>
+    </div>
+
+    <div class="mp_container">
+        <div class="mp_section mp_weight-section">
+            Today's Weight: <span id="weight-value">152 lbs</span>
+            <i class="fas fa-edit mp_edit-icon"></i>
+        </div>
+        
+        <div class="mp_section mp_calories-section">
+            <h2 class="mp_section-title">Calories Tracker</h2>
+            <div class="mp_checkmark">&#10003;</div> Breakfast:
+            <span class="mp_meal-item">Eggs, Yogurt, Orange Juice</span>
+            <i class="fas fa-edit mp_edit-calories-icon" id="edit-icon-1"></i>
+            <div class="mp_total-calories">
+                788 cal
+            </div>
+            <div class="mp_checkmark">&#10003;</div> Lunch:
+            <span class="mp_meal-item">Grilled Cheese Sandwich, Coffee</span>
+            <i class="fas fa-edit mp_edit-calories-icon" id="edit-icon-2"></i>
+            <div class="mp_total-calories">
+                567 cal
+            </div>
+            <div class="mp_checkmark">&#10003;</div> Dinner:
+            <span class="mp_meal-item">Pasta, Chocolate Ice Cream, Chips</span>
+            <i class="fas fa-edit mp_edit-calories-icon" id="edit-icon-2"></i>
+            <div class="mp_total-calories">
+                898 cal
+            </div>
+            <div class="mp_plus-sign" id="add-meal-button">+</div> Add a Meal
+        </div>
+
+        <div class="mp_section mp_mood-section">
+            <i class="fas fa-question-circle mp_help-icon" id="help-icon"></i> 
+            <h2 class="mp_section-title">Mood Tracker</h2>
+            <div class="mp_mood-icons" id="moodIcons">
+                <div class="mp_mood-icon-happy">
+                    <img src="icons/Neutral (1).png" alt="Neutral Icon" class="mood-option" onclick="selectMood('neutral')">
+                    <div class="mp_mood-text">Morning</div>
+                </div>
+                <div class="mp_mood-icon-sad">
+                    <img src="icons/Sad (1).png" alt="Sad Icon" class="mood-option" onclick="selectMood('sad')">
+                    <div class="mp_mood-text">Afternoon</div>
+                </div>
+                <div class="mp_mood-icon-sad">
+                    <img src="icons/Angry (1).png" alt="Angry Icon" class="mood-option" onclick="selectMood('angry')">
+                    <div class="mp_mood-text">Evening</div>
+                </div>
+            </div>
+            
+        </div>
+        
+
+        <div class="mp_section mp_exercise-section">
+            <h2 class="mp_section-title">Exercise Tracker</h2>
+            <div class="mp_checkmark">&#10003;</div> Morning Run:
+            <span class="mp_exercise-item">1 hr</span>
+            <i class="fas fa-edit mp_edit-exercise-icon"></i>
+            <br>
+            <br>
+            <div class="mp_checkmark">&#10003;</div> Weight Lifting:
+            <span class="mp_exercise-item">45 mins</span>
+            <i class="fas fa-edit mp_edit-exercise-icon"></i>
+            <br>
+            <br>
+            <div class="mp_checkmark">&#10003;</div> Afternoon Walk:
+            <span class="mp_exercise-item">1 hr</span>
+            <i class="fas fa-edit mp_edit-exercise-icon"></i>
+            <br>
+            <br>
+            <div class="mp_checkmark">&#10003;</div> Evening Walk:
+            <span class="mp_exercise-item">15 mins</span>
+            <i class="fas fa-edit mp_edit-exercise-icon"></i>
+            <br>
+            <br>
+            <div class="mp_plus-sign" id="add-exercise-button">+</div> Add More
+        </div>
+        
+        
+    </div>
+
+    <div class="icon_menu">
+        <i id="chartIcon" class="fas fa-chart-bar"></i>
+        <i id="weightIcon" class="fas fa-weight"></i>
+        <i id="usersIcon" class="fas fa-users"></i>
+    </div>
+</body>
+</html>
