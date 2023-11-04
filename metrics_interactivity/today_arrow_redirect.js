@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const right = document.getElementById("right-arrow");
 
     left.addEventListener("click", function () {
-        window.location.href = "homepage.html";
+        window.location.href = "yesterday_metrics.html";
     });
 
     right.addEventListener("click", function () {
-        window.location.href = "comm.html";
+        window.location.href = "tomorrow_metrics.html";
     });
 });
