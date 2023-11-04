@@ -283,7 +283,7 @@ h1 {
     width: 90%; /* Make the goal line span the full width */
     background-color: transparent; /* Make it transparent */
     height: 4px; /* Adjust the height of the line */
-    top: 15%; /* Position it in the middle of the container */
+    top: 2%; /* Position it in the middle of the container */
     border-top: 2px dotted #FF5733; /* Create a dotted effect */
 }
 
@@ -305,7 +305,7 @@ h1 {
     font-size: 22px;
     font-family: Inter, sans-serif;
     margin-top: 5px;
-    padding-left: .5em;
+    padding-left: .9em;
 }
 
 .H_bar-labels {
