@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     weightIcon.addEventListener('click', () => {
-        window.location.href = 'metrics_page.html';
+        window.location.href = 'today_metrics.html';
     });
 
     usersIcon.addEventListener('click', () => {
-        window.location.href = 'community.html'; //doesn't currently exist
+        window.location.href = 'community.html';
     });
 });

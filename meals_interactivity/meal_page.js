@@ -5,7 +5,7 @@ function handleAddFoodButtonClick() {
 }
 
 function handleBackButtonClick() {
-    window.location.href = 'todays_metrics.html';
+    window.location.href = 'today_metrics.html';
 }
 
 // Function to toggle plus sign to checkmark icon
