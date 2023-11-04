@@ -1,8 +1,8 @@
 
 h1 {
   color: #FFFFFF;
-  font-size: 5em;
-  margin-left: 12em;
+  font-size: 4vw; /* scale font size with the width of the viewport */
+  margin-left: 21%; /* use percentage instead of fixed margin */
   margin-bottom: 0;
   font-family: Inter, sans-serif;
 }
@@ -15,11 +15,11 @@ h1 {
 
 #H_community {
     background-color: #FFFFFF;
-    max-width: 50em; /* Use max-width to ensure it adjusts on smaller screens */
-    margin: 0 auto; /* Center it */
+    max-width: 60%; /* use percentage for maximum width */
+    margin: 0 auto; /* center it */
     font-size: 1.8em;
     font-family: Inter, sans-serif;
-    height: 1.50em;
+    height: auto; /* make height flexible */
     margin-bottom: 1em;
 }
 
@@ -33,11 +33,10 @@ h1 {
 }
 
 #H_words{
-  padding-top: .125em;
-    margin-left: 18em;
-    position: center;
-    color: #075685;
-    width: 15em;
+  padding-top: 0.125em;
+  margin: 0 auto; /* center instead of using fixed margin */
+  color: #075685;
+  width: 23%; /* responsive width */
 }
 #H_basic-font{
   font-family: Inter, sans-serif;
@@ -57,6 +56,7 @@ h1 {
 }
 
 #H_steps-dv {
+  
   margin: 0 auto; 
   width: 75%;
   height: 450px;
@@ -83,6 +83,7 @@ h1 {
   border-radius: 15px;
   gap: 11.04px;
   margin-bottom: 5em;
+  overflow: hidden; /* Add this line to prevent overflowing */
 }
 #H_plus {
     font-size: 4em;
@@ -114,28 +115,62 @@ h1 {
   font-size: 22px; /* Adjust font size as desired */
 }
 
+.H_title-container,
+.H_progress-bar,
+#H_steps-left {
+  max-width: 100%; /* Ensures these elements do not exceed their container's width */
+}
 
 #H_steps-left{
-    font-family: Inter, sans-serif;
-    color: #075685;
-    font-size: 24pt;
-    margin-left: 30em;
+  font-family: Inter, sans-serif;
+  color: #075685;
+  font-size: 24pt;
+  margin: 0 auto; /* Centers the element horizontally */
+  display: flex; /* Use flexbox to center the text within the element */
+  justify-content: center; /* Center the text horizontally */
+  align-items: center; /* Center the text vertically (if it's in a flex container of specific height) */
+  text-align: center; /* Ensures the text itself is centered */
+  padding: 0; /* Remove padding if you don't need it */
+  overflow: hidden; /* Prevents the content from spilling out */
+  white-space: nowrap; /* Prevents the text from wrapping */
+  text-overflow: ellipsis; /* Adds an ellipsis if the text is too long */
 }
 
 .H_progress-bar {
-    margin-left: 63em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
-    background: 
-      radial-gradient(closest-side, #D8EDFE 77%, transparent 80% 100%),
-      conic-gradient(rgb(0, 39, 97) 0%, white 0);  
+  margin: 0 auto; /* center it */
+  width: 20%; /* default width relative to the parent element */
+  height: 20%; /* maintain aspect ratio relative to the width */
+  aspect-ratio: 1 / 1; /* This maintains a 1:1 aspect ratio */
+  min-width: 250px; /* minimum width */
+  min-height: 250px; /* minimum height */
+  border-radius: 50%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: 
+    radial-gradient(closest-side, #D8EDFE 77%, transparent 80% 100%),
+    conic-gradient(rgb(0, 39, 97) 0%, white 0);  
+}
+
+/* Adjust size for wider screens */
+@media (min-width: 600px) {
+  .H_progress-bar {
+    width: 15vw; /* use viewport width for wider screens */
+    height: 15vw; /* maintain aspect ratio */
   }
+}
+
+/* Adjust size for even wider screens */
+@media (min-width: 1000px) {
+  .H_progress-bar {
+    width: 10vw; /* use smaller viewport width for even wider screens */
+    height: 10vw; /* maintain aspect ratio */
+  }
+}
 
 .H_progress-bar::before {
+
     content: attr(data-steps) " Steps";
     white-space: pre;
     font-family: Inter, sans-serif;
@@ -143,6 +178,7 @@ h1 {
     color: #075685;
     
   }
+  
 
   .H_container {
   display: flex;
@@ -164,7 +200,27 @@ h1 {
   width: 45%;
 }
 
+@media (max-width: 768px) {
+  h1 {
+    font-size: 8vw; /* larger font size for smaller screens */
+  }
 
+  .H_group, .H_container2 .H_group {
+    max-width: calc(50% - 20px); /* two items per row on smaller screens */
+  }
+}
+
+/* Media Query for mobile devices */
+@media (max-width: 480px) {
+  .H_group, .H_container2 .H_group {
+    max-width: 100%; /* one item per row on very small screens */
+  }
+
+  .H_progress-bar {
+    width: 80vw; /* larger relative size on smaller screens */
+    height: 80vw;
+  }
+}
 .H_container2 {
   padding: 48px;
   display: flex;
@@ -315,13 +371,22 @@ h1 {
     justify-content: flex-start; /* Align labels from the left */
     margin-top: 10px; /* Adjust the vertical spacing between bars and labels */
 }
+.H_bar-label, .H_bar-label2 {
+  white-space: nowrap; /* Prevent the text from wrapping */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Add an ellipsis if text is too long */
+ 
+  
+ 
+}
 
 .H_bar-label {
+  padding-left: 34px; /* Fixed padding */
+  padding-right: 65px; /* Fixed padding */
     font-size: 24px;
     font-weight: bold;
     font-family: Inter, sans-serif;
-    padding-left: 1em;
-    padding-right: 3.2em;
+
     color: #075685;
     text-align: center;
     
@@ -329,13 +394,22 @@ h1 {
 .H_bar-label2 {
     font-size: 24px;
     font-weight: bold;
-    padding-left: 1.2em;
-    padding-right: 3.2em;
+    padding-left: 30px; /* Fixed padding */
+    padding-right: 76px; /* Fixed padding */
     font-family: Inter, sans-serif;
    
     color: #075685;
     text-align: center;
+    flex-wrap: nowrap; /* Prevent wrapping of child elements */
   
+}
+
+@media (max-width: 768px) {
+  .H_bar-label, .H_bar-label2 {
+    padding-left: 10px; /* Smaller fixed padding for small screens */
+    padding-right: 10px; /* Smaller fixed padding for small screens */
+    font-size: 18px; /* Smaller font size for small screens */
+  }
 }
 
 .H_stats-header {
