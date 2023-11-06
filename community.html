@@ -109,37 +109,149 @@
         </div>
     </div>
 
+         <!-- Keyboard layout -->
+<div id="keyboard" style="display:none;">
+  <!-- Number row -->
+  <div class="keyboard-row">
+    <button onclick="typeKey('1')">1</button>
+    <button onclick="typeKey('2')">2</button>
+    <button onclick="typeKey('3')">3</button>
+    <button onclick="typeKey('4')">4</button>
+    <button onclick="typeKey('5')">5</button>
+    <button onclick="typeKey('6')">6</button>
+    <button onclick="typeKey('7')">7</button>
+    <button onclick="typeKey('8')">8</button>
+    <button onclick="typeKey('9')">9</button>
+    <button onclick="typeKey('0')">0</button>
+    <button onclick="backspaceKey()">⌫</button>
+    <!-- ... other numbers ... -->
+  </div>
+
+  <!-- Top row of letters -->
+  <div class="keyboard-row">
+    <button onclick="typeKey('q')">Q</button>
+    <button onclick="typeKey('w')">W</button>
+    <button onclick="typeKey('e')">E</button>
+    <button onclick="typeKey('r')">R</button>
+    <button onclick="typeKey('t')">T</button>
+    <button onclick="typeKey('y')">Y</button>
+    <button onclick="typeKey('u')">U</button>
+    <button onclick="typeKey('i')">I</button>
+    <button onclick="typeKey('o')">O</button>
+    <button onclick="typeKey('p')">P</button>
+
+    <!-- ... other letters ... -->
+  </div>
+
+  <!-- Second row of letters -->
+  <div class="keyboard-row">
+    <button onclick="typeKey('a')">A</button>
+    <button onclick="typeKey('s')">S</button>
+    <button onclick="typeKey('d')">D</button>
+    <button onclick="typeKey('f')">F</button>
+    <button onclick="typeKey('g')">G</button>
+    <button onclick="typeKey('h')">H</button>
+    <button onclick="typeKey('j')">J</button>
+    <button onclick="typeKey('k')">K</button>
+    <button onclick="typeKey('l')">L</button>
+    <!-- ... other letters ... -->
+  </div>
+
+  <!-- Third row of letters -->
+  <div class="keyboard-row">
+    <button onclick="typeKey('z')">Z</button>
+    <button onclick="typeKey('x')">X</button>
+    <button onclick="typeKey('c')">C</button>
+    <button onclick="typeKey('v')">V</button>
+    <button onclick="typeKey('b')">B</button>
+    <button onclick="typeKey('n')">N</button>
+    <button onclick="typeKey('m')">M</button>
+
+    <!-- ... other letters ... -->
+  </div>
+
+  <!-- Special keys and space -->
+  <div class="keyboard-row">
+    <button class="space" onclick="typeKey(' ')">Space</button>
+    <button onclick="moveCursor('left')">&larr;</button>
+  <button onclick="moveCursor('right')">&rarr;</button>
+    <button onclick="closeKeyboard()">Exit</button>
+  </div>
+</div>
+
     <script>
-function postMessage() {
-    const messageInput = document.getElementById("message-input");
+document.addEventListener("DOMContentLoaded", function () {
+  function toggleKeyboard(element) {
+    var keyboard = document.getElementById("keyboard");
+    if (keyboard.style.display === "none") {
+      keyboard.style.display = "block";
+      // Optional: Position the keyboard near the clicked icon or input field.
+      positionKeyboard(element);
+    } else {
+      keyboard.style.display = "none";
+    }
+  }
+
+  function positionKeyboard(element) {
+    var keyboard = document.getElementById("keyboard");
+    var rect = element.getBoundingClientRect();
+    // Position the keyboard just below the element
+    keyboard.style.position = "relative";
+
+  }
+
+  // Trigger the keyboard for the message input
+  const messageInput = document.getElementById("message-input");
+  messageInput.addEventListener("focus", function () {
+    toggleKeyboard(messageInput);
+  });
+
+  // Hide the keyboard when the message input loses focus
+  messageInput.addEventListener("blur", function () {
+    toggleKeyboard(messageInput);
+  });
+
+  // Post message function
+  function postMessage() {
     const messageText = messageInput.value.trim();
 
     if (messageText !== "") {
-        const messagesContainer = document.querySelector(".messages-container");
-        const messageBox = document.createElement("div");
-        messageBox.className = "c_section c_message1";
-        /*moves text in new messages added*/
-        messageBox.innerHTML = `
-            <img src="icons/profile_pic.png" height="60px" width="60px" style="margin: 0; border: 0;">
-            <p style="margin-left: 15px;">${messageText}</p>
-        `;
+      const messagesContainer = document.querySelector(".messages-container");
+      const messageBox = document.createElement("div");
+      messageBox.className = "c_section c_message1";
+      messageBox.innerHTML = `
+        <img src="icons/profile_pic.png" height="60px" width="60px" style="margin: 0; border: 0;">
+        <p style="margin-left: 15px;">${messageText}</p>
+      `;
 
-        // Apply the same styling to the new message box
-        messageBox.style.width = "80%";
-        messageBox.style.margin = "20px auto";
-        messageBox.style.position = "relative";
-        messageBox.style.overflow = "hidden";
-        messageBox.style.backgroundColor = "#FFFFFF";
-        messageBox.style.border = "1px solid #075685";
-        messageBox.style.textAlign = "left";
+      // Apply styling to the new message box
+      Object.assign(messageBox.style, {
+        width: "80%",
+        margin: "20px auto",
+        position: "relative",
+        overflow: "hidden",
+        backgroundColor: "#FFFFFF",
+        border: "1px solid #075685",
+        textAlign: "left"
+      });
 
-        // Insert the new message at the top
-        messagesContainer.insertBefore(messageBox, messagesContainer.firstChild);
+      // Insert the new message at the top
+      messagesContainer.insertBefore(messageBox, messagesContainer.firstChild);
 
-        // Clear the input
-        messageInput.value = "";
+      // Clear the input
+      messageInput.value = "";
     }
-}
+  }
+
+  // Add an event listener to the message input for submitting the message
+  messageInput.addEventListener("keyup", function (event) {
+    if (event.key === "Enter") {
+      postMessage();
+      // Hide the keyboard
+      document.getElementById("keyboard").style.display = "none";
+    }
+  });
+});
 
 
     </script>

@@ -47,6 +47,15 @@ function filterListItems(searchText) {
         }
     }
 }
+function toggleKeyboard(inputField) {
+    var keyboard = document.getElementById("keyboard");
+    if (keyboard.style.display === "none") {
+        keyboard.style.display = "block";
+     
+    } else {
+        keyboard.style.display = "none";
+    }
+}
 
 // Add event listeners
 document.addEventListener('DOMContentLoaded', function () {
@@ -55,6 +64,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const clearButton = document.getElementById('clear_search');
     const addButton = document.querySelector('.meal_add_food_button');
 
+    searchInput.addEventListener('focus', function() {
+        toggleKeyboard(searchInput);
+    });
 
     arrowElement.addEventListener('click', handleBackButtonClick);
 

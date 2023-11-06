@@ -1,41 +1,55 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Select the weight edit button
-    const weightEditButton = document.querySelector(".mp_weight-section .mp_edit-icon");
+    // Function to toggle the keyboard display
+    function toggleKeyboard(inputField) {
+        var keyboard = document.getElementById("keyboard");
+        if (keyboard.style.display === "none") {
+            keyboard.style.display = "block";
+        } else {
+            keyboard.style.display = "none";
+        }
+    }
+   
+    const weightEditButton = document.querySelector(".mp_weight-section .fa-edit");
 
-    // Select the weight element
     const weightElement = document.querySelector(".mp_weight-section");
 
-    // Add a click event listener to the weight edit button
     weightEditButton.addEventListener("click", function () {
         const weightText = weightElement.querySelector("span");
         const weightValue = weightText.textContent.trim();
 
-        // Create an input field for editing the weight
+        
         const inputField = document.createElement("input");
         inputField.type = "text";
         inputField.value = weightValue;
+        inputField.className = "weight-input-field"; 
 
-        // Replace the weight text with the input field
+     
         weightElement.replaceChild(inputField, weightText);
 
-        inputField.addEventListener("blur", function () {
-            // When the input field loses focus, update the weight value
-            weightText.textContent = inputField.value;
+       
+        toggleKeyboard(inputField);
 
-            // Remove the input field
+        inputField.addEventListener("blur", function () {
+          
+            weightText.textContent = inputField.value;
+           
             weightElement.replaceChild(weightText, inputField);
+           
+            document.getElementById("keyboard").style.display = "none";
         });
 
         inputField.addEventListener("keyup", function (event) {
             if (event.key === "Enter") {
-                // Update the weight value
+                
                 weightText.textContent = inputField.value;
-
-                // Remove the input field
+               
                 weightElement.replaceChild(weightText, inputField);
+              
+                document.getElementById("keyboard").style.display = "none";
             }
         });
 
         inputField.focus();
     });
 });
+
