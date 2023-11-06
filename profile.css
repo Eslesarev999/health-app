@@ -1,0 +1,134 @@
+.addf_container {
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.addf_section {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.addf_section-title {
+    color: #FFFFFF;
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+}
+
+.addf_header h1,
+.addf_header p {
+    color: #FFFFFF;
+    padding: 0;
+    height: 20px;
+    line-height: 3;
+    display: flex;
+    margin-top: 20px;
+}
+
+
+
+.addf_food-table table {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    width: 70%;
+    margin: 40px auto 20px;
+    position: relative;
+    overflow: hidden;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.addf_food-table td {
+    padding: 15px;
+    width: 50%;
+    text-align: center;
+    background-color: #FFFFFF;
+    color: #075685;
+    height: 40px;
+}
+
+.addf_food-table td:not(:last-child) {
+    border-right: 1px solid #075685;
+}
+
+.addf_food-table tr:not(:last-child) td {
+    border-bottom: 1px solid #075685;
+}
+
+.addf_food-table td:first-child {
+    font-weight: bold;
+}
+#heightFeet.dark-blue-input,
+#heightInches.dark-blue-input {
+    color: #075685;
+}
+.addf_food-table input {
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    border: none;
+    background: transparent;
+    width: 100%;
+    color: #075685;
+    text-align: center;
+}
+
+.addf_food-table td:nth-child(2) select.dark-blue-input {
+    background-color: #075685;
+    color: #FFFFFF;
+    border: none;
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+    padding: 5px; /* Add padding to improve visual appearance */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+}
+
+
+.addf_food-table td:nth-child(2) input#calories {
+    color: #075685; /* Change the color to dark blue for height input */
+}
+
+.addf_done_div {
+    width: 385px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.addf_done_button {
+    height: 24px;
+    width: 96px;
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    border-color: #000000;
+    color: #075685;
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.dark-blue-input {
+    background-color: #075685;
+    color: #075685;
+    border: none;
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+    padding: 5px; /* Add padding to improve visual appearance */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+}
+
+#heightFeet.dark-blue-input,
+#heightInches.dark-blue-input {
+    color: #075685;
+}
