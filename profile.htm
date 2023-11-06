@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css_pages/global.css" />
+    <link rel="stylesheet" type="text/css" href="css_pages/add_food.css" />
+    <link rel="stylesheet" href="Inter/Inter-VariableFont_slnt,wght.ttf">
+    <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.min.css">
+    <script src="redirect_home.js"></script>
+    <script src="global_interactivity.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Health App</title>
+    <style>
+        .addf_container {
+            color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .addf_section {
+            color: #FFFFFF;
+            text-align: center;
+        }
+
+        .addf_section-title {
+            color: #FFFFFF;
+            font-size: 24px;
+            margin: 0;
+            text-align: center;
+        }
+
+        .addf_header h1,
+        .addf_header p {
+            color: #FFFFFF;
+            padding: 0;
+            height: 20px;
+            line-height: 3;
+            display: flex;
+            margin: 0;
+        }
+
+
+
+
+        .addf_food-table-container {
+            width: 70%; /* Adjust the width as needed */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 40px auto 20px;
+        }
+
+        .addf_food-table table {
+            width: 100%;
+            border-radius: 20px;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            border-collapse: collapse;
+            table-layout: fixed; /* Added to make the table more responsive */
+        }
+
+        .addf_food-table td {
+            padding: 15px;
+            width: 50%;
+            text-align: center;
+            background-color: #FFFFFF;
+            color: #075685;
+            height: 40px;
+        }
+
+        .addf_food-table td:not(:last-child) {
+            border-right: 1px solid #075685;
+        }
+
+        .addf_food-table tr:not(:last-child) td {
+            border-bottom: 1px solid #075685;
+        }
+
+        .addf_food-table td:first-child {
+            font-weight: bold;
+        }
+
+        .addf_food-table input {
+            font-family: Inter, sans-serif;
+            font-size: 15px;
+            border: none;
+            background: transparent;
+            width: 100%;
+            color: #075685;
+            text-align: center;
+        }
+
+        .addf_done_div {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .addf_done_button {
+            height: 24px;
+            width: 96px; /* Adjust the width as needed */
+            background-color: #FFFFFF;
+            border-radius: 50px;
+            border-color: #000000;
+            color: #075685;
+            font-family: Inter, sans-serif;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="addf_profile-icon">
+        <img class="profile-icon" src="icons/profile_pic.png" height="36px" width="36px">
+    </div>
+
+    <div class="addf_container">
+        <div class="addf_section">
+            <div class="header">
+                <input type="checkbox" id="12345" value="+"/>
+                <label for="12345"></label>
+
+               
+
+                <input type="checkbox" id="xd" value="+"/>
+                <label for="figma"></label>
+                <label for="sketch"></label>
+                <label for="xd"></label>
+                <h1 id="date"></h1>
+                <h1>Update Profile</h1>
+            </div>
+
+            <div class="addf_food-table-container">
+                <div class="addf_food-table">
+                    <table>
+                        <tr>
+                            <td>Age</td>
+                            <td><input type="text" id="addf_foodName" placeholder="Enter age"></td>
+                        </tr>
+                        <tr>
+                            <td>Height</td>
+                            <td>
+                                <select id="heightFeet", class="dark-blue-input", style="color: #075685">
+                                    <option value="0">0 feet</option>
+                                    <option value="1">1 foot</option>
+                                    <option value="2">2 feet</option>
+                                    <option value="3">3 feet</option>
+                                    <option value="4">4 feet</option>
+                                    <option value="5" selected>5 feet</option>
+                                    <option value="6">6 feet</option>
+                                    <option value="7">7 feet</option>
+                                </select>
+                                <select id="heightInches" class="dark-blue-input" style="color: #075685">
+                                    <option value="0">0 inches</option>
+                                    <option value="1">1 inch</option>
+                                    <option value="2">2 inches</option>
+                                    <option value="3">3 inches</option>
+                                    <option value="4">4 inches</option>
+                                    <option value="5">5 inches</option>
+                                    <option value="6">6 inches</option>
+                                    <option value="7">7 inches</option>
+                                    <option value="8" selected>8 inches</option>
+                                    <option value="9">9 inches</option>
+                                    <option value="10">10 inches</option>
+                                    <option value="11">11 inches</option>
+                                </select>
+                            </td>
+                        </tr>
+                        
+                            <td>Gender</td>
+                            <td><input type="text" id="fat" placeholder="Enter gender"></td>
+                        </tr>
+                        
+                    </table>
+                </div>
+
+                <div class="addf_done_div">
+                    
+                    <button class="addf_done_button" id="done_button">Done</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="icon_menu">
+        <i id="chartIcon" class="fas fa-chart-bar"></i>
+        <i id="weightIcon" class="fas fa-weight"></i>
+        <i id="usersIcon" class="fas fa-users"></i>
+    </div>
+
+
+
+    <!-- Other HTML elements and content above this point -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const doneButton = document.getElementById("done_button");
+    
+        doneButton.addEventListener("click", function () {
+            // Get user input
+            const foodName = document.getElementById("addf_foodName").value;
+            const calories = document.getElementById("calories").value;
+            const fat = document.getElementById("fat").value;
+            const carbs = document.getElementById("carbs").value;
+            const protein = document.getElementById("protein").value;
+    
+            // Create an object to represent the food entry
+            const foodEntry = {
+                name: foodName,
+                calories: calories,
+                fat: fat,
+                carbs: carbs,
+                protein: protein
+            };
+    
+            // Check if there's existing data in local storage
+            const existingData = localStorage.getItem("foodHistory");
+            let foodHistory = [];
+    
+            if (existingData) {
+                foodHistory = JSON.parse(existingData);
+            }
+    
+            // Add the new entry to the food history
+            foodHistory.push(foodEntry);
+    
+            // Store the updated food history in local storage
+            localStorage.setItem("foodHistory", JSON.stringify(foodHistory));
+    
+            // Redirect to meal_input.html
+            window.location.href = "meal_input.html";
+        });
+    });
+    </script>
+    
+    
+</body>
+
+</html>
