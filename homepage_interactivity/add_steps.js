@@ -46,48 +46,6 @@ document.querySelectorAll(".H_group input[type='checkbox']").forEach(checkbox =>
         window.location.href = 'meal_input.html';
     });
 });
-// function updateBarGraph(steps) {
-//     // Assuming each bar can be a maximum of 100% height for the target steps.
-//     const percentageOfTarget = (steps / maxSteps) * 100 + 15;
-
-
-//     // Get current day
-//     const currentDay = new Date().getDay();
-
-//     let barId;
-//     switch (currentDay) {
-//         case 0:
-//             barId = 'sunday-bar';
-//             break;
-//         case 1:
-//             barId = 'monday-bar';
-//             break;
-//         case 2:
-//             barId = 'tuesday-bar';
-//             break;
-//         case 3:
-//             barId = 'wednesday-bar';
-//             break;
-//         case 4:
-//             barId = 'thursday-bar';
-//             break;
-//         case 5:
-//             barId = 'friday-bar';
-//             break;
-//         case 6:
-//             barId = 'saturday-bar';
-//             break;
-//     }
-
-//     // Get bar and update its height and value
-//     const bar = document.getElementById(barId);
-//     const barValue = bar.querySelector('.H_bar-value');
-
-//     bar.style.height = `${percentageOfTarget}%`;
-//     barValue.textContent = steps;
-// }
-
-
 
 function updateBarGraph(steps, targetSteps) {
     // Adjust this function to take targetSteps into account
@@ -133,13 +91,3 @@ function updateBarGraph(steps, targetSteps) {
     // Additionally, you might want to update the goal line to reflect the target steps
    
 }
-
-
-
-// Call updateBarGraph within updateProgressBar function
-// function updateProgressBar(targetSteps) {
-//     ... your existing logic ...
-
-//     Now call updateBarGraph with the correct parameters
-//     updateBarGraph(currentSteps, targetSteps);
-// }

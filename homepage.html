@@ -35,8 +35,8 @@
               <span id="H_plus">+</span>
               <!-- Dropdown for selecting steps -->
               <div id="H_manual-entry" style="display: none;">
-                <input type="number" id="H_manual-target" placeholder="Enter target steps" min="1"><br>
-                <input type="number" id="H_manual-steps" placeholder="Enter steps taken" min="1">
+                <input type="number" id="H_manual-target" placeholder="Enter target steps" min="1" onfocus="showKeyboard(this)"><br>
+                <input type="number" id="H_manual-steps" placeholder="Enter steps taken" min="1" onfocus="showKeyboard(this)">
                 <button id="H_confirm-steps">Add</button>
             </div>
           </div>
@@ -46,6 +46,7 @@
         <div class="H_progress-bar" data-steps="0" ></div>
 
           <p id = "H_steps-left"></p>
+
       </div>
 
         <div id = "H_cals-dv"> 
