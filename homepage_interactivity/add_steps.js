@@ -91,3 +91,37 @@ function updateBarGraph(steps, targetSteps) {
     // Additionally, you might want to update the goal line to reflect the target steps
    
 }
+
+var currentInput;
+
+
+function showKeyboard(element) {
+  currentInput = element; // Store reference to the input
+  document.getElementById('keyboard').style.display = 'block'; // Show the keyboard
+}
+
+
+function typeKey(keyValue) {
+  currentInput.value += keyValue; // Append key value to input
+}
+
+
+function closeKeyboard() {
+  document.getElementById('keyboard').style.display = 'none'; // Hide the keyboard
+}
+
+
+// Bind the document click to close the keyboard if clicked outside
+document.addEventListener('click', function(event) {
+  var isClickInsideElement = currentInput.contains(event.target) || document.getElementById('keyboard').contains(event.target);
+  if (!isClickInsideElement) {
+    closeKeyboard();
+  }
+});
+function backspaceKey() {
+    var currentValue = currentInput.value;
+    if (currentValue.length > 0) {
+      // Remove the last character from the current value
+      currentInput.value = currentValue.substring(0, currentValue.length - 1);
+    }
+  }
