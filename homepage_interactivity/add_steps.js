@@ -46,48 +46,6 @@ document.querySelectorAll(".H_group input[type='checkbox']").forEach(checkbox =>
         window.location.href = 'meal_input.html';
     });
 });
-// function updateBarGraph(steps) {
-//     // Assuming each bar can be a maximum of 100% height for the target steps.
-//     const percentageOfTarget = (steps / maxSteps) * 100 + 15;
-
-
-//     // Get current day
-//     const currentDay = new Date().getDay();
-
-//     let barId;
-//     switch (currentDay) {
-//         case 0:
-//             barId = 'sunday-bar';
-//             break;
-//         case 1:
-//             barId = 'monday-bar';
-//             break;
-//         case 2:
-//             barId = 'tuesday-bar';
-//             break;
-//         case 3:
-//             barId = 'wednesday-bar';
-//             break;
-//         case 4:
-//             barId = 'thursday-bar';
-//             break;
-//         case 5:
-//             barId = 'friday-bar';
-//             break;
-//         case 6:
-//             barId = 'saturday-bar';
-//             break;
-//     }
-
-//     // Get bar and update its height and value
-//     const bar = document.getElementById(barId);
-//     const barValue = bar.querySelector('.H_bar-value');
-
-//     bar.style.height = `${percentageOfTarget}%`;
-//     barValue.textContent = steps;
-// }
-
-
 
 function updateBarGraph(steps, targetSteps) {
     // Adjust this function to take targetSteps into account
@@ -134,12 +92,36 @@ function updateBarGraph(steps, targetSteps) {
    
 }
 
+var currentInput;
 
 
-// Call updateBarGraph within updateProgressBar function
-// function updateProgressBar(targetSteps) {
-//     ... your existing logic ...
+function showKeyboard(element) {
+  currentInput = element; // Store reference to the input
+  document.getElementById('keyboard').style.display = 'block'; // Show the keyboard
+}
 
-//     Now call updateBarGraph with the correct parameters
-//     updateBarGraph(currentSteps, targetSteps);
-// }
+
+function typeKey(keyValue) {
+  currentInput.value += keyValue; // Append key value to input
+}
+
+
+function closeKeyboard() {
+  document.getElementById('keyboard').style.display = 'none'; // Hide the keyboard
+}
+
+
+// Bind the document click to close the keyboard if clicked outside
+document.addEventListener('click', function(event) {
+  var isClickInsideElement = currentInput.contains(event.target) || document.getElementById('keyboard').contains(event.target);
+  if (!isClickInsideElement) {
+    closeKeyboard();
+  }
+});
+function backspaceKey() {
+    var currentValue = currentInput.value;
+    if (currentValue.length > 0) {
+      // Remove the last character from the current value
+      currentInput.value = currentValue.substring(0, currentValue.length - 1);
+    }
+  }

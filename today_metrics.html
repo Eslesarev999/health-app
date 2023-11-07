@@ -34,7 +34,7 @@
     <div class="mp_container">
         <div class="mp_section mp_weight-section">
             Today's Weight: <span id="weight-value">150 lbs</span>
-            <i class="fas fa-edit mp_edit-icon"></i>
+           <i id="editIcon" class="fas fa-edit mp_edit-icon"></i>
         </div>
         
         <div class="mp_section mp_calories-section">
@@ -101,5 +101,74 @@
         <i id="weightIcon" class="fas fa-weight"></i>
         <i id="usersIcon" class="fas fa-users"></i>
     </div>
+         <!-- Keyboard layout -->
+<div id="keyboard" style="display:none;">
+    <!-- Number row -->
+    <div class="keyboard-row">
+      <button onclick="typeKey('1')">1</button>
+      <button onclick="typeKey('2')">2</button>
+      <button onclick="typeKey('3')">3</button>
+      <button onclick="typeKey('4')">4</button>
+      <button onclick="typeKey('5')">5</button>
+      <button onclick="typeKey('6')">6</button>
+      <button onclick="typeKey('7')">7</button>
+      <button onclick="typeKey('8')">8</button>
+      <button onclick="typeKey('9')">9</button>
+      <button onclick="typeKey('0')">0</button>
+      <button onclick="backspaceKey()">⌫</button>
+      <!-- ... other numbers ... -->
+    </div>
+  
+    <!-- Top row of letters -->
+    <div class="keyboard-row">
+      <button onclick="typeKey('q')">Q</button>
+      <button onclick="typeKey('w')">W</button>
+      <button onclick="typeKey('e')">E</button>
+      <button onclick="typeKey('r')">R</button>
+      <button onclick="typeKey('t')">T</button>
+      <button onclick="typeKey('y')">Y</button>
+      <button onclick="typeKey('u')">U</button>
+      <button onclick="typeKey('i')">I</button>
+      <button onclick="typeKey('o')">O</button>
+      <button onclick="typeKey('p')">P</button>
+  
+      <!-- ... other letters ... -->
+    </div>
+  
+    <!-- Second row of letters -->
+    <div class="keyboard-row">
+      <button onclick="typeKey('a')">A</button>
+      <button onclick="typeKey('s')">S</button>
+      <button onclick="typeKey('d')">D</button>
+      <button onclick="typeKey('f')">F</button>
+      <button onclick="typeKey('g')">G</button>
+      <button onclick="typeKey('h')">H</button>
+      <button onclick="typeKey('j')">J</button>
+      <button onclick="typeKey('k')">K</button>
+      <button onclick="typeKey('l')">L</button>
+      <!-- ... other letters ... -->
+    </div>
+  
+    <!-- Third row of letters -->
+    <div class="keyboard-row">
+      <button onclick="typeKey('z')">Z</button>
+      <button onclick="typeKey('x')">X</button>
+      <button onclick="typeKey('c')">C</button>
+      <button onclick="typeKey('v')">V</button>
+      <button onclick="typeKey('b')">B</button>
+      <button onclick="typeKey('n')">N</button>
+      <button onclick="typeKey('m')">M</button>
+  
+      <!-- ... other letters ... -->
+    </div>
+  
+    <!-- Special keys and space -->
+    <div class="keyboard-row">
+      <button class="space" onclick="typeKey(' ')">Space</button>
+      <button onclick="moveCursor('left')">&larr;</button>
+    <button onclick="moveCursor('right')">&rarr;</button>
+      <button onclick="closeKeyboard()">Exit</button>
+    </div>
+  </div>
 </body>
 </html>
