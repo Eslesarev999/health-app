@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const weightIcon = document.getElementById('weightIcon');
     const usersIcon = document.getElementById('usersIcon');
     const profIcon = document.getElementById('profIcon');
+    const tutIcon = document.getElementById('newIcon');
+
     chartIcon.addEventListener('click', () => {
         window.location.href = 'homepage.html';
     });
@@ -16,5 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     profIcon.addEventListener('click', () => {
         window.location.href = 'profile.html';
+    });
+    tutIcon.addEventListener('click', () => {
+        window.location.href = 'tutorial.html';
     });
 });

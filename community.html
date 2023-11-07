@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" href="css_pages/community.css" />
     <link rel="stylesheet" href="Inter/Inter-VariableFont_slnt,wght.ttf">
     <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.min.css">
+    <script src="community_interactivity/messages.js"></script>
+    <script src="community_interactivity/messages.js"></script>
     <script src="global_interactivity.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -81,6 +83,7 @@
     <div class="icon_menu">
         <i id="chartIcon" class="fas fa-chart-bar"></i>
         <i id="weightIcon" class="fas fa-weight"></i>
+        <i id="usersIcon" class="fas fa-users"></i>
         <i id="usersIcon" class="fas fa-users"></i>
     </div>
 
@@ -179,82 +182,8 @@
   </div>
 </div>
 
-    <script>
-document.addEventListener("DOMContentLoaded", function () {
-  function toggleKeyboard(element) {
-    var keyboard = document.getElementById("keyboard");
-    if (keyboard.style.display === "none") {
-      keyboard.style.display = "block";
-      // Optional: Position the keyboard near the clicked icon or input field.
-      positionKeyboard(element);
-    } else {
-      keyboard.style.display = "none";
-    }
-  }
-
-  function positionKeyboard(element) {
-    var keyboard = document.getElementById("keyboard");
-    var rect = element.getBoundingClientRect();
-    // Position the keyboard just below the element
-    keyboard.style.position = "relative";
-
-  }
-
-  // Trigger the keyboard for the message input
-  const messageInput = document.getElementById("message-input");
-  messageInput.addEventListener("focus", function () {
-    toggleKeyboard(messageInput);
-  });
-
-  // Hide the keyboard when the message input loses focus
-  messageInput.addEventListener("blur", function () {
-    toggleKeyboard(messageInput);
-  });
-
-  // Post message function
-  function postMessage() {
-    const messageText = messageInput.value.trim();
-
-    if (messageText !== "") {
-      const messagesContainer = document.querySelector(".messages-container");
-      const messageBox = document.createElement("div");
-      messageBox.className = "c_section c_message1";
-      messageBox.innerHTML = `
-        <img src="icons/profile_pic.png" height="60px" width="60px" style="margin: 0; border: 0;">
-        <p style="margin-left: 15px;">${messageText}</p>
-      `;
-
-      // Apply styling to the new message box
-      Object.assign(messageBox.style, {
-        width: "80%",
-        margin: "20px auto",
-        position: "relative",
-        overflow: "hidden",
-        backgroundColor: "#FFFFFF",
-        border: "1px solid #075685",
-        textAlign: "left"
-      });
-
-      // Insert the new message at the top
-      messagesContainer.insertBefore(messageBox, messagesContainer.firstChild);
-
-      // Clear the input
-      messageInput.value = "";
-    }
-  }
-
-  // Add an event listener to the message input for submitting the message
-  messageInput.addEventListener("keyup", function (event) {
-    if (event.key === "Enter") {
-      postMessage();
-      // Hide the keyboard
-      document.getElementById("keyboard").style.display = "none";
-    }
-  });
-});
 
 
-    </script>
 </body>
 
 </html>
