@@ -58,25 +58,12 @@ input[type="checkbox"]:checked + label::before {
 
 }
 
-
-
 .c_message1 table {
     margin-top: 30px;
     display: none; /* Hide the table */
 }
 
-/* .c_message1 {
-    width: 100%;
-    border-radius: 20px;
-    padding: 20px;
-    width: 80%;
-    margin: 30px auto;
-    position: relative;
-    overflow: hidden;
-    background-color: #FFFFFF;
-    border: 1px solid #075685;
-    text-align: left; 
-} */
+
 /*HERERERE MAKES IT SPREAD OUT*/
 .c_message1 {
     width: 100%;
@@ -85,7 +72,7 @@ input[type="checkbox"]:checked + label::before {
     width: 80%;
     margin: 20px auto;
     position: relative;
-    overflow: hidden;
+    overflow: auto;
     background-color: #FFFFFF;
     border: 1px solid #075685;
     text-align: left; /* Set text alignment for the entire box to left */
@@ -292,4 +279,47 @@ input[type="checkbox"] {
     flex-grow: .3;
     /* Add more styles to make the space key wider */
   }
+
+  .c_section.c_message1 {
+    width: 80%;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px auto;
+    overflow: auto;
+    background-color: #FFFFFF;
+    border: 1px solid #075685;
+    text-align: left;
+    display: flex; /* Add this line */
+}
+
+.c_section.c_message1 .profile-icon {
+    color: #000000;
+    font-size: 60px;
+    margin-right: 20px;
+}
+
+.c_section.c_message1 .message-text {
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    text-align: left;
+    margin-left: 0px;
+    color: #075685;
+}
+
+.messages-container {
+    display: flex;
+    margin-top: 40px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.messages {
+    width: 100%;
+    border: 0px;
+    padding: 20px;
+    width: 90%;
+    margin: 20px auto;
+    overflow: auto;
+    background-color: #07334b;
+}
 

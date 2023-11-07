@@ -10,6 +10,8 @@ function postMessage() {
         messageBox.innerHTML = `
             <img src="icons/profile_pic.png" height="60px" width="60px" style="margin: 0; border: 0;">
             <p style="margin-left: 15px;">${messageText}</p>
+            <i class="fas fa-trash trash-icon" onclick="deleteMessage(this)"></i>
+
         `;
 
         // Apply the same styling to the new message box
@@ -28,3 +30,11 @@ function postMessage() {
         messageInput.value = "";
     }
 }
+
+function deleteMessage(iconElement) {
+            // Get the parent container of the message (c_section)
+            const messageContainer = iconElement.parentElement;
+            
+            // Remove the message container
+            messageContainer.remove();
+        }
