@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const weightIcon = document.getElementById('weightIcon');
     const usersIcon = document.getElementById('usersIcon');
     const profIcon = document.getElementById('profIcon');
-    const tutIcon = document.getElementById('newIcon');
+    const tutIcon = document.getElementById('tutIcon');
 
     chartIcon.addEventListener('click', () => {
         window.location.href = 'homepage.html';
