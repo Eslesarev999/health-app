@@ -47,6 +47,7 @@ function filterListItems(searchText) {
         }
     }
 }
+
 function toggleKeyboard(inputField) {
     var keyboard = document.getElementById("keyboard");
     if (keyboard.style.display === "none") {
