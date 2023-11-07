@@ -8,21 +8,18 @@
     <script src="tutorial_interactivity/thumbs.js"></script>
     <script src="tutorial_interactivity/filter.js"></script>
     <script src="tutorial_interactivity/load_more.js"></script>
-    <script src="tutorial_interactivity/redirect.js"></script>
     <script src="global_interactivity.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tutorial Page</title>
 </head>
 <body>
-    <img class="profile-icon" src="icons/profile_pic.png" height="36px" width="36px">
+    <img class="profile-icon" id="profIcon" src="icons/profile_pic.png" height="36px" width="36px">
     <div class="mp_header">
         <h1 class="tutorial-heading">
-            <span class="mp_arrow" id="left-arrow"> &lt; </span>
             <div class="header-text-container">
                 Tutorial Page
             </div>
-            <span class="mp_arrow" id="right-arrow"> &gt; </span>
         </h1>
     </div>
 
@@ -100,6 +97,13 @@
 
     <div class="load-more-container">
         <button class="load-more-button" onclick="loadMoreVideos()">Load More</button>
+    </div>
+
+    <div class="icon_menu">
+        <i id="chartIcon" class="fas fa-chart-bar"></i>
+        <i id="weightIcon" class="fas fa-weight"></i>
+        <i id="usersIcon" class="fas fa-users"></i>
+        <i id="tutIcon" class="fas fa-video"></i>
     </div>
 </body>
 </html>

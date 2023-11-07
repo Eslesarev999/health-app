@@ -1,15 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Select the Add Exercise button
-
-    function toggleKeyboard(inputField) {
-        var keyboard = document.getElementById("keyboard");
-        if (keyboard.style.display === "none") {
-            keyboard.style.display = "block";
-        } else {
-            keyboard.style.display = "none";
-        }
-    }
-
     const addExerciseButton = document.getElementById("add-exercise-button");
 
     // Add a click event listener to the Add Exercise button
@@ -58,13 +48,23 @@ document.addEventListener("DOMContentLoaded", function () {
             titleInputField.value = exerciseName.textContent;
             titleInputField.className = "exercise-title-input";
 
-            toggleKeyboard(titleInputField);
+            // titleInputField.addEventListener("blur", function () {
+            //     exerciseName.textContent = titleInputField.value;
+            // });
+
+            // titleInputField.addEventListener("keyup", function (event) {
+            //     if (event.key === "Enter") {
+            //         exerciseName.textContent = titleInputField.value;
+            //     }
+            // });
+
+            // keyboard functionality 
+            // toggleKeyboard(titleInputField);
 
             titleInputField.addEventListener("focus", function () {
                 document.getElementById("keyboard").style.display = "block"; // Show keyboard
             });
         
-
             titleInputField.addEventListener("blur", function () {
                 exerciseName.textContent = titleInputField.value;
                 document.getElementById("keyboard").style.display = "none";
@@ -81,21 +81,32 @@ document.addEventListener("DOMContentLoaded", function () {
             const durationInputField = document.createElement("input");
             durationInputField.type = "text";
             durationInputField.value = exerciseInput.textContent;
-            durationInputField.className = "exercise-duration-input";
-            toggleKeyboard(durationInputField);
+            
+            // keyboard functionality 
+            // durationInputField.className = "exercise-duration-input";
+            // toggleKeyboard(durationInputField);
 
-            durationInputField.addEventListener("focus", function () {
-                document.getElementById("keyboard").style.display = "block"; // Show keyboard
-            });
+            // durationInputField.addEventListener("focus", function () {
+            //     document.getElementById("keyboard").style.display = "block"; // Show keyboard
+            // });
+            // durationInputField.addEventListener("blur", function () {
+            //     exerciseInput.textContent = durationInputField.value;
+            //     document.getElementById("keyboard").style.display = "none";
+            // });
+            // durationInputField.addEventListener("keyup", function (event) {
+            //     if (event.key === "Enter") {
+            //         exerciseInput.textContent = durationInputField.value;
+            //         document.getElementById("keyboard").style.display = "none";
+            //     }
+            // });
+
             durationInputField.addEventListener("blur", function () {
                 exerciseInput.textContent = durationInputField.value;
-                document.getElementById("keyboard").style.display = "none";
             });
 
             durationInputField.addEventListener("keyup", function (event) {
                 if (event.key === "Enter") {
                     exerciseInput.textContent = durationInputField.value;
-                    document.getElementById("keyboard").style.display = "none";
                 }
             });
 
@@ -108,3 +119,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
