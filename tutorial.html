@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="css_pages/tutorial.css"/>
+    <link rel="stylesheet" type="text/css" href="css_pages/global.css" />
+    <link rel="stylesheet" href="Inter/Inter-VariableFont_slnt,wght.ttf">
+    <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.min.css">
+    <script src="tutorial_interactivity/thumbs.js"></script>
+    <script src="tutorial_interactivity/filter.js"></script>
+    <script src="tutorial_interactivity/load_more.js"></script>
+    <script src="tutorial_interactivity/redirect.js"></script>
+    <script src="global_interactivity.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tutorial Page</title>
+</head>
+<body>
+    <img class="profile-icon" src="icons/profile_pic.png" height="36px" width="36px">
+    <div class="mp_header">
+        <h1 class="tutorial-heading">
+            <span class="mp_arrow" id="left-arrow"> &lt; </span>
+            <div class="header-text-container">
+                Tutorial Page
+            </div>
+            <span class="mp_arrow" id="right-arrow"> &gt; </span>
+        </h1>
+    </div>
+
+    <div class="mp_section">
+        <h2 class="mp_section-title">Filter Videos</h2>
+    </div>
+
+    <div class="filter-options">
+        <button class="filter-button">Core</button>
+        <button class="filter-button">Cardio</button>
+        <button class="filter-button">Chest</button>
+    </div>
+
+    <div class="mp_section">
+        <h2 class="mp_section-title">Video Tutorials</h2>
+    </div>
+
+    <div class="tutorial-thumbnails">
+        <div class="mp_container" data-filter="Core">
+            <div class="thumbnail_1">
+                <img src="icons/fitness_1.webp" alt="Video 1">
+            </div>
+            <div class="mp_section tutorial_core">
+                Core Workout:
+                <br>
+                <br>Get ready for a high-energy Total Core Workout! 
+                <br>Join us for a fun, fast-paced session to strengthen 
+                your core and boost your energy. 
+                <br>No boring sit-ups, 
+                just upbeat exercises to tone those abs. 
+                Let's sweat and smile together! 
+            </div>
+            <div class="video-feedback">
+                <i class="fas fa-thumbs-up thumbs-icon thumbs-up"></i>
+                <i class="fas fa-thumbs-down thumbs-icon thumbs-down"></i>
+            </div>
+        </div>
+
+        <div class="mp_container" data-filter="Chest">
+            <div class="thumbnail_2">
+                <img src="icons/fitness_2.jpeg" alt="Video 2">
+            </div>
+            <div class="mp_section tutorial_chest">
+                Chest Workout:
+                <br>
+                <br>
+                Crush your Chest Workout with this intense routine! 
+                <br>Sculpt your upper body and build strong, defined chest muscles. 
+                <br>Get ready to pump up those pecs and feel the burn!
+            </div>
+            <div class="video-feedback">
+                <i class="fas fa-thumbs-up thumbs-icon thumbs-up"></i>
+                <i class="fas fa-thumbs-down thumbs-icon thumbs-down"></i>
+            </div>
+        </div>
+
+        <div class="mp_container" data-filter="Cardio">
+            <div class="thumbnail_3">
+                <img src="icons/fitness_3.png" alt="Video 2">
+            </div>
+            <div class="mp_section tutorial_zumba">
+                Cardio Workout:
+                <br>
+                <br>
+                Dance your way to fitness with this high-energy Zumba workout! 
+                <br>Groove to the rhythm, shed those extra calories, and have a blast while you do it. 
+                <br>It's fun, it's energetic, and it's all about keeping your body moving! 
+            </div>
+            <div class="video-feedback">
+                <i class="fas fa-thumbs-up thumbs-icon thumbs-up"></i>
+                <i class="fas fa-thumbs-down thumbs-icon thumbs-down"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="load-more-container">
+        <button class="load-more-button" onclick="loadMoreVideos()">Load More</button>
+    </div>
+</body>
+</html>
