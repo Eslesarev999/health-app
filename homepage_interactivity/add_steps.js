@@ -9,15 +9,15 @@ document.getElementById('H_plus').addEventListener('click', function() {
 document.getElementById('H_confirm-steps').addEventListener('click', function() {
     // Get manual steps and target
     const manualSteps = parseInt(document.getElementById('H_manual-steps').value);
-    const targetSteps = parseInt(document.getElementById('H_manual-target').value);
+    const targetSteps = 10000;
 
-    if (isNaN(manualSteps) || isNaN(targetSteps)) {
+    if (isNaN(manualSteps)) {
         alert("Please enter valid numbers for both target steps and steps taken!");
         return;
     }
     currentSteps = manualSteps; // Set currentSteps to manualSteps
     // Update the progress bar and steps left
-    updateProgressBar(targetSteps);
+    updateProgressBar(10000);
     // Hide the manual entry
     document.getElementById('H_manual-entry').style.display = 'none';
 });
@@ -25,7 +25,7 @@ document.getElementById('H_confirm-steps').addEventListener('click', function() 
 function updateProgressBar(targetSteps) {
     const progressBar = document.querySelector('.H_progress-bar');
     const stepsLeftElem = document.getElementById('H_steps-left');
-    const percentageProgress = (currentSteps / targetSteps) * 100;
+    const percentageProgress = (currentSteps / 10000) * 100;
     
     // Update the conic-gradient with dynamic percentage
     progressBar.style.background = `
@@ -36,9 +36,9 @@ function updateProgressBar(targetSteps) {
     progressBar.setAttribute("data-steps", currentSteps);
 
     // Calculate and update the steps left
-    const remainingSteps = targetSteps - currentSteps;
+    const remainingSteps = 10000 - currentSteps;
     stepsLeftElem.textContent = `${remainingSteps} Steps Left!`;
-    updateBarGraph(currentSteps, targetSteps);
+    updateBarGraph(currentSteps);
 }
 document.querySelectorAll(".H_group input[type='checkbox']").forEach(checkbox => {
     checkbox.addEventListener('click', function() {
@@ -47,7 +47,7 @@ document.querySelectorAll(".H_group input[type='checkbox']").forEach(checkbox =>
     });
 });
 
-function updateBarGraph(steps, targetSteps) {
+function updateBarGraph(steps) {
     // Adjust this function to take targetSteps into account
     const days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
 
@@ -82,7 +82,7 @@ function updateBarGraph(steps, targetSteps) {
         const barValue = bar.querySelector('.H_bar-value');
 
         // Calculate the height of the bar as a percentage of the targetSteps, capping it at 100%
-        let percentageOfTarget = (steps / targetSteps) * 100;
+        let percentageOfTarget = (steps / 10000) * 100;
         percentageOfTarget = percentageOfTarget > 100 ? 100 : percentageOfTarget; // Ensure it doesn't exceed 100%
 
         bar.style.height = `${percentageOfTarget}%`;
