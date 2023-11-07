@@ -1,8 +1,12 @@
 h1 {
   color: #FFFFFF;
-  font-size: 4vw; /* scale font size with the width of the viewport */
-  margin-left: 21%; /* use percentage instead of fixed margin */
-  margin-bottom: 0;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  height: 20px;
+  line-height: 3;
+  color: #FFFFFF;
+  font-size: 22px; /* scale font size with the width of the viewport */
   font-family: Inter, sans-serif;
 }
 
@@ -22,7 +26,7 @@ h1 {
 #H_basic-font{
   font-family: Inter, sans-serif;
     color: #075685;
-    font-size: 22pt;
+    font-size: 12pt;
     padding-left: .6em;
     text-align: left;
 }
@@ -49,9 +53,9 @@ h1 {
 
 @media (max-width: 414px) {
   #H_steps-dv {
-    width: 100%;
-    height: 50%;
-    padding: 10px;
+    width: 83%;
+    height: 200px;
+    padding: 1px;
   }
 }
 
@@ -67,8 +71,8 @@ h1 {
 
 @media (max-width: 414px) {
   #H_cals-dv {
-    width: 100%;
-    padding: 10px;
+    width: 83%;
+    padding: 1px;
   }
 }
 
@@ -85,7 +89,7 @@ h1 {
 
 @media (max-width: 414px) {
   #H_stats-dv {
-    width: 100%; /* increase the width on small screens for more space */
+    width: 83%; /* increase the width on small screens for more space */
     padding: 10px;
   }
 }
@@ -95,15 +99,13 @@ h1 {
     vertical-align: middle;
     padding-right: .4em;
     font-weight: bold;
+   
 }
-#H_manual-target {
-  width: 200px;  /* Adjust the width as desired */
-  height: 30px;  /* Adjust the height as desired */
-  font-size: 22px; /* Adjust font size as desired */
-  border: 1px solid #075685; /* Add a border for visual emphasis */
-  border-radius: 4px; /* Add rounded corners for a modern look */
-  padding: 5px; /* Add some padding for comfort */
+#H_add-steps{
+  display: flex;
+  align-items: flex-start; /* Align items to the start of the container */
 }
+
 
 #H_manual-steps {
   width: 200px;  /* Adjust the width as desired */
@@ -112,12 +114,31 @@ h1 {
   border: 1px solid #075685; /* Add a border for visual emphasis */
   border-radius: 4px; /* Add rounded corners for a modern look */
   padding: 5px; /* Add some padding for comfort */
+  margin-top: .4em; /* Add space between the button and the input box */
 }
 #H_confirm-steps{
   width: 70px;  /* Adjust the width as desired */
   height: 50px;  /* Adjust the height as desired */
   font-size: 22px; /* Adjust font size as desired */
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding, adjust if needed */
 }
+@media (max-width: 600px) {
+  #H_manual-steps {
+    width: 50%;  /* Adjust the width as desired */
+    height: 10%;  /* Adjust the height as desired */
+    font-size: 12px; /* Adjust font size as desired */
+    border: 1px solid #075685; /* Add a border for visual emphasis */
+    border-radius: 4px; /* Add rounded corners for a modern look */
+    padding: 4px; /* Add some padding for comfort */
+  }
+  #H_confirm-steps{
+    font-size: 14px;
+    width: 23%;  /* Adjust the width as desired */
+    height: 23%;  /* Adjust the height as desired */
+  }
+}
+
 
 .H_title-container, .H_progress-bar, #H_steps-left {
   max-width: 100%; /* Ensures these elements do not exceed their container's width */
@@ -139,7 +160,11 @@ h1 {
 }
 @media (max-width: 600px) {
   #H_steps-left {
-    font-size: 20px; /* Minimum font size for small screens */
+    padding-top:2%;
+    font-size: 13.5px; /* Minimum font size for small screens */
+  }
+  #H_plus{
+    font-size: 25px;
   }
 }
 
@@ -161,7 +186,7 @@ h1 {
 /* Adjust size for smaller screens */
 @media (max-width: 600px) {
   .H_progress-bar {
-    width: 35vw; /* use larger viewport width for smaller screens */
+    width: 23vw; /* use larger viewport width for smaller screens */
     /* min-width and min-height are removed to allow the bar to shrink */
   }
 }
@@ -184,7 +209,7 @@ h1 {
   }
   @media (max-width: 600px) {
     .H_progress-bar::before {
-      font-size: 20px; /* Set a minimum font size for small screens */
+      font-size: 13.5px; /* Set a minimum font size for small screens */
     }
   }
   
@@ -212,6 +237,11 @@ h1 {
   width: 30%;
 }
 
+@media (max-width: 600px) {
+  .H_container .H_group  {
+    width: 10%;
+  }
+}
   
   input[type="checkbox"] {
     display: none;
@@ -262,8 +292,9 @@ h1 {
 @media (max-width: 600px) {
     #H_circle-style::before,
     #H_circle-style::after {
-        width: 8vw; /* Increase size for better visibility on small screens */
-        height: 8vw; /* Keep the aspect ratio the same as width */
+        width: 7.3vw; /* Increase size for better visibility on small screens */
+        height: 7.5vw; /* Keep the aspect ratio the same as width */
+        padding-top: .5em;
     }
 
     #H_circle-style::after {
@@ -323,6 +354,12 @@ h1 {
   font-weight: bold;
   font-size: 25px;
 }
+@media (max-width: 600px) {
+  .H_goal-label {
+   font-size: 15px;
+}
+}
+
 .H_goal-line {
     position: absolute;
     width: 90%; /* Make the goal line span the full width */
@@ -356,23 +393,18 @@ h1 {
 /* Responsive adjustments for smaller screens */
 @media (max-width: 600px) {
   .H_bar {
-      width: 15%; /* Increase width for smaller screens if needed */
-      margin-right: 3%; /* Reduce margin between bars for smaller screens */
-      padding-right: 10px; /* Adjust padding to be more suitable for smaller screens */
+      width: 9%; /* Increase width for smaller screens if needed */
+      margin-right: 7%; /* Reduce margin between bars for smaller screens */
+      padding-right: 8px; /* Adjust padding to be more suitable for smaller screens */
   }
 
   .H_bar-value {
       font-size: 12px; /* Set a minimum font size for small screens */
+      padding-right: .3em;
   }
 }
 
-/* Responsive adjustments for very small screens */
-@media (max-width: 400px) {
-  .H_bar {
-      margin-right: 2%; /* Further reduce margin for very small screens */
-      padding-right: 5px; /* Adjust padding for very small screens */
-  }
-}
+
 
 .H_bar-labels {
   color: #075685;
@@ -413,10 +445,15 @@ h1 {
 }
 
 @media (max-width: 768px) {
-  .H_bar-label1, .H_bar-label2 {
-    padding-left: 12px; /* Smaller fixed padding for small screens */
-    padding-right: 11px; /* Smaller fixed padding for small screens */
-    font-size: 18px; /* Smaller font size for small screens */
+  .H_bar-label1{
+    padding-left: 10px; /* Smaller fixed padding for small screens */
+    padding-right: 12px; /* Smaller fixed padding for small screens */
+    font-size: 13px; /* Smaller font size for small screens */
+  }
+ .H_bar-label2 {
+    padding-left: 8px; /* Smaller fixed padding for small screens */
+    padding-right: 15px; /* Smaller fixed padding for small screens */
+    font-size: 13px; /* Smaller font size for small screens */
   }
 }
 
@@ -433,6 +470,12 @@ h1 {
     font-size: 28px;
     text-align: right; 
 }
+@media (max-width: 600px) {
+  #H_date {
+   font-size: 15px;
+}
+}
+
 
 .H_title-container {
     display: flex;
