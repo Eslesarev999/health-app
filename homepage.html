@@ -21,9 +21,7 @@
         Welcome Back, <strong><span class="H_bold-name">Susan Smith</span></strong>!
     </h1> 
   </div>
-       <div id ="H_community">
-        <p id = "H_words">Community: <b>1 new message!</b> </p>
-        </div>
+       
 
         
 
@@ -190,29 +188,8 @@
      
 
       <script src="homepage_interactivity/add_steps.js"></script>
+      <script src="homepage_interactivity/circle_stuff.js"></script>
+      <script src="homepage_interactivity/date.js"></script>
         
-        
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', function() {
-            const label = this.nextElementSibling;
-            if (this.checked) {
-                label.style.setProperty('--circle-bg', 'green');
-                label.style.setProperty('--circle-border', 'green');
-            } else {
-                label.style.setProperty('--circle-bg', 'white');
-                label.style.setProperty('--circle-border', '#075685');
-            }
-        });
-    });
-});
-          </script>
-          <script>
-            const dateElement = document.getElementById("H_date");
-            const currentDate = new Date();
-            const formattedDate = currentDate.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: '2-digit' });
-            dateElement.textContent = formattedDate;
-        </script>
+  
 </body>
