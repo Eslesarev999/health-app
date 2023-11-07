@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const right = document.getElementById("right-arrow");
 
     left.addEventListener("click", function () {
-        window.location.href = "metrics.html";
+        window.location.href = "today_metrics.html";
     });
 
     right.addEventListener("click", function () {
