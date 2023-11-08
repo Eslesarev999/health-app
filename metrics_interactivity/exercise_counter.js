@@ -1,6 +1,66 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Select the Add Exercise button
     const addExerciseButton = document.getElementById("add-exercise-button");
+    const addExer1 = document.getElementById("editIcon-1");
+    const addExer2 = document.getElementById("editIcon-2");
+
+    const createEditFunctionality = function (editButton, exerciseNameSelector, exerciseDurationSelector) {
+        editButton.addEventListener("click", function () {
+            // Get the existing exercise name and duration elements
+            const exerciseName = document.querySelector(exerciseNameSelector);
+            const exerciseDuration = document.querySelector(exerciseDurationSelector);
+
+            // Create an input field for editing the exercise title
+            const titleInputField = document.createElement("input");
+            titleInputField.type = "text";
+            titleInputField.value = exerciseName.textContent;
+            titleInputField.className = "exercise-title-input";
+
+            titleInputField.addEventListener("focus", function () {
+                document.getElementById("keyboard").style.display = "block"; // Show keyboard
+            });
+
+            titleInputField.addEventListener("blur", function () {
+                exerciseName.textContent = titleInputField.value;
+                document.getElementById("keyboard").style.display = "none";
+            });
+
+            titleInputField.addEventListener("keyup", function (event) {
+                if (event.key === "Enter") {
+                    exerciseName.textContent = titleInputField.value;
+                    document.getElementById("keyboard").style.display = "none";
+                }
+            });
+
+            // Create an input field for editing the exercise duration
+            const durationInputField = document.createElement("input");
+            durationInputField.type = "text";
+            durationInputField.value = exerciseDuration.textContent;
+            durationInputField.className = "exercise-duration-input";
+
+            durationInputField.addEventListener("blur", function () {
+                exerciseDuration.textContent = durationInputField.value;
+            });
+
+            durationInputField.addEventListener("keyup", function (event) {
+                if (event.key === "Enter") {
+                    exerciseDuration.textContent = durationInputField.value;
+                }
+            });
+
+            exerciseName.textContent = "";
+            exerciseName.appendChild(titleInputField);
+
+            exerciseDuration.textContent = "";
+            exerciseDuration.appendChild(durationInputField);
+
+            titleInputField.focus();
+        });
+    };
+
+    createEditFunctionality(addExer1, ".mp_exercise-section .mp_exercise-name", ".mp_exercise-section .mp_exercise-item");
+    createEditFunctionality(addExer2, ".mp_exercise-section .mp_exercise-name-2", ".mp_exercise-section .mp_exercise-item-2");
+
 
     // Add a click event listener to the Add Exercise button
     addExerciseButton.addEventListener("click", function () {
@@ -48,19 +108,6 @@ document.addEventListener("DOMContentLoaded", function () {
             titleInputField.value = exerciseName.textContent;
             titleInputField.className = "exercise-title-input";
 
-            // titleInputField.addEventListener("blur", function () {
-            //     exerciseName.textContent = titleInputField.value;
-            // });
-
-            // titleInputField.addEventListener("keyup", function (event) {
-            //     if (event.key === "Enter") {
-            //         exerciseName.textContent = titleInputField.value;
-            //     }
-            // });
-
-            // keyboard functionality 
-            // toggleKeyboard(titleInputField);
-
             titleInputField.addEventListener("focus", function () {
                 document.getElementById("keyboard").style.display = "block"; // Show keyboard
             });
@@ -82,23 +129,6 @@ document.addEventListener("DOMContentLoaded", function () {
             durationInputField.type = "text";
             durationInputField.value = exerciseInput.textContent;
             
-            // keyboard functionality 
-            // durationInputField.className = "exercise-duration-input";
-            // toggleKeyboard(durationInputField);
-
-            // durationInputField.addEventListener("focus", function () {
-            //     document.getElementById("keyboard").style.display = "block"; // Show keyboard
-            // });
-            // durationInputField.addEventListener("blur", function () {
-            //     exerciseInput.textContent = durationInputField.value;
-            //     document.getElementById("keyboard").style.display = "none";
-            // });
-            // durationInputField.addEventListener("keyup", function (event) {
-            //     if (event.key === "Enter") {
-            //         exerciseInput.textContent = durationInputField.value;
-            //         document.getElementById("keyboard").style.display = "none";
-            //     }
-            // });
 
             durationInputField.addEventListener("blur", function () {
                 exerciseInput.textContent = durationInputField.value;
