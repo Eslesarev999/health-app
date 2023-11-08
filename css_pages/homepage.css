@@ -503,15 +503,13 @@ input[type="checkbox"]:focus {
   border-radius: 2px; /* Rounded corners for the buttons */
 }
 
-
 #keyboard button {
-  padding: 5px 10px;
-  margin: 5px;
-  width: 65px; /* or any size you want */
-  height: 55px;
+  padding: 1px 1px;
+
+  width: 34px; /* or any size you want */
+  height: 30px;
   /* Add more styles if needed */
 }
-
 .keyboard-row {
   display: flex;
   justify-content: center;
