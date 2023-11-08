@@ -64,6 +64,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.getElementById('meal_searchbar');
     const clearButton = document.getElementById('clear_search');
     const addButton = document.querySelector('.meal_add_food_button');
+    const foodList = document.getElementById("foodList");
+
 
     searchInput.addEventListener('focus', function() {
         toggleKeyboard(searchInput);
@@ -84,4 +86,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     togglePlusToCheckmark();
+
+    foodList.addEventListener("click", function (event) {
+        if (event.target.classList.contains("meal_plus-sign")) {
+            // Toggle the checkmark
+            const listItem = event.target.parentElement;
+            const isCheck = listItem.querySelector(".meal_plus-sign").textContent === '✓';
+            listItem.querySelector(".meal_plus-sign").textContent = isCheck ? '+' : '✓';
+
+            // Save the checked state in localStorage
+            const foodName = listItem.querySelector(".food-name").textContent;
+            const checkedState = isCheck ? 'checked' : 'unchecked';
+            localStorage.setItem(foodName, checkedState);
+        }
+    });
+
 });
