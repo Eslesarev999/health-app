@@ -5,7 +5,7 @@ function handleAddFoodButtonClick() {
 }
 
 function handleBackButtonClick() {
-    window.location.href = 'today_metrics.html';
+    window.history.back();     
 }
 
 // Function to toggle plus sign to checkmark icon
@@ -60,16 +60,18 @@ function toggleKeyboard(inputField) {
 
 // Add event listeners
 document.addEventListener('DOMContentLoaded', function () {
-    const arrowElement = document.getElementById('meal_arrow');
     const searchInput = document.getElementById('meal_searchbar');
     const clearButton = document.getElementById('clear_search');
     const addButton = document.querySelector('.meal_add_food_button');
+    const backArrows = document.getElementById('meal_arrow');
+
+    backArrows.addEventListener("click", function () {
+        window.history.back(); // Navigate back to the previous page
+    });
 
     searchInput.addEventListener('focus', function() {
         toggleKeyboard(searchInput);
     });
-
-    arrowElement.addEventListener('click', handleBackButtonClick);
 
     searchInput.addEventListener('input', () => {
         const searchText = searchInput.value.toLowerCase();

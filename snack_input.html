@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" type="text/css" href="css_pages/global.css" />
+    <link rel="stylesheet" type="text/css" href="css_pages/meal_input.css" />
+    <link rel="stylesheet" href="Inter/Inter-VariableFont_slnt,wght.ttf">
+    <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.min.css">
+    <script src="meals_interactivity/meals_global.js"></script>
+    <script src="global_interactivity.js"></script>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Health App</title>
+</head>
+
+<body>
+    
+    <div class="meal_profile-icon">
+        <img class="profile-icon"  id="profIcon" src="icons/profile_pic.png" height="36px" width="36px">
+    </div>
+    
+    <div class="meal_header">
+        <span id="meal_arrow"> &lt; </span>
+        <h1>Snack</h1>
+    </div>
+
+    <div class="meal_meal_container">
+        <div class="meal_search-section">
+                <input id="meal_searchbar" type="text" placeholder="Search your history">
+                <button id="clear_search"> <img src="icons/Close.png" height="25px" width="25px"> </button>
+        </div>
+
+        <div class="meal_add_food_div">
+            <button class="meal_add_food_button">Add New Food</button>
+        </div>
+
+        <div class="meal_food_history">
+            <h2 class="meal_history_title">History</h2>
+            <ul id="foodList">
+                <li class="meal_food_item">
+                    <span class="food-name">Banana</span> <div class="meal_calories">21cal</div> <div class="meal_plus-sign">+</div>
+                </li>
+                <li class="meal_food_item">
+                    <span class="food-name">Grilled Cheese Sandwish</span> <div class="meal_calories">250cal</div> <div class="meal_plus-sign">+</div>
+                </li>
+                <li class="meal_food_item">
+                    <span class="food-name">Oatmeal</span> <div class="meal_calories">150cal</div> <div class="meal_plus-sign">+</div>
+                </li>
+                <li class="meal_food_item">
+                    <span class="food-name">Banana</span> <div class="meal_calories">21cal</div> <div class="meal_plus-sign">+</div>
+                </li>
+                <li class="meal_food_item">
+                    <span class="food-name">Grilled Cheese Sandwish</span> <div class="meal_calories">250cal</div> <div class="meal_plus-sign">+</div>
+                </li>
+                <li class="meal_food_item">
+                    <span class="food-name">Oatmeal</span> <div class="meal_calories">150cal</div> <div class="meal_plus-sign">+</div>
+                </li>
+                <li class="meal_food_item">
+                    <span class="food-name">Banana</span> <div class="meal_calories">21cal</div> <div class="meal_plus-sign">+</div>
+                </li>
+                <li class="meal_food_item">
+                    <span class="food-name">Grilled Cheese Sandwish</span> <div class="meal_calories">250cal</div> <div class="meal_plus-sign">+</div>
+                </li>
+                <li class="meal_food_item">
+                    <span class="food-name">Oatmeal</span> <div class="meal_calories">150cal</div> <div class="meal_plus-sign">+</div>
+                </li>
+                <li class="meal_food_item">
+                    <span class="food-name">Banana</span> <div class="meal_calories">21cal</div> <div class="meal_plus-sign">+</div>
+                </li>
+                <li class="meal_food_item">
+                    <span class="food-name">Grilled Cheese Sandwish</span> <div class="meal_calories">250cal</div> <div class="meal_plus-sign">+</div>
+                </li>
+                <li class="meal_food_item">
+                    <span class="food-name">Oatmeal</span> <div class="meal_calories">150cal</div> <div class="meal_plus-sign">+</div>
+                </li>
+                <li class="meal_food_item">
+                    <span class="food-name">Banana</span> <div class="meal_calories">21cal</div> <div class="meal_plus-sign">+</div>
+                </li>
+                <li class="meal_food_item">
+                    <span class="food-name">Grilled Cheese Sandwish</span> <div class="meal_calories">250cal</div> <div class="meal_plus-sign">+</div>
+                </li>
+                <li class="meal_food_item">
+                    <span class="food-name">Oatmeal</span> <div class="meal_calories">150cal</div> <div class="meal_plus-sign">+</div>
+                </li>
+                <li class="meal_food_item">
+                    <span class="food-name">Banana</span> <div class="meal_calories">21cal</div> <div class="meal_plus-sign">+</div>
+                </li>
+                <li class="meal_food_item">
+                    <span class="food-name">Grilled Cheese Sandwish</span> <div class="meal_calories">250cal</div> <div class="meal_plus-sign">+</div>
+                </li>
+                <li class="meal_food_item">
+                    <span class="food-name">Oatmeal</span> <div class="meal_calories">150cal</div> <div class="meal_plus-sign">+</div>
+                </li>
+                <li class="meal_food_item">
+                    <span class="food-name">Banana</span> <div class="meal_calories">21cal</div> <div class="meal_plus-sign">+</div>
+                </li>
+                <li class="meal_food_item">
+                    <span class="food-name">Grilled Cheese Sandwish</span> <div class="meal_calories">250cal</div> <div class="meal_plus-sign">+</div>
+                </li>
+                <li class="meal_food_item">
+                    <span class="food-name">Oatmeal</span> <div class="meal_calories">150cal</div> <div class="meal_plus-sign">+</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="icon_menu">
+        <i id="chartIcon" class="fas fa-chart-bar"></i>
+        <i id="weightIcon" class="fas fa-weight"></i>
+        <i id="usersIcon" class="fas fa-users"></i>
+        <i id="tutIcon" class="fas fa-video"></i>
+    </div>
+            <!-- Keyboard layout -->
+<div id="keyboard" style="display:none;">
+    <!-- Number row -->
+    <div class="keyboard-row">
+      <button onclick="typeKey('1')">1</button>
+      <button onclick="typeKey('2')">2</button>
+      <button onclick="typeKey('3')">3</button>
+      <button onclick="typeKey('4')">4</button>
+      <button onclick="typeKey('5')">5</button>
+      <button onclick="typeKey('6')">6</button>
+      <button onclick="typeKey('7')">7</button>
+      <button onclick="typeKey('8')">8</button>
+      <button onclick="typeKey('9')">9</button>
+      <button onclick="typeKey('0')">0</button>
+      <!-- ... other numbers ... -->
+    </div>
+  
+    <!-- Top row of letters -->
+    <div class="keyboard-row">
+      <button onclick="typeKey('q')">Q</button>
+      <button onclick="typeKey('w')">W</button>
+      <button onclick="typeKey('e')">E</button>
+      <button onclick="typeKey('r')">R</button>
+      <button onclick="typeKey('t')">T</button>
+      <button onclick="typeKey('y')">Y</button>
+      <button onclick="typeKey('u')">U</button>
+      <button onclick="typeKey('i')">I</button>
+      <button onclick="typeKey('o')">O</button>
+      <button onclick="typeKey('p')">P</button>
+  
+      <!-- ... other letters ... -->
+    </div>
+  
+    <!-- Second row of letters -->
+    <div class="keyboard-row">
+      <button onclick="typeKey('a')">A</button>
+      <button onclick="typeKey('s')">S</button>
+      <button onclick="typeKey('d')">D</button>
+      <button onclick="typeKey('f')">F</button>
+      <button onclick="typeKey('g')">G</button>
+      <button onclick="typeKey('h')">H</button>
+      <button onclick="typeKey('j')">J</button>
+      <button onclick="typeKey('k')">K</button>
+      <button onclick="typeKey('l')">L</button>
+      <!-- ... other letters ... -->
+    </div>
+  
+    <!-- Third row of letters -->
+    <div class="keyboard-row">
+      <button onclick="typeKey('z')">Z</button>
+      <button onclick="typeKey('x')">X</button>
+      <button onclick="typeKey('c')">C</button>
+      <button onclick="typeKey('v')">V</button>
+      <button onclick="typeKey('b')">B</button>
+      <button onclick="typeKey('n')">N</button>
+      <button onclick="typeKey('m')">M</button>
+  
+      <!-- ... other letters ... -->
+    </div>
+  
+    <!-- Special keys and space -->
+    <div class="keyboard-row">
+        <button onclick="backspaceKey()">⌫</button>
+      <button class="space" onclick="typeKey(' ')">Space</button>
+      <button onclick="moveCursor('left')">&larr;</button>
+    <button onclick="moveCursor('right')">&rarr;</button>
+      <button onclick="closeKeyboard()">Exit</button>
+    </div>
+  </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Retrieve the food history from local storage
+            const existingData = localStorage.getItem("foodHistory");
+            let foodHistory = [];
+
+            if (existingData) {
+                foodHistory = JSON.parse(existingData);
+            }
+
+            // Access the UL element where you want to display the history list
+            const foodList = document.getElementById("foodList");
+
+            foodHistory.forEach(function (entry) {
+                const listItem = createFoodItem(entry);
+                foodList.insertBefore(listItem, foodList.firstChild);
+            });
+
+            // Function to create a food item
+            function createFoodItem(entry) {
+                const listItem = document.createElement("li");
+                listItem.className = "meal_food_item";
+
+                // Initialize as a plus button
+                let isCheck = false;
+
+                listItem.innerHTML = `
+                    <span class="food-name">${entry.name}</span>
+                    <div class="meal_calories">${entry.calories}cal</div>
+                    <div class="meal_plus-sign">${isCheck ? '✓' : '+'}</div>
+                `;
+
+                listItem.addEventListener("click", function () {
+                    isCheck = !isCheck; // Toggle the checkmark
+
+                    // Update the icon based on the new state
+                    listItem.querySelector(".meal_plus-sign").textContent = isCheck ? '✓' : '+';
+                });
+
+                return listItem;
+            }
+        });
+    </script>
+</body>
+</html>
+
