@@ -1,16 +1,15 @@
 function loadMoreVideos() {
     const tutorialThumbnails = document.querySelector('.tutorial-thumbnails');
 
-    // Create a new mp_container
+    
     const newContainer = document.createElement('div');
     newContainer.classList.add('mp_container');
 
-    // Create a thumbnail
     const newThumbnail = document.createElement('div');
     newThumbnail.classList.add('thumbnail_2');
     const thumbnailImage = document.createElement('img');
-    thumbnailImage.src = 'icons/fitness_4.png'; // Set the image source
-    thumbnailImage.alt = 'Video Placeholder'; // Set the alt text
+    thumbnailImage.src = 'icons/fitness_4.png'; 
+    thumbnailImage.alt = 'Video Placeholder';
     newThumbnail.appendChild(thumbnailImage);
 
     // Create a tutorial section
@@ -35,19 +34,15 @@ function loadMoreVideos() {
     newVideoFeedback.appendChild(thumbsUpIcon);
     newVideoFeedback.appendChild(thumbsDownIcon);
 
-    // Append the thumbnail, tutorial section, and video feedback to the new container
     newContainer.appendChild(newThumbnail);
     newContainer.appendChild(newTutorialSection);
     newContainer.appendChild(newVideoFeedback);
 
-    // Append the new container to the tutorial-thumbnails
     tutorialThumbnails.appendChild(newContainer);
 
-    // Add event listeners for the new thumbs up and down icons
     thumbsUpIcon.addEventListener('click', function () {
         if (!thumbsUpIcon.classList.contains('highlighted')) {
             toggleIconColor(thumbsUpIcon);
-            // Check if the associated thumbs-down icon is already highlighted and unhighlight it
             const associatedThumbsDownIcon = thumbsUpIcon.parentElement.querySelector('.thumbs-down');
             if (associatedThumbsDownIcon.classList.contains('highlighted')) {
                 toggleIconColor(associatedThumbsDownIcon);
@@ -58,7 +53,6 @@ function loadMoreVideos() {
     thumbsDownIcon.addEventListener('click', function () {
         if (!thumbsDownIcon.classList.contains('highlighted')) {
             toggleIconColor(thumbsDownIcon);
-            // Check if the associated thumbs-up icon is already highlighted and unhighlight it
             const associatedThumbsUpIcon = thumbsDownIcon.parentElement.querySelector('.thumbs-up');
             if (associatedThumbsUpIcon.classList.contains('highlighted')) {
                 toggleIconColor(associatedThumbsUpIcon);

@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
         thumbsUpIcon.addEventListener('click', function () {
             if (!thumbsUpIcon.classList.contains('highlighted')) {
                 toggleIconColor(thumbsUpIcon);
-                // Check if the associated thumbs-down icon is already highlighted and unhighlight it
                 const associatedThumbsDownIcon = thumbsUpIcon.parentElement.querySelector('.thumbs-down');
                 if (associatedThumbsDownIcon.classList.contains('highlighted')) {
                     toggleIconColor(associatedThumbsDownIcon);
@@ -20,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
         thumbsDownIcon.addEventListener('click', function () {
             if (!thumbsDownIcon.classList.contains('highlighted')) {
                 toggleIconColor(thumbsDownIcon);
-                // Check if the associated thumbs-up icon is already highlighted and unhighlight it
                 const associatedThumbsUpIcon = thumbsDownIcon.parentElement.querySelector('.thumbs-up');
                 if (associatedThumbsUpIcon.classList.contains('highlighted')) {
                     toggleIconColor(associatedThumbsUpIcon);

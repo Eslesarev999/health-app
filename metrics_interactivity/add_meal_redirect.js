@@ -1,4 +1,3 @@
-// redirect to add meal page upon click of "add a new meal" button in metrics page
 document.addEventListener("DOMContentLoaded", function () {
     const addMealButton = document.getElementById("add-meal-button");
     const breakfast = document.getElementById("breakfast");

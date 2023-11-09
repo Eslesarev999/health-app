@@ -6,7 +6,7 @@ h1 {
   height: 20px;
   line-height: 3;
   color: #FFFFFF;
-  font-size: 22px; /* scale font size with the width of the viewport */
+  font-size: 22px; 
   font-family: Inter, sans-serif;
 }
 
@@ -42,9 +42,9 @@ h1 {
 
 #H_words{
   padding-top: 0.125em;
-  margin: 0 auto; /* center instead of using fixed margin */
+  margin: 0 auto; 
   color: #075685;
-  width: 23%; /* responsive width */
+  width: 23%; 
 }
 
 #H_basic-font{
@@ -108,12 +108,12 @@ h1 {
   border-radius: 15px;
   gap: 11.04px;
   margin-bottom: 5em;
-  overflow: hidden; /* Add this line to prevent overflowing */
+  overflow: hidden; 
 }
 
 @media (max-width: 414px) {
   #H_stats-dv {
-    width: 83%; /* increase the width on small screens for more space */
+    width: 83%; 
     padding: 10px;
   }
 }
@@ -127,65 +127,65 @@ h1 {
 }
 #H_add-steps{
   display: flex;
-  align-items: flex-start; /* Align items to the start of the container */
+  align-items: flex-start; 
 }
 
 
 #H_manual-steps {
-  width: 200px;  /* Adjust the width as desired */
-  height: 30px;  /* Adjust the height as desired */
-  font-size: 22px; /* Adjust font size as desired */
-  border: 1px solid #075685; /* Add a border for visual emphasis */
-  border-radius: 4px; /* Add rounded corners for a modern look */
-  padding: 5px; /* Add some padding for comfort */
-  margin-top: .4em; /* Add space between the button and the input box */
+  width: 200px;  
+  height: 30px;  
+  font-size: 22px; 
+  border: 1px solid #075685; 
+  border-radius: 4px;
+  padding: 5px; 
+  margin-top: .4em;
 }
 #H_confirm-steps{
-  width: 70px;  /* Adjust the width as desired */
-  height: 50px;  /* Adjust the height as desired */
-  font-size: 22px; /* Adjust font size as desired */
-  margin: 0; /* Reset margin */
-  padding: 0; /* Reset padding, adjust if needed */
+  width: 70px;  
+  height: 50px;  
+  font-size: 22px; 
+  margin: 0; 
+  padding: 0; 
 }
 @media (max-width: 600px) {
   #H_manual-steps {
-    width: 50%;  /* Adjust the width as desired */
-    height: 10%;  /* Adjust the height as desired */
-    font-size: 12px; /* Adjust font size as desired */
-    border: 1px solid #075685; /* Add a border for visual emphasis */
-    border-radius: 4px; /* Add rounded corners for a modern look */
-    padding: 4px; /* Add some padding for comfort */
+    width: 50%;  
+    height: 10%;  
+    font-size: 12px; 
+    border: 1px solid #075685;
+    border-radius: 4px; 
+    padding: 4px; 
   }
   #H_confirm-steps{
     font-size: 14px;
-    width: 23%;  /* Adjust the width as desired */
-    height: 23%;  /* Adjust the height as desired */
+    width: 23%;  
+    height: 23%;  
   }
 }
 
 
 .H_title-container, .H_progress-bar, #H_steps-left {
-  max-width: 100%; /* Ensures these elements do not exceed their container's width */
+  max-width: 100%; 
 }
 
 #H_steps-left{
   font-family: Inter, sans-serif;
   color: #075685;
   font-size: 24pt;
-  margin: 0 auto; /* Centers the element horizontally */
-  display: flex; /* Use flexbox to center the text within the element */
-  justify-content: center; /* Center the text horizontally */
-  align-items: center; /* Center the text vertically (if it's in a flex container of specific height) */
-  text-align: center; /* Ensures the text itself is centered */
-  padding: 0; /* Remove padding if you don't need it */
-  overflow: hidden; /* Prevents the content from spilling out */
-  white-space: nowrap; /* Prevents the text from wrapping */
-  text-overflow: ellipsis; /* Adds an ellipsis if the text is too long */
+  margin: 0 auto; 
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+  text-align: center; 
+  padding: 0; 
+  overflow: hidden; 
+  white-space: nowrap; 
+  text-overflow: ellipsis; 
 }
 @media (max-width: 600px) {
   #H_steps-left {
     padding-top:2%;
-    font-size: 13.5px; /* Minimum font size for small screens */
+    font-size: 13.5px; 
   }
   #H_plus{
     font-size: 25px;
@@ -193,10 +193,10 @@ h1 {
 }
 
 .H_progress-bar {
-  margin: 0 auto; /* center it */
-  width: 20%; /* default width relative to the parent element */
-  height: auto; /* maintain aspect ratio relative to the width */
-  aspect-ratio: 1 / 1; /* This maintains a 1:1 aspect ratio */
+  margin: 0 auto; 
+  width: 20%; 
+  height: auto; 
+  aspect-ratio: 1 / 1; 
   border-radius: 50%;
   
   display: flex;
@@ -207,18 +207,16 @@ h1 {
     conic-gradient(rgb(0, 39, 97) 0%, white 0);  
 }
 
-/* Adjust size for smaller screens */
+
 @media (max-width: 600px) {
   .H_progress-bar {
-    width: 23vw; /* use larger viewport width for smaller screens */
-    /* min-width and min-height are removed to allow the bar to shrink */
+    width: 23vw; 
   }
 }
 
-/* Adjust size for wider screens */
 @media (min-width: 1000px) {
   .H_progress-bar {
-    width: 10vw; /* use smaller viewport width for even wider screens */
+    width: 10vw;
   }
 }
 
@@ -233,21 +231,21 @@ h1 {
   }
   @media (max-width: 600px) {
     .H_progress-bar::before {
-      font-size: 13.5px; /* Set a minimum font size for small screens */
+      font-size: 13.5px; 
     }
   }
   
 
   .H_container {
   display: flex;
-  justify-content: space-between; /* Distribute items evenly */
+  justify-content: space-between; 
 }
 
 .H_group {
   display: flex;
-  flex-direction: column; /* Place checkbox and label vertically */
-  align-items: center; /* Center items horizontally */
-  text-align: center; /* Center text horizontally */
+  flex-direction: column;
+  align-items: center; 
+  text-align: center; 
 }
 
 
@@ -279,7 +277,7 @@ h1 {
 
 #H_circle-style::before {
     content: "";
-    background: transparent; /* Set the initial background to transparent */
+    background: transparent; 
     background-position: center;
     background-size: contain;
     width: 55px; 
@@ -288,7 +286,7 @@ h1 {
     left: -35px;
     top: -20px; 
 
-    transform: scale(1) rotateZ(180deg); /* Set scale to 1 always */
+    transform: scale(1) rotateZ(180deg); 
     transition: all 0.4s cubic-bezier(0.54, 0.01, 0, 1.49);
 }
 
@@ -312,30 +310,30 @@ h1 {
     transform: translate(-50%, -50%);
     background-color: var(--circle-bg);
 }
-  /* Adjust size for smaller screens */
+  
 @media (max-width: 600px) {
     #H_circle-style::before,
     #H_circle-style::after {
-        width: 7.3vw; /* Increase size for better visibility on small screens */
-        height: 7.5vw; /* Keep the aspect ratio the same as width */
+        width: 7.3vw; 
+        height: 7.5vw; 
         padding-top: .5em;
     }
 
     #H_circle-style::after {
-        font-size: 5vw; /* Increase font size for readability on small screens */
+        font-size: 5vw; 
     }
 }
 
-/* Adjust size for very small screens */
+
 @media (max-width: 400px) {
     #H_circle-style::before,
     #H_circle-style::after {
-        width: 18vw; /* Further increase size for very small screens */
-        height: 18vw; /* Keep the aspect ratio the same as width */
+        width: 18vw; 
+        height: 18vw; 
     }
 
     #H_circle-style::after {
-        font-size: 6vw; /* Further increase font size for very small screens */
+        font-size: 6vw; 
     }
 }
   input[type="checkbox"]:checked + label::before {
@@ -361,19 +359,19 @@ h1 {
     background-color: whitesmoke;
     border-radius: 5px;
     padding: 10px;
-    height: 400px; /* Set the height of the bar graph container */
+    height: 400px; 
     display: flex;
     align-items: flex-end;
     border: 1px solid  #075685;
-    justify-content: flex-start; /* Align bars from the left */
+    justify-content: flex-start; 
 }
 .H_goal-label {
   position: absolute;
   
-  right: 10px; /* Adjust the right position as needed */
+  right: 10px; 
   top: 0;
   font-family: Inter, sans-serif;
-  color: #FF5733; /* Adjust the color as needed */
+  color: #FF5733; 
   font-weight: bold;
   font-size: 25px;
 }
@@ -385,16 +383,16 @@ h1 {
 
 .H_goal-line {
     position: absolute;
-    width: 90%; /* Make the goal line span the full width */
-    background-color: transparent; /* Make it transparent */
-    height: 4px; /* Adjust the height of the line */
-    top: 2%; /* Position it in the middle of the container */
-    border-top: 2px dotted #FF5733; /* Create a dotted effect */
+    width: 90%; 
+    background-color: transparent; 
+    height: 4px; 
+    top: 2%; 
+    border-top: 2px dotted #FF5733; 
 }
 
 .H_bar {
-    width: 60px; /* Adjust the width of each bar */
-    background-color:rgb(0, 37, 97); /* Adjust the color as needed */
+    width: 60px; 
+    background-color:rgb(0, 37, 97); 
     border-radius: 5px;
     text-align: center;
     color: white;
@@ -402,27 +400,27 @@ h1 {
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin-right: 50px; /* Adjust the spacing between bars */
+    margin-right: 50px; 
     padding-right: 2.8em;
 }
 
 .H_bar-value {
-  font-size: 2vmin; /* Use viewport minimum for responsive font size */
+  font-size: 2vmin; 
   font-family: Inter, sans-serif;
   margin-top: 5px;
   padding-left: .9em;
 }
 
-/* Responsive adjustments for smaller screens */
+
 @media (max-width: 600px) {
   .H_bar {
-      width: 9%; /* Increase width for smaller screens if needed */
-      margin-right: 7%; /* Reduce margin between bars for smaller screens */
-      padding-right: 8px; /* Adjust padding to be more suitable for smaller screens */
+      width: 9%; 
+      margin-right: 7%; 
+      padding-right: 8px; 
   }
 
   .H_bar-value {
-      font-size: 12px; /* Set a minimum font size for small screens */
+      font-size: 12px; 
       padding-right: .3em;
   }
 }
@@ -433,18 +431,18 @@ h1 {
   color: #075685;
   font-family: Inter, sans-serif;
     display: flex;
-    justify-content: flex-start; /* Align labels from the left */
-    margin-top: 10px; /* Adjust the vertical spacing between bars and labels */
+    justify-content: flex-start;
+    margin-top: 10px; 
 }
 .H_bar-label1, .H_bar-label2 {
-  white-space: nowrap; /* Prevent the text from wrapping */
-  overflow: hidden; /* Hide overflow */
-  text-overflow: ellipsis; /* Add an ellipsis if text is too long */
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
 }
 
 .H_bar-label1 {
-  padding-left: 35px; /* Fixed padding */
-  padding-right: 67px; /* Fixed padding */
+  padding-left: 35px;
+  padding-right: 67px;
     font-size: 24px;
     font-weight: bold;
     font-family: Inter, sans-serif;
@@ -457,26 +455,26 @@ h1 {
 .H_bar-label2 {
     font-size: 24px;
     font-weight: bold;
-    padding-left: 33px; /* Fixed padding */
-    padding-right: 80px; /* Fixed padding */
+    padding-left: 33px; 
+    padding-right: 80px; 
     font-family: Inter, sans-serif;
    
     color: #075685;
     text-align: center;
-    flex-wrap: nowrap; /* Prevent wrapping of child elements */
+    flex-wrap: nowrap;
   
 }
 
 @media (max-width: 768px) {
   .H_bar-label1{
-    padding-left: 10px; /* Smaller fixed padding for small screens */
-    padding-right: 12px; /* Smaller fixed padding for small screens */
-    font-size: 13px; /* Smaller font size for small screens */
+    padding-left: 10px; 
+    padding-right: 12px; 
+    font-size: 13px; 
   }
  .H_bar-label2 {
-    padding-left: 8px; /* Smaller fixed padding for small screens */
-    padding-right: 15px; /* Smaller fixed padding for small screens */
-    font-size: 13px; /* Smaller font size for small screens */
+    padding-left: 8px; 
+    padding-right: 15px; 
+    font-size: 13px;
   }
 }
 
@@ -523,15 +521,13 @@ input[type="checkbox"]:focus {
   padding: 10px;
   text-align: center;
   z-index: 1000;
-  border-radius: 2px; /* Rounded corners for the buttons */
+  border-radius: 2px; 
 }
 
 #keyboard button {
   padding: 1px 1px;
-
-  width: 34px; /* or any size you want */
+  width: 34px; 
   height: 30px;
-  /* Add more styles if needed */
 }
 .keyboard-row {
   display: flex;
@@ -541,34 +537,25 @@ input[type="checkbox"]:focus {
 .keyboard-row button {
   margin: 2px;
   padding: 5px 10px;
-  background-color: #f0f0f0; /* Light grey background */
-  border: 1px solid #d0d0d0; /* Slight border for definition */
-  border-radius: 4px; /* Rounded corners for the buttons */
-  
-  /* Text styling */
-  font-size: 16px; /* Example font size */
-  color: #333; /* Dark grey text color */
-  
-  /* Shadow for 3D effect */
+  background-color: #f0f0f0; 
+  border: 1px solid #d0d0d0;
+  border-radius: 4px; 
+  font-size: 16px; 
+  color: #333; 
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  
-  /* Transition for a smooth effect on click */
   transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .keyboard-row button:active {
-  /* Slightly different style when button is clicked */
-  background-color: #e0e0e0; /* Darker grey background */
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2); /* Smaller shadow for a "pressed" effect */
+  background-color: #e0e0e0; 
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2); 
 }
 
 .keyboard-row button:hover {
-  /* Style when the mouse hovers over the button */
-  background-color: #e8e8e8; /* Slightly darker background on hover */
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Larger shadow on hover for more pop */
+  background-color: #e8e8e8; 
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); 
 }
 
 .space {
   flex-grow: .3;
-  /* Add more styles to make the space key wider */
 }

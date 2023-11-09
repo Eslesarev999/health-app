@@ -112,9 +112,8 @@
         <i id="usersIcon" class="fas fa-users"></i>
         <i id="tutIcon" class="fas fa-video"></i>
     </div>
-            <!-- Keyboard layout -->
+           
 <div id="keyboard" style="display:none;">
-    <!-- Number row -->
     <div class="keyboard-row">
       <button onclick="typeKey('1')">1</button>
       <button onclick="typeKey('2')">2</button>
@@ -126,10 +125,8 @@
       <button onclick="typeKey('8')">8</button>
       <button onclick="typeKey('9')">9</button>
       <button onclick="typeKey('0')">0</button>
-      <!-- ... other numbers ... -->
     </div>
   
-    <!-- Top row of letters -->
     <div class="keyboard-row">
       <button onclick="typeKey('q')">Q</button>
       <button onclick="typeKey('w')">W</button>
@@ -141,11 +138,8 @@
       <button onclick="typeKey('i')">I</button>
       <button onclick="typeKey('o')">O</button>
       <button onclick="typeKey('p')">P</button>
-  
-      <!-- ... other letters ... -->
     </div>
   
-    <!-- Second row of letters -->
     <div class="keyboard-row">
       <button onclick="typeKey('a')">A</button>
       <button onclick="typeKey('s')">S</button>
@@ -156,10 +150,8 @@
       <button onclick="typeKey('j')">J</button>
       <button onclick="typeKey('k')">K</button>
       <button onclick="typeKey('l')">L</button>
-      <!-- ... other letters ... -->
     </div>
   
-    <!-- Third row of letters -->
     <div class="keyboard-row">
       <button onclick="typeKey('z')">Z</button>
       <button onclick="typeKey('x')">X</button>
@@ -168,11 +160,8 @@
       <button onclick="typeKey('b')">B</button>
       <button onclick="typeKey('n')">N</button>
       <button onclick="typeKey('m')">M</button>
-  
-      <!-- ... other letters ... -->
     </div>
   
-    <!-- Special keys and space -->
     <div class="keyboard-row">
         <button onclick="backspaceKey()">⌫</button>
       <button class="space" onclick="typeKey(' ')">Space</button>
@@ -184,7 +173,6 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Retrieve the food history from local storage
             const existingData = localStorage.getItem("foodHistory");
             let foodHistory = [];
 
@@ -192,7 +180,6 @@
                 foodHistory = JSON.parse(existingData);
             }
 
-            // Access the UL element where you want to display the history list
             const foodList = document.getElementById("foodList");
 
             foodHistory.forEach(function (entry) {
@@ -200,12 +187,10 @@
                 foodList.insertBefore(listItem, foodList.firstChild);
             });
 
-            // Function to create a food item
             function createFoodItem(entry) {
                 const listItem = document.createElement("li");
                 listItem.className = "meal_food_item";
 
-                // Initialize as a plus button
                 let isCheck = false;
 
                 listItem.innerHTML = `
@@ -215,9 +200,8 @@
                 `;
 
                 listItem.addEventListener("click", function () {
-                    isCheck = !isCheck; // Toggle the checkmark
+                    isCheck = !isCheck; 
 
-                    // Update the icon based on the new state
                     listItem.querySelector(".meal_plus-sign").textContent = isCheck ? '✓' : '+';
                 });
 

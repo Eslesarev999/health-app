@@ -86,13 +86,13 @@
     font-size: 15px;
     width: 100%;
     text-align: center;
-    padding: 5px; /* Add padding to improve visual appearance */
-    border-radius: 5px; /* Add border-radius for rounded corners */
+    padding: 5px; 
+    border-radius: 5px; 
 }
 
 
 .addf_food-table td:nth-child(2) input#calories {
-    color: #075685; /* Change the color to dark blue for height input */
+    color: #075685; 
 }
 
 .addf_done_div {
@@ -124,8 +124,8 @@ input[type="checkbox"] {
     font-size: 15px;
     width: 100%;
     text-align: center;
-    padding: 5px; /* Add padding to improve visual appearance */
-    border-radius: 5px; /* Add border-radius for rounded corners */
+    padding: 5px; 
+    border-radius: 5px; 
 }
 
 #heightFeet.dark-blue-input,

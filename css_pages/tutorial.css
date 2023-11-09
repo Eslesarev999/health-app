@@ -172,11 +172,11 @@ body {
     margin-left: 20px;
     font-size: 24px;
     cursor: pointer;
-    color: #07334B; /* Adjust the color as needed */
+    color: #07334B; 
 }
 
 .video-feedback i:hover {
-    color: #ffffff; /* Adjust the color for hover state */
+    color: #ffffff;  
 }
 
 .highlighted {

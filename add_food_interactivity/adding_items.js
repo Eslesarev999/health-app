@@ -17,31 +17,26 @@ document.addEventListener("DOMContentLoaded", function () {
         );
     }
 
-    // Function to update the "Done" button state
     function updateDoneButtonState() {
         doneButton.disabled = !areAllInputsFilled();
     }
-
-    // Add event listeners for input fields
+ 
     foodNameInput.addEventListener("input", updateDoneButtonState);
     caloriesInput.addEventListener("input", updateDoneButtonState);
     fatInput.addEventListener("input", updateDoneButtonState);
     carbsInput.addEventListener("input", updateDoneButtonState);
     proteinInput.addEventListener("input", updateDoneButtonState);
-
-    // Initially set the button state
+    
     updateDoneButtonState();
 
     doneButton.addEventListener("click", function () {
         if (areAllInputsFilled()) {
-            // Get user input
             const foodName = foodNameInput.value;
             const calories = caloriesInput.value;
             const fat = fatInput.value;
             const carbs = carbsInput.value;
             const protein = proteinInput.value;
 
-            // Create an object to represent the food entry
             const foodEntry = {
                 name: foodName,
                 calories: calories,
@@ -50,18 +45,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 protein: protein
             };
 
-            // Check if there's existing data in local storage
+            // check if there's existing data in local storage
             const existingData = localStorage.getItem("foodHistory");
             let foodHistory = [];
 
             if (existingData) {
                 foodHistory = JSON.parse(existingData);
             }
-
-            // Add the new entry to the food history
+            
             foodHistory.push(foodEntry);
-
-            // Store the updated food history in local storage
             localStorage.setItem("foodHistory", JSON.stringify(foodHistory));
         }
     });

@@ -4,12 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const helpIcon = document.getElementById("help-icon");
 
     let moodIconCount = 0;
-
-    // Event listener for the "Add More" button
     addMoodButton.addEventListener("click", function () {
-        // Check if a mood icon has already been added
         if (moodIconCount < 3) {
-            // Create and show the mood icon modal
             const moodIconModal = document.createElement("div");
             moodIconModal.id = "moodIconModal";
             moodIconModal.className = "modal";
@@ -23,11 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
             `;
 
             moodIconModal.className = "mp_modal";
-
-            // Append the mood icon modal to the moodIcons section
             moodIcons.appendChild(moodIconModal);
-
-            // Prevent clicks in the modal from closing the modal
             moodIconModal.addEventListener("click", function (event) {
                 event.stopPropagation();
             });
@@ -41,8 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-
-    // Event listener to close the mood icon modal when clicking outside the modal
     window.addEventListener("click", function (event) {
         const moodIconModal = document.getElementById("moodIconModal");
         if (moodIconModal && event.target === moodIconModal) {
@@ -51,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     tooltip.style.display = "none";
-    // Event listener for the help icon hover
     helpIcon.addEventListener("mouseover", function () {
         tooltip.style.display = "block";
     });
@@ -63,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-// Function to select a mood icon and add it to the Mood Tracker section
 function selectMood(mood) {
     const moodSection = document.getElementById("moodIcons");
     const newMoodDiv = document.createElement("div");

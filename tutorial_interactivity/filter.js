@@ -1,4 +1,3 @@
-// JavaScript for filtering videos
 document.addEventListener('DOMContentLoaded', function () {
     const filterButtons = document.querySelectorAll('.filter-button');
     const videoContainers = document.querySelectorAll('.mp_container');

@@ -14,7 +14,6 @@ function postMessage() {
 
         `;
 
-        // Apply the same styling to the new message box
         messageBox.style.width = "80%";
         messageBox.style.margin = "20px auto";
         messageBox.style.position = "relative";
@@ -23,18 +22,13 @@ function postMessage() {
         messageBox.style.border = "1px solid #075685";
         messageBox.style.textAlign = "left";
 
-        // Insert the new message at the top
         messagesContainer.insertBefore(messageBox, messagesContainer.firstChild);
-
-        // Clear the input
         messageInput.value = "";
     }
 }
 
+// delte a post
 function deleteMessage(iconElement) {
-            // Get the parent container of the message (c_section)
             const messageContainer = iconElement.parentElement;
-            
-            // Remove the message container
             messageContainer.remove();
         }

@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Function to toggle the keyboard display
     function toggleKeyboard(inputField) {
         var keyboard = document.getElementById("keyboard");
         if (keyboard.style.display === "none") {

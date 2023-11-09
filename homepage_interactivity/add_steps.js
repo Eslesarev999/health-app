@@ -15,10 +15,8 @@ document.getElementById('H_confirm-steps').addEventListener('click', function() 
         alert("Please enter valid numbers for both target steps and steps taken!");
         return;
     }
-    currentSteps = manualSteps; // Set currentSteps to manualSteps
-    // Update the progress bar and steps left
+    currentSteps = manualSteps;
     updateProgressBar(10000);
-    // Hide the manual entry
     document.getElementById('H_manual-entry').style.display = 'none';
 });
 
@@ -27,12 +25,12 @@ function updateProgressBar(targetSteps) {
     const stepsLeftElem = document.getElementById('H_steps-left');
     const percentageProgress = (currentSteps / 10000) * 100;
     
-    // Update the conic-gradient with dynamic percentage
+    
     progressBar.style.background = `
       radial-gradient(closest-side, #D8EDFE 77%, transparent 80% 100%),
       conic-gradient(rgb(0, 39, 97) ${percentageProgress}%, white ${percentageProgress}% 100%)`;
     
-    // Set steps taken in progress bar
+    
     progressBar.setAttribute("data-steps", currentSteps);
 
     // Calculate and update the steps left
@@ -41,35 +39,29 @@ function updateProgressBar(targetSteps) {
     updateBarGraph(currentSteps);
 }
 
-//Meals button navigation
 document.querySelectorAll(".H_group input[type='checkbox']").forEach(checkbox => {
     breakfast.addEventListener('click', function() {
-        // Redirect to the meal_input.html page
         window.location.href = 'breakfast_input.html';
     });
 
     lunch.addEventListener('click', function() {
-        // Redirect to the meal_input.html page
         window.location.href = 'lunch_input.html';
     });
 
     snack.addEventListener('click', function() {
-        // Redirect to the meal_input.html page
         window.location.href = 'snack_input.html';
     });
 
     dinner.addEventListener('click', function() {
-        // Redirect to the meal_input.html page
         window.location.href = 'dinner_input.html';
     });
 });
 
 function updateBarGraph(steps) {
-    // Adjust this function to take targetSteps into account
     const days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
 
-    // Iterate over each day and update its bar graph
-        const currentDay = new Date().getDay();
+   
+    const currentDay = new Date().getDay();
 
     let barId;
     switch (currentDay) {
@@ -98,14 +90,12 @@ function updateBarGraph(steps) {
         const bar = document.getElementById(barId);
         const barValue = bar.querySelector('.H_bar-value');
 
-        // Calculate the height of the bar as a percentage of the targetSteps, capping it at 100%
+        
         let percentageOfTarget = (steps / 10000) * 100;
-        percentageOfTarget = percentageOfTarget > 100 ? 100 : percentageOfTarget; // Ensure it doesn't exceed 100%
+        percentageOfTarget = percentageOfTarget > 100 ? 100 : percentageOfTarget; 
 
         bar.style.height = `${percentageOfTarget}%`;
-        barValue.textContent = steps; // Update the text content with the number of steps
-
-    // Additionally, you might want to update the goal line to reflect the target steps
+        barValue.textContent = steps; 
    
 }
 
@@ -113,22 +103,21 @@ var currentInput;
 
 
 function showKeyboard(element) {
-  currentInput = element; // Store reference to the input
-  document.getElementById('keyboard').style.display = 'block'; // Show the keyboard
+  currentInput = element; 
+  document.getElementById('keyboard').style.display = 'block'; 
 }
 
 
 function typeKey(keyValue) {
-  currentInput.value += keyValue; // Append key value to input
+  currentInput.value += keyValue; 
 }
 
 
 function closeKeyboard() {
-  document.getElementById('keyboard').style.display = 'none'; // Hide the keyboard
+  document.getElementById('keyboard').style.display = 'none'; 
 }
 
 
-// Bind the document click to close the keyboard if clicked outside
 document.addEventListener('click', function(event) {
   var isClickInsideElement = currentInput.contains(event.target) || document.getElementById('keyboard').contains(event.target);
   if (!isClickInsideElement) {
@@ -138,7 +127,6 @@ document.addEventListener('click', function(event) {
 function backspaceKey() {
     var currentValue = currentInput.value;
     if (currentValue.length > 0) {
-      // Remove the last character from the current value
       currentInput.value = currentValue.substring(0, currentValue.length - 1);
     }
   }
