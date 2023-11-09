@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const tutIcon = document.getElementById('tutIcon');
 
     chartIcon.addEventListener('click', () => {
-        window.location.href = 'homepage.html';
+        window.location.href = 'index.html';
     });
 
     weightIcon.addEventListener('click', () => {
