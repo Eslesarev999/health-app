@@ -94,6 +94,12 @@
     justify-content: flex-end;
 }
 
+#done_button[disabled] {
+    background-color: #ccc; 
+    color: #888;
+    cursor: not-allowed; /* Change cursor to indicate it's not clickable */
+}
+
 .addf_done_button {
     height: 24px;
     width: 96px;

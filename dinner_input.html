@@ -4,7 +4,8 @@
     <link rel="stylesheet" type="text/css" href="css_pages/meal_input.css" />
     <link rel="stylesheet" href="Inter/Inter-VariableFont_slnt,wght.ttf">
     <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.min.css">
-    <script src="meals_interactivity/dinner_page.js"></script>
+    <script src="meals_interactivity/meals_global.js"></script>
+    <script src="meals_interactivity/dinner_save.js"></script>
     <script src="global_interactivity.js"></script>
 
 
@@ -15,6 +16,10 @@
 </head>
 
 <body>
+    
+    <div class="meal_profile-icon">
+        <img class="profile-icon"  id="profIcon" src="icons/profile_pic.png" height="36px" width="36px">
+    </div>
     
     <div class="meal_header">
         <span id="meal_arrow"> &lt; </span>
@@ -196,7 +201,7 @@
                 foodList.insertBefore(listItem, foodList.firstChild);
             });
 
-            //Function to create a food item
+            // Function to create a food item
             function createFoodItem(entry) {
                 const listItem = document.createElement("li");
                 listItem.className = "meal_food_item";

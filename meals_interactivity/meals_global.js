@@ -5,7 +5,7 @@ function handleAddFoodButtonClick() {
 }
 
 function handleBackButtonClick() {
-    window.location.href = 'today_metrics.html';
+    window.history.back();     
 }
 
 // Function to toggle plus sign to checkmark icon
@@ -60,18 +60,29 @@ function toggleKeyboard(inputField) {
 
 // Add event listeners
 document.addEventListener('DOMContentLoaded', function () {
-    const arrowElement = document.getElementById('meal_arrow');
     const searchInput = document.getElementById('meal_searchbar');
     const clearButton = document.getElementById('clear_search');
     const addButton = document.querySelector('.meal_add_food_button');
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:meals_interactivity/dinner_page.js
     const foodList = document.getElementById("foodList");
 
+========
+>>>>>>> d3566e9 (local storage not possible but other edits have occured)
+    const backArrows = document.getElementById('meal_arrow');
+
+    backArrows.addEventListener("click", function () {
+        window.history.back(); // Navigate back to the previous page
+    });
+<<<<<<< HEAD
+=======
+>>>>>>>> c553352 (local storage not possible but other edits have occured):meals_interactivity/meals_global.js
+>>>>>>> d3566e9 (local storage not possible but other edits have occured)
 
     searchInput.addEventListener('focus', function() {
         toggleKeyboard(searchInput);
     });
-
-    arrowElement.addEventListener('click', handleBackButtonClick);
 
     searchInput.addEventListener('input', () => {
         const searchText = searchInput.value.toLowerCase();
@@ -86,6 +97,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     togglePlusToCheckmark();
+<<<<<<< HEAD
+=======
 
     foodList.addEventListener("click", function (event) {
         if (event.target.classList.contains("meal_plus-sign")) {
@@ -101,4 +114,5 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+>>>>>>> d3566e9 (local storage not possible but other edits have occured)
 });

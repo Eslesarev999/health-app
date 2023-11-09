@@ -83,13 +83,13 @@
     background-color: #FFFFFF;
     border-radius: 10px;
     width: 373px;
-    height: 450px;
+    height: 620px;
     overflow-y: scroll;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     padding: 5px;
-     margin-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 .meal_food_item {

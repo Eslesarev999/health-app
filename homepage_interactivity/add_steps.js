@@ -40,10 +40,27 @@ function updateProgressBar(targetSteps) {
     stepsLeftElem.textContent = `${remainingSteps} Steps Left!`;
     updateBarGraph(currentSteps);
 }
+
+//Meals button navigation
 document.querySelectorAll(".H_group input[type='checkbox']").forEach(checkbox => {
-    checkbox.addEventListener('click', function() {
+    breakfast.addEventListener('click', function() {
         // Redirect to the meal_input.html page
-        window.location.href = 'meal_input.html';
+        window.location.href = 'breakfast_input.html';
+    });
+
+    lunch.addEventListener('click', function() {
+        // Redirect to the meal_input.html page
+        window.location.href = 'lunch_input.html';
+    });
+
+    snack.addEventListener('click', function() {
+        // Redirect to the meal_input.html page
+        window.location.href = 'snack_input.html';
+    });
+
+    dinner.addEventListener('click', function() {
+        // Redirect to the meal_input.html page
+        window.location.href = 'dinner_input.html';
     });
 });
 
